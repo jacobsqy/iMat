@@ -2,7 +2,179 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d1bbb6-e103-46ad-bc37-a317e9deb8c0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/App.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist/ProductEditor.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist/lib/appframework-1.0.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist/lib/projectbackend.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist/lib/swing-layout-1.0.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist/lib/swing-worker-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_100.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_101.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_102.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_102.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_103.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_104.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_105.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_106.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_107.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_108.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_109.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_110.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_111.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_112.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_113.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_114.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_115.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_116.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_117.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_118.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_119.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_120.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_121.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_122.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_123.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_124.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_125.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_126.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_127.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_129.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_130.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_131.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_132.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_133.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_134.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_135.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_136.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_137.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_138.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_139.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_140.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_141.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_142.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_143.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_144.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_145.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_146.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_147.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_148.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_149.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_150.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_151.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_152.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_153.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_154.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_21.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_23.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_24.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_28.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_29.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_30.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_31.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_32.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_33.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_34.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_35.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_36.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_37.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_38.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_39.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_40.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_41.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_42.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_43.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_44.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_45.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_46.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_47.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_48.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_49.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_50.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_51.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_52.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_53.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_54.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_55.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_56.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_57.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_58.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_59.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_60.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_61.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_62.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_63.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_64.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_65.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_66.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_67.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_68.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_69.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_70.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_71.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_72.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_73.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_74.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_75.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_76.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_77.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_78.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_79.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_80.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_81.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_82.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_83.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_84.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_85.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_86.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_87.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_88.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_89.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_90.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_91.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_92.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_93.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_94.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_95.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_96.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_97.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_98.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/images/product_99.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/projectbackend.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/dist/README.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/creditcard.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/customer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/eco.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/favorites.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/prefs.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/products.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/shoppingcart.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/imat/user.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,12 +185,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+            <state relative-caret-position="32">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,6 +213,13 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/App.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -48,9 +227,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="1" />
-    <option name="width" value="960" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1390" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -67,8 +246,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -80,8 +258,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -91,6 +270,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -146,6 +330,12 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -180,12 +370,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -201,41 +385,43 @@
       <option name="presentableId" value="Default" />
       <updated>1525249839702</updated>
       <workItem from="1525249843205" duration="112000" />
+      <workItem from="1525250204662" duration="203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112000" />
+    <option name="totallyTimeSpent" value="315000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="1" width="960" height="1056" extended-state="0" />
+    <frame x="0" y="23" width="1390" height="804" extended-state="0" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17359051" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +438,15 @@
     <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
