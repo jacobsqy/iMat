@@ -37,5 +37,6 @@ public class ProductItem extends AnchorPane {
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
         spinnerCount.setValueFactory(valueFactory);
         spinnerCount.setEditable(true);
+        spinnerCount.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
     }
 }

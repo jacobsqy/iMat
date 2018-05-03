@@ -43,7 +43,7 @@
                   <Insets top="80.0" />
                </GridPane.margin>
             </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="224.0" text="Till Varukorgen" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="224.0" style="-fx-background-color: green;" text="Till Varukorgen" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -52,7 +52,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <ImageView fitHeight="179.0" fitWidth="220.0" pickOnBounds="true" GridPane.rowSpan="2">
+            <ImageView fitHeight="199.0" fitWidth="286.0" pickOnBounds="true" GridPane.rowSpan="2">
                <image>
                   <Image url="@resources/imat/images/logo.png" />
                </image>
@@ -75,7 +75,6 @@
                   <Insets top="36.0" />
                </GridPane.margin>
             </ChoiceBox>
-            <Label prefHeight="111.0" prefWidth="822.0" styleClass="label-text" text="Handla Enkelt &amp; Snabbt" GridPane.columnIndex="1" GridPane.columnSpan="2" />
             <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="90.0" text="Antal varor:" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="50.0" top="-30.0" />
