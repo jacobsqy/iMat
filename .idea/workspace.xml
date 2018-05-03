@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d3d1bbb6-e103-46ad-bc37-a317e9deb8c0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/iMat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iMat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMat/App/App.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMat/App/App.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMat/App/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMat/App/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMat/App/AppMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMat/App/AppMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dist/ProductEditor.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/dist/ProductEditor.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dist/README.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/dist/README.TXT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dist/lib/appframework-1.0.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/dist/lib/appframework-1.0.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dist/lib/projectbackend.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/dist/lib/projectbackend.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dist/lib/swing-layout-1.0.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/dist/lib/swing-layout-1.0.4.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dist/lib/swing-worker-1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/dist/lib/swing-worker-1.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/creditcard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/creditcard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/customer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/customer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/eco.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/eco.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/favorites.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/favorites.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_100.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_100.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_101.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_101.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_102.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_102.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_102.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_102.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_103.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_103.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_104.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_104.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_105.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_105.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_106.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_106.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_107.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_107.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_108.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_108.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_109.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_109.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_110.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_110.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_111.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_111.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_112.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_112.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_113.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_113.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_114.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_114.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_115.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_115.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_116.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_116.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_117.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_117.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_118.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_118.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_119.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_119.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_120.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_120.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_122.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_122.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_123.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_123.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_124.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_124.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_125.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_125.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_126.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_126.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_127.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_127.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_128.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_128.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_129.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_129.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_130.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_130.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_131.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_131.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_132.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_132.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_133.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_133.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_134.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_134.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_135.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_135.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_136.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_136.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_137.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_137.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_138.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_138.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_139.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_139.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_140.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_140.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_141.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_141.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_142.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_142.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_144.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_144.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_145.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_145.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_146.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_146.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_147.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_147.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_148.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_148.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_149.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_149.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_150.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_151.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_151.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_152.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_152.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_153.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_153.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_154.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_154.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_26.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_27.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_28.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_29.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_33.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_34.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_34.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_35.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_35.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_36.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_36.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_37.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_37.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_38.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_39.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_39.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_40.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_40.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_41.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_42.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_42.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_43.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_43.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_44.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_45.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_45.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_46.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_46.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_47.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_47.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_48.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_48.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_49.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_49.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_50.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_50.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_51.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_51.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_52.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_52.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_53.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_53.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_54.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_54.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_55.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_55.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_56.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_56.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_57.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_57.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_58.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_58.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_59.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_59.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_60.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_60.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_61.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_62.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_62.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_63.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_63.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_64.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_64.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_65.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_65.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_66.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_66.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_67.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_67.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_68.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_68.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_69.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_69.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_70.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_70.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_71.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_71.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_72.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_72.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_73.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_73.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_74.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_74.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_75.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_75.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_76.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_76.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_77.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_77.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_78.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_78.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_79.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_79.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_80.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_80.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_81.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_81.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_82.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_82.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_83.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_83.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_84.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_84.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_85.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_85.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_86.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_86.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_87.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_87.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_88.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_88.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_89.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_89.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_90.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_90.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_91.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_91.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_92.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_92.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_93.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_93.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_94.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_94.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_95.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_95.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_96.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_96.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_97.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_97.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_98.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_98.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/images/product_99.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/images/product_99.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/prefs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/prefs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/products.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/shoppingcart.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/shoppingcart.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/imat/user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/resources/imat/user.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/projectbackend.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/projectbackend.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/App.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AppMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/resources/dist.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/resources/imat.zip" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AppMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="76" column="89" selection-start-line="76" selection-start-column="89" selection-end-line="76" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductBackedController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/ProductBackedController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="78" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/ProductItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>choi</find>
+      <find>IMatDataHandler</find>
+      <find>flowpane</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/App.java" />
+        <option value="$PROJECT_DIR$/src/AppMain.java" />
+        <option value="$PROJECT_DIR$/src/App.fxml" />
+        <option value="$PROJECT_DIR$/src/ProductItem.java" />
+        <option value="$PROJECT_DIR$/src/App/ProductBackedController.java" />
+        <option value="$PROJECT_DIR$/src/App/Product.fxml" />
+        <option value="$PROJECT_DIR$/src/App/StyleSheet.css" />
+        <option value="$PROJECT_DIR$/src/App/App.fxml" />
+        <option value="$PROJECT_DIR$/src/App/ProductItem.java" />
+        <option value="$PROJECT_DIR$/src/App/AppMain.java" />
+        <option value="$PROJECT_DIR$/src/App/AppController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="iMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iMat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iMat" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iMat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iMat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/src/App" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AppMain">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="AppMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AppMain" />
+      <module name="iMat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AppMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.AppMain" />
+      <module name="iMat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.AppMain" />
+      <item itemvalue="Application.AppMain (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppMain" />
+        <item itemvalue="Application.AppMain (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3d1bbb6-e103-46ad-bc37-a317e9deb8c0" name="Default" comment="" />
+      <created>1525249839702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525249839702</updated>
+      <workItem from="1525249843205" duration="112000" />
+      <workItem from="1525250204662" duration="203000" />
+      <workItem from="1525250803108" duration="236000" />
+      <workItem from="1525252672758" duration="981000" />
+      <workItem from="1525262854910" duration="29560000" />
+      <workItem from="1525302694204" duration="3721000" />
+      <workItem from="1525307077922" duration="174000" />
+      <workItem from="1525332470328" duration="5824000" />
+      <workItem from="1525338901618" duration="87000" />
+      <workItem from="1525353669146" duration="222000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="41120000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32903227" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38064516" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="PlantUML" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductBackedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="78" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductBackedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="78" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1252">
+          <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingCart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/Test.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/User.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/Product.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/resources/dist/README.TXT">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ProductCategory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/IMatDataHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/StyleSheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductBackedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="78" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/ProductItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="76" column="89" selection-start-line="76" selection-start-column="89" selection-end-line="76" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>iMat</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
