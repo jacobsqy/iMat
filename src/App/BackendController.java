@@ -36,7 +36,7 @@ public class BackendController {
         List<ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
             if (shoppingItem.getProduct().getName() == itemToRemove.getProduct().getName()) {
-
+                iMatDataHandler.getShoppingCart().removeItem(itemToRemove);
             }
         }
     }
