@@ -41,6 +41,20 @@ public class BackendController {
         }
     }
 
+    public void removeFromCart(Product productToRemove){
+        List <ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
+        for (ShoppingItem shoppingItem : list){
+            if (shoppingItem.getProduct().getName() == productToRemove.getName()){
+                if (shoppingItem.getAmount() > 1){
+                    shoppingItem.setAmount(shoppingItem.getAmount() -1);
+                }
+                else {
+                    iMatDataHandler.getShoppingCart().removeItem(shoppingItem);
+                }
+            }
+        }
+    }
+
     private boolean cartContains(Product p) {
         List<ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
