@@ -17,9 +17,9 @@
          </image>
       </ImageView>
       <Label fx:id="lblName" layoutX="188.0" layoutY="31.0" text="Gröna ärter" />
-      <Spinner fx:id="spinnerCount" editable="true" layoutX="182.0" layoutY="126.0" prefHeight="32.0" prefWidth="135.0" />
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="182.0" layoutY="126.0" prefHeight="32.0" prefWidth="99.0" />
       <Label fx:id="lblPrice" layoutX="188.0" layoutY="53.0" text="19.50 kr/kg" />
-      <Button contentDisplay="RIGHT" layoutX="328.0" layoutY="123.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="161.0" style="-fx-background-color: green;" text="Lägg till Varukorg" textFill="WHITE">
+      <Button contentDisplay="RIGHT" layoutX="283.0" layoutY="123.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="206.0" style="-fx-background-color: green;" text="Lägg till i Varukorg" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -27,8 +27,8 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button layoutX="182.0" layoutY="83.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="308.0" style="-fx-border-color: blue; -fx-border-width: 1px;" text="Mer Information" />
-      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="444.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="182.0" layoutY="81.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="308.0" style="-fx-background-color: lightblue;" text="Mer Information" textFill="WHITE" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="454.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/imat/images/favorite.png" />
          </image>
