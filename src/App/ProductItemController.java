@@ -12,7 +12,7 @@ public class ProductItemController {
        int count = Integer.parseInt(productItem.getLabelCount().getText().replaceAll("\\D+",""));
 
         if(count < 100) {
-            productItem.getLabelCount().setText(Integer.toString(count + 1) + productItem.product.getUnitSuffix());
+            productItem.getLabelCount().setText(Integer.toString(count + 1) + " " + productItem.product.getUnitSuffix());
         }
     }
 
@@ -20,7 +20,7 @@ public class ProductItemController {
         int count = Integer.parseInt(productItem.getLabelCount().getText().replaceAll("\\D+",""));
 
         if(count > 1) {
-            productItem.getLabelCount().setText(Integer.toString(count - 1) + productItem.product.getUnitSuffix());
+            productItem.getLabelCount().setText(Integer.toString(count - 1) + " " + productItem.product.getUnitSuffix());
         }
     }
 }

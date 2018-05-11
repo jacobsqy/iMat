@@ -45,7 +45,7 @@ public class ProductItem extends AnchorPane {
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + product.getImageName())));
         lblName.setText(product.getName());
         lblPrice.setText(product.getPrice() + " " + product.getUnit());
-        labelCount.setText("1" + product.getUnitSuffix());
+        labelCount.setText("1 " + product.getUnitSuffix());
 
         /*SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
         spinnerCount.setValueFactory(valueFactory);
