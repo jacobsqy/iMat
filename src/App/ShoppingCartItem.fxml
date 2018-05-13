@@ -21,8 +21,8 @@
       <Label fx:id="totalPriceLabel" layoutX="787.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.leftAnchor="850.0" />
       <Button fx:id="deleteButton" layoutX="934.0" layoutY="61.0" mnemonicParsing="false" text="ta bort">
          <styleClass>
+            <String fx:value="button-red" />
             <String fx:value="text-normal" />
-            <String fx:value="button" />
          </styleClass>
       </Button>
       <Spinner fx:id="amountSpinner" layoutX="645.0" layoutY="60.0" prefHeight="27.0" prefWidth="85.0" AnchorPane.rightAnchor="375.0" />
