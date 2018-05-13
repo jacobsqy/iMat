@@ -13,16 +13,16 @@ public class BackendController {
         IMatDataHandler.getInstance().addFavorite(p);
     }
 
-    public List<Product> getFavorites() {
+    public static List<Product> getFavorites() {
         return IMatDataHandler.getInstance().favorites();
     }
 
-    public void removeAsFavorite(Product p) {
+    public static void removeAsFavorite(Product p) {
         IMatDataHandler.getInstance().removeFavorite(p);
     }
 
     //Shoppingcart
-    public void addToCart(Product p) {
+    public static void addToCart(Product p) {
         if (cartContains(p)) {
             addProductToShoppingItem(p);
         } else {
@@ -31,7 +31,7 @@ public class BackendController {
     }
     //removes an entire item (not just a product!) from the ShoppingCart
     //compare to removeFromCart(Product)
-    public void removeFromCart(ShoppingItem itemToRemove) {
+    public static void removeFromCart(ShoppingItem itemToRemove) {
         List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
             if (shoppingItem.getProduct().getName().equals(itemToRemove.getProduct().getName())) {
@@ -40,7 +40,7 @@ public class BackendController {
         }
     }
 
-    public void removeFromCart(Product productToRemove){
+    public static void removeFromCart(Product productToRemove){
         List <ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list){
             if (shoppingItem.getProduct().getName().equals(productToRemove.getName())){
@@ -54,7 +54,7 @@ public class BackendController {
         }
     }
 
-    private boolean cartContains(Product p) {
+    private static boolean cartContains(Product p) {
         List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
             if (shoppingItem.getProduct().getName().equals(p.getName())) {
@@ -64,7 +64,7 @@ public class BackendController {
         return false;
     }
 
-    private void addProductToShoppingItem(Product p) {
+    private static void addProductToShoppingItem(Product p) {
         List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
             if (shoppingItem.getProduct().getName().equals(p.getName())) {
