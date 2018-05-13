@@ -22,11 +22,26 @@ public class BackendController {
     }
 
     //Shoppingcart
+    public static List<ShoppingItem> getShoppingItems() {
+        return IMatDataHandler.getInstance().getShoppingCart().getItems();
+    }
+
     public static void addToCart(Product p) {
         if (cartContains(p)) {
             addProductToShoppingItem(p);
         } else {
             IMatDataHandler.getInstance().getShoppingCart().addItem(new ShoppingItem(p));
+        }
+    }
+
+    public static void addToCart(Product p, int amount) {
+        if (amount < 2) addToCart(p);
+        if (cartContains(p)) {
+            for (int i = 0; i < amount; i++)
+                addProductToShoppingItem(p);
+        } else {
+            IMatDataHandler.getInstance().getShoppingCart().addItem(new ShoppingItem(p));
+            addToCart(p, amount - 1);
         }
     }
     //removes an entire item (not just a product!) from the ShoppingCart

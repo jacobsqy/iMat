@@ -9,8 +9,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ProductItem extends AnchorPane {
 
@@ -18,6 +20,7 @@ public class ProductItem extends AnchorPane {
     @FXML private Label lblName;
     @FXML private Label lblPrice;
     @FXML private Spinner spinnerCount;
+    @FXML private Product product;
 
     public ProductItem(Product product) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Product.fxml"));
@@ -34,9 +37,16 @@ public class ProductItem extends AnchorPane {
         lblName.setText(product.getName());
         lblPrice.setText(product.getPrice() + " " + product.getUnit());
 
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 1, 1);
         spinnerCount.setValueFactory(valueFactory);
         spinnerCount.setEditable(true);
         spinnerCount.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
+
+        this.product = product;
+    }
+
+    @FXML
+    private void addToCartPressed() {
+        BackendController.addToCart(product, (int) spinnerCount.getValue());
     }
 }
