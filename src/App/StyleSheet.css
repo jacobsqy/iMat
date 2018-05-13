@@ -56,13 +56,6 @@
     -fx-border-insets: 1 1 1 1, 0;
 }
 
-.catagory:focused {
-    -fx-background-color: black;
-    -fx-text-fill: white;
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
-
 .choice-box .context-menu {
     -fx-pref-width: 591;
 }

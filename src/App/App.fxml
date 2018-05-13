@@ -104,11 +104,11 @@
                   <ScrollPane prefHeight="492.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
                         <VBox fx:id="vBox" prefHeight="489.0" prefWidth="262.0" spacing="15.0">
+                           <padding>
+                              <Insets bottom="30.0" top="30.0" />
+                           </padding>
                            <children>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Favoriter" textFill="RED">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
@@ -121,9 +121,6 @@
                                  </graphic>
                               </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Baljväxter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -133,9 +130,6 @@
                                  </graphic>
                               </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Bröd">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -145,9 +139,6 @@
                                  </graphic>
                               </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Bär">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -156,10 +147,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Citrosfrukter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Frukter">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -168,58 +156,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Drycker varma">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/hotbeverage.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Drycker kalla">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/cold_drink.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Exotiska frukter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/fruit-pineapple.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Fisk">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/fish.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Grönsaksfrukter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Grönsakser &amp; Örtkryddor">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -228,34 +165,34 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Kål">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Pasta, Potatis &amp; Ris">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@resources/imat/images/cabbage.png" />
+                                          <Image url="@resources/imat/images/pasta.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Kött">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Drycker">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@resources/imat/images/meat.png" />
+                                          <Image url="@resources/imat/images/hotbeverage.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Fisk &amp; Kött">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/fish.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
                               </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Mejeriprodukter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -264,22 +201,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Meloner">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/water-melon.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Mjöl, Socker, Salt">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -289,9 +211,6 @@
                                  </graphic>
                               </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Nötter och frön">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -300,58 +219,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Pasta">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/pasta.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Potatis, ris">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/potato.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Rotfrukter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/carrots.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Stenfrukter">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/apple.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
                               <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Sötsaker">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -360,22 +228,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Örtkryddor">
-                                 <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@resources/imat/images/herb.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
                            </children>
-                           <padding>
-                              <Insets bottom="30.0" top="30.0" />
-                           </padding>
                         </VBox>
                      </content>
                   </ScrollPane>
