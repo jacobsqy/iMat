@@ -7,19 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BackendController {
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     // Favorites
-    public void addAsFavorite(Product p) {
-        iMatDataHandler.addFavorite(p);
+    public static void addAsFavorite(Product p) {
+        IMatDataHandler.getInstance().addFavorite(p);
     }
 
     public List<Product> getFavorites() {
-        return iMatDataHandler.favorites();
+        return IMatDataHandler.getInstance().favorites();
     }
 
     public void removeAsFavorite(Product p) {
-        iMatDataHandler.removeFavorite(p);
+        IMatDataHandler.getInstance().removeFavorite(p);
     }
 
     //Shoppingcart
@@ -27,38 +26,38 @@ public class BackendController {
         if (cartContains(p)) {
             addProductToShoppingItem(p);
         } else {
-            iMatDataHandler.getShoppingCart().addItem(new ShoppingItem(p));
+            IMatDataHandler.getInstance().getShoppingCart().addItem(new ShoppingItem(p));
         }
     }
     //removes an entire item (not just a product!) from the ShoppingCart
     //compare to removeFromCart(Product)
     public void removeFromCart(ShoppingItem itemToRemove) {
-        List<ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
+        List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
-            if (shoppingItem.getProduct().getName() == itemToRemove.getProduct().getName()) {
-                iMatDataHandler.getShoppingCart().removeItem(itemToRemove);
+            if (shoppingItem.getProduct().getName().equals(itemToRemove.getProduct().getName())) {
+                IMatDataHandler.getInstance().getShoppingCart().removeItem(itemToRemove);
             }
         }
     }
 
     public void removeFromCart(Product productToRemove){
-        List <ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
+        List <ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list){
-            if (shoppingItem.getProduct().getName() == productToRemove.getName()){
+            if (shoppingItem.getProduct().getName().equals(productToRemove.getName())){
                 if (shoppingItem.getAmount() > 1){
                     shoppingItem.setAmount(shoppingItem.getAmount() -1);
                 }
                 else {
-                    iMatDataHandler.getShoppingCart().removeItem(shoppingItem);
+                    IMatDataHandler.getInstance().getShoppingCart().removeItem(shoppingItem);
                 }
             }
         }
     }
 
     private boolean cartContains(Product p) {
-        List<ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
+        List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
-            if (shoppingItem.getProduct().getName() == p.getName()) {
+            if (shoppingItem.getProduct().getName().equals(p.getName())) {
                 return true;
             }
         }
@@ -66,9 +65,9 @@ public class BackendController {
     }
 
     private void addProductToShoppingItem(Product p) {
-        List<ShoppingItem> list = iMatDataHandler.getShoppingCart().getItems();
+        List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
-            if (shoppingItem.getProduct().getName() == p.getName()) {
+            if (shoppingItem.getProduct().getName().equals(p.getName())) {
                 shoppingItem.setAmount(shoppingItem.getAmount() + 1);
             }
         }
