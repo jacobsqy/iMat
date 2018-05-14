@@ -69,6 +69,12 @@ public class BackendController {
         }
     }
 
+    public static void emptyShoppingCart() {
+        IMatDataHandler.getInstance().getShoppingCart().clear();
+    }
+
+    // Misc
+
     private static boolean cartContains(Product p) {
         List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
         for (ShoppingItem shoppingItem : list) {
