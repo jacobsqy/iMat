@@ -11,6 +11,7 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class ProductItem extends AnchorPane {
     Product product;
 
 
-    public ProductItem(Product product) {
+    public ProductItem(Product product, IMatDataHandler iMatDataHandler) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Product.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -59,5 +60,10 @@ public class ProductItem extends AnchorPane {
 
     public Label getLabelCount() {
         return labelCount;
+    }
+
+    @FXML
+    private void addToCartPressed() {
+        BackendController.addToCart(product, Integer.valueOf(labelCount.getText()));
     }
 }
