@@ -17,7 +17,7 @@
       </ImageView>
       <Label fx:id="lblName" layoutX="188.0" layoutY="31.0" text="Gröna ärter" />
       <Label fx:id="lblPrice" layoutX="188.0" layoutY="53.0" text="19.50 kr/kg" />
-      <Button contentDisplay="RIGHT" layoutX="283.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#addToCartPressed" prefHeight="36.0" prefWidth="206.0" style="-fx-background-color: green;" text="Lägg till i Varukorg" textFill="WHITE">
+      <Button contentDisplay="RIGHT" layoutX="259.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#addToCartPressed" prefHeight="36.0" prefWidth="230.0" style="-fx-background-color: green;" text="Lägg till i Varukorg" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -32,8 +32,8 @@
          </image>
       </ImageView>
       <Separator layoutX="174.0" layoutY="3.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label fx:id="labelCount" layoutX="212.0" layoutY="134.0" text="1st" />
-      <Button fx:id="buttonIncrease" layoutX="248.0" layoutY="128.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="6.0" text="+" />
+      <Label fx:id="labelCount" layoutX="212.0" layoutY="134.0" text="1" />
+      <Button fx:id="buttonIncrease" layoutX="223.0" layoutY="128.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="6.0" text="+" />
       <Button fx:id="buttonDecrease" layoutX="182.0" layoutY="128.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" text="-" />
    </children>
    <styleClass>
