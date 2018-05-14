@@ -21,6 +21,10 @@ public class BackendController {
         IMatDataHandler.getInstance().removeFavorite(p);
     }
 
+    public static boolean isFavorite(Product p) {
+        return IMatDataHandler.getInstance().isFavorite(p);
+    }
+
     //Shoppingcart
     public static List<ShoppingItem> getShoppingItems() {
         return IMatDataHandler.getInstance().getShoppingCart().getItems();
