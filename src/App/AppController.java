@@ -82,14 +82,8 @@ public class AppController implements Initializable {
                         List<Product> categoryList = new ArrayList<Product>();
 
                         switch (catagory) {
-                            case "Baljväxter":
-                                categoryList.addAll(dataHandler.getProducts(ProductCategory.POD));
-                                break;
                             case "Bröd":
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.BREAD));
-                                break;
-                            case "Bär":
-                                categoryList.addAll(dataHandler.getProducts(ProductCategory.BERRY));
                                 break;
                             case "Frukter":
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.CITRUS_FRUIT));
@@ -97,11 +91,13 @@ public class AppController implements Initializable {
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.ROOT_VEGETABLE));
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.FRUIT));
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.MELONS));
+                                categoryList.addAll(dataHandler.getProducts(ProductCategory.BERRY));
                                 break;
                             case "Grönsakser & Örtkryddor":
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.VEGETABLE_FRUIT));
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.CABBAGE));
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.HERB));
+                                categoryList.addAll(dataHandler.getProducts(ProductCategory.POD));
                                 break;
                             case "Pasta, Potatis & Ris":
                                 categoryList.addAll(dataHandler.getProducts(ProductCategory.PASTA));
