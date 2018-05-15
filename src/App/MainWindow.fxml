@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.AppController">
+<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
    <children>
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="198.0" prefWidth="1330.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -97,18 +97,18 @@
             </Label>
          </children>
       </GridPane>
-      <SplitPane dividerPositions="0.2129080118694362" layoutX="6.0" layoutY="199.0" prefHeight="491.0" prefWidth="1350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="199.0">
+      <SplitPane dividerPositions="0.22329376854599406" layoutX="6.0" layoutY="199.0" prefHeight="491.0" prefWidth="1350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="199.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="250.0">
                <children>
                   <ScrollPane prefHeight="492.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <VBox fx:id="vBox" prefHeight="489.0" prefWidth="262.0" spacing="15.0">
+                        <VBox fx:id="vBox" prefHeight="608.0" prefWidth="295.0" spacing="15.0">
                            <padding>
                               <Insets bottom="30.0" top="30.0" />
                            </padding>
                            <children>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Favoriter" textFill="RED">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="295.0" styleClass="catagory" text="Favoriter" textFill="RED">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
@@ -120,7 +120,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Bröd">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Bröd">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -129,7 +129,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Frukter">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Frukter">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -138,7 +138,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Grönsakser &amp; Örtkryddor">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Grönsakser &amp; Örtkryddor">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -147,7 +147,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Pasta, Potatis &amp; Ris">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Pasta, Potatis &amp; Ris">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -156,7 +156,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Drycker">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Drycker">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -165,7 +165,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Fisk &amp; Kött">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Fisk &amp; Kött">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -174,7 +174,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Mejeriprodukter">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Mejeriprodukter">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -183,7 +183,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Mjöl, Socker, Salt">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Mjöl, Socker, Salt">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -192,7 +192,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Nötter och frön">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Nötter och frön">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -201,7 +201,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="250.0" styleClass="catagory" text="Sötsaker">
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Sötsaker">
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

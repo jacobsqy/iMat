@@ -8,6 +8,75 @@ import java.util.List;
 
 public class BackendController {
 
+    // Backend
+    public static IMatDataHandler backend = IMatDataHandler.getInstance();
+
+    // Products
+
+    public static List<Product> getProduct(){
+        List<Product> products = backend.getProducts();
+        return products;
+    }
+
+    public static ArrayList<String> getProductNames() {
+        ArrayList<String> product = new ArrayList<>();
+        for (Product item: getProduct()) {
+            product.add(item.getName());
+        }
+        return product;
+    }
+
+    public static List<Product> getProductByCategory(String s) {
+
+        List<Product> l = new ArrayList<Product>();
+        switch (s) {
+            case "Favoriter":
+                l.addAll(backend.favorites());
+                break;
+            case "Bröd":
+                l.addAll(backend.getProducts(ProductCategory.BREAD));
+                break;
+            case "Frukter":
+                l.addAll(backend.getProducts(ProductCategory.CITRUS_FRUIT));
+                l.addAll(backend.getProducts(ProductCategory.EXOTIC_FRUIT));
+                l.addAll(backend.getProducts(ProductCategory.ROOT_VEGETABLE));
+                l.addAll(backend.getProducts(ProductCategory.FRUIT));
+                l.addAll(backend.getProducts(ProductCategory.MELONS));
+                l.addAll(backend.getProducts(ProductCategory.BERRY));
+                break;
+            case "Grönsakser & Örtkryddor":
+                l.addAll(backend.getProducts(ProductCategory.VEGETABLE_FRUIT));
+                l.addAll(backend.getProducts(ProductCategory.CABBAGE));
+                l.addAll(backend.getProducts(ProductCategory.HERB));
+                l.addAll(backend.getProducts(ProductCategory.POD));
+                break;
+            case "Pasta, Potatis & Ris":
+                l.addAll(backend.getProducts(ProductCategory.PASTA));
+                l.addAll(backend.getProducts(ProductCategory.POTATO_RICE));
+                break;
+            case "Drycker":
+                l.addAll(backend.getProducts(ProductCategory.HOT_DRINKS));
+                l.addAll(backend.getProducts(ProductCategory.COLD_DRINKS));
+                break;
+            case "Fisk & Kött":
+                l.addAll(backend.getProducts(ProductCategory.FISH));
+                l.addAll(backend.getProducts(ProductCategory.MEAT));
+                break;
+            case "Mejeriprodukter":
+                l.addAll(backend.getProducts(ProductCategory.DAIRIES));
+                break;
+            case "Mjöl, Socker, Salt":
+                l.addAll(backend.getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+                break;
+            case "Nötter och frön":
+                l.addAll(backend.getProducts(ProductCategory.NUTS_AND_SEEDS));
+                break;
+            case "Sötsaker":
+                l.addAll(backend.getProducts(ProductCategory.SWEET));
+                break;
+        }
+        return l;
+    }
     // Favorites
     public static void addAsFavorite(Product p) {
         IMatDataHandler.getInstance().addFavorite(p);

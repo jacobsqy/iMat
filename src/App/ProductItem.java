@@ -1,22 +1,20 @@
 package App;
 
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 import java.util.List;
+
+import static App.BackendController.backend;
 
 public class ProductItem extends AnchorPane {
 
@@ -33,29 +31,29 @@ public class ProductItem extends AnchorPane {
     Product product;
 
 
-    public ProductItem(Product product, IMatDataHandler dataHandler) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Product.fxml"));
+    public ProductItem(Product product) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         this.pic = new ProductItemController(this);
         this.product = product;
 
-        List<Product> favorite = dataHandler.favorites();
+        List<Product> favorite = backend.favorites();
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
 
-        imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + (dataHandler.isFavorite(product) ? "favorite.png":"favorite_empty.png"))));
+        imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + (backend.isFavorite(product) ? "favorite.png":"favorite_empty.png"))));
         imgFavorite.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                if (dataHandler.isFavorite(product)) {
-                    dataHandler.removeFavorite(product);
+                if (backend.isFavorite(product)) {
+                    backend.removeFavorite(product);
                     imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite_empty.png")));
                 } else {
-                    dataHandler.addFavorite(product.getProductId());
+                    backend.addFavorite(product.getProductId());
                     imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
                 }
             }
