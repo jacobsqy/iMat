@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
    <children>
       <VBox prefHeight="601.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -17,12 +16,6 @@
                <children>
                   <Label layoutX="198.0" layoutY="89.0" styleClass="text-normal" text="Vara" AnchorPane.topAnchor="90.0" />
                   <Label fx:id="shoppingCartLabel" layoutX="461.0" layoutY="21.0" styleClass="text-headlines" text="Varukorgen" AnchorPane.topAnchor="21.0" />
-                  <Button fx:id="continueToShopButton" layoutX="27.0" layoutY="24.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Fortsätt handla" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
-                     <styleClass>
-                        <String fx:value="text-normal" />
-                        <String fx:value="button-grey" />
-                     </styleClass>
-                  </Button>
                   <Label layoutX="648.0" layoutY="85.0" styleClass="text-normal" text="Antal" AnchorPane.rightAnchor="375.0" AnchorPane.topAnchor="90.0" />
                   <Label layoutX="805.0" layoutY="90.0" styleClass="text-normal" text="Pris" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="90.0" />
                   <Label layoutX="948.0" layoutY="87.0" styleClass="text-normal" text="Summa" AnchorPane.leftAnchor="850.0" AnchorPane.topAnchor="90.0" />
