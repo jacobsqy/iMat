@@ -1,43 +1,36 @@
 package App;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
+
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.VBox;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ProductCategory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
-import java.net.URL;
-import java.util.*;
+import java.util.Optional;
 
 import static App.BackendController.backend;
+import static App.ProductView.productItems;
 
-public class MainWindow implements Initializable {
+public class MainWindow {
     @FXML private TextField txtSearch;
     @FXML private ChoiceBox choiceBox;
-    @FXML private FlowPane productListFlowPane;
-    @FXML private VBox vBox;
+    @FXML private Button shoppingCardButton;
+    @FXML private Button continueToShopButton;
+    @FXML Label amountOfProducts, totalPrice;
 
-    private List<Product> productItems = new ArrayList<Product>();
-    private Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
+    @FXML private AnchorPane contentPane;
+    @FXML private AnchorPane productView;
+    @FXML private ProductView productViewController;
+    @FXML private AnchorPane shoppingView;
+    @FXML private ShoppingCartView shoppingViewController;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-        Platform.runLater(() ->txtSearch.requestFocus());
-
-        for (Product product : backend.getProducts()) {
-            ProductItem productItem = new ProductItem(product);
-            productMap.put(product.getName(), productItem);
-        }
+    public void initialize() {
 
         txtSearch.textProperty().addListener(((observable, oldValue, newValue) -> {
 
@@ -53,7 +46,7 @@ public class MainWindow implements Initializable {
                 }
                 choiceBox.show();
             }
-            updateList();
+            productViewController.updateList();
         }));
         choiceBox.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             if (choiceBox.getItems().size() > 0) {
@@ -63,36 +56,44 @@ public class MainWindow implements Initializable {
 
         }));
 
-        // will work on later, probably in another class, (this is for demonstration)
-        for (Node node: vBox.getChildren()) {
-            if (node instanceof Button) {
-                ((Button) node).setOnAction(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent event) {
+        shoppingCardButton.setVisible(true);
+        continueToShopButton.setVisible(false);
 
-                        for (Node node: vBox.getChildren()) {
-                            if (node instanceof Button) {
-                                ((Button) node).setStyle(null);
-                            }
-                        }
-
-                        ((Button) node).setStyle("-fx-background-color: black;\n" +
-                                "    -fx-text-fill: white;\n" +
-                                "    -fx-border-radius: 0, 0;\n" +
-                                "    -fx-border-insets: 1 1 1 1, 0;");
-
-                        productItems = BackendController.getProductByCategory(((Button) event.getSource()).getText());
-                        updateList();
-                    }
-                });
+        shoppingCardButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                toggleView();
+                continueToShopButton.setVisible(true);
+                shoppingCardButton.setVisible(false);
+                txtSearch.setVisible(false);
             }
-        }
+        });
+        continueToShopButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                toggleView();
+                shoppingCardButton.setVisible(true);
+                continueToShopButton.setVisible(false);
+                txtSearch.setVisible(true);
+            }
+        });
+        showView(productView);
+
     }
 
-    private void updateList() {
-        productListFlowPane.getChildren().clear();
-        for (Product product : productItems) {
-            productListFlowPane.getChildren().add(productMap.get(product.getName()));
-        }
+    private void showView(Node view) {
+        contentPane.getChildren().setAll(view);
+    }
+
+    private Optional<Node> getActiveView() {
+        ObservableList<Node> children = contentPane.getChildren();
+        return children.isEmpty() ? Optional.empty() : Optional.of(children.get(0));
+    }
+
+    private void toggleView() {
+        getActiveView().ifPresent(view -> {
+            if (view.equals(productView)) showView(shoppingView);
+            if (view.equals(shoppingView)) showView(productView);
+        });
     }
 }

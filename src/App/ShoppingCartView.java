@@ -5,13 +5,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
-public class ShoppingCartView extends AnchorPane {
+public class ShoppingCartView {
     @FXML private Label totalAmountLabel;
     @FXML private Label totalPriceLabel;
 
-    @FXML private void continueToShopButtonPressed() {
-        //TODO
-        // change the current view to the previous one
+    @FXML
+    public void initialize() {
+
     }
 
     @FXML private void toPaymentButtonPressed() {
