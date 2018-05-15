@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 
 import java.util.Optional;
 
@@ -25,7 +24,7 @@ public class MainWindow {
     @FXML private Button continueToShopButton;
     @FXML Label amountOfProducts, totalPrice;
 
-    @FXML private StackPane contentPane;
+    @FXML private AnchorPane contentPane;
     @FXML private AnchorPane productView;
     @FXML private ProductView productViewController;
     @FXML private AnchorPane shoppingView;

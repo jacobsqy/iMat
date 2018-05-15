@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
 
 <AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
    <children>
@@ -100,9 +99,9 @@
             </Label>
          </children>
       </GridPane>
-      <StackPane fx:id="contentPane" layoutY="194.0" prefHeight="652.0" prefWidth="1359.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0">
-         <fx:include fx:id="productView" source="ProductView.fxml" StackPane.alignment="TOP_LEFT" />
-         <fx:include fx:id="shoppingView" source="ShoppingCartView.fxml" StackPane.alignment="TOP_LEFT" />
-      </StackPane>
+      <AnchorPane fx:id="contentPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0">
+         <fx:include fx:id="productView" source="ProductView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         <fx:include fx:id="shoppingView" source="ShoppingCartView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </AnchorPane>
    </children>
 </AnchorPane>
