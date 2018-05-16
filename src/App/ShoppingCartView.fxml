@@ -15,7 +15,7 @@
          <children>
             <AnchorPane maxHeight="-Infinity" prefHeight="219.0" prefWidth="1057.0">
                <children>
-                  <Label layoutX="198.0" layoutY="89.0" styleClass="text-normal" text="Vara" AnchorPane.rightAnchor="820.0" AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="198.0" layoutY="89.0" styleClass="text-normal" text="Vara" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="90.0" />
                   <Label fx:id="shoppingCartLabel" layoutX="461.0" layoutY="21.0" styleClass="text-headlines" text="Varukorgen" AnchorPane.topAnchor="21.0" />
                   <Label layoutX="648.0" layoutY="85.0" styleClass="text-normal" text="Antal" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="90.0" />
                   <Label layoutX="805.0" layoutY="90.0" styleClass="text-normal" text="Pris" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="90.0" />
