@@ -15,15 +15,15 @@
             <Image url="@resources/imat/images/product_41.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="productNameLabel" layoutX="209.0" layoutY="63.0" prefHeight="17.0" prefWidth="288.0" styleClass="text-normal" text="Produktnamn" />
-      <Label fx:id="priceLabel" layoutX="703.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.leftAnchor="750.0" />
-      <Label fx:id="totalPriceLabel" layoutX="787.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.leftAnchor="850.0" />
-      <Button fx:id="deleteButton" layoutX="934.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#deleteButtonPressed" text="ta bort">
+      <Label fx:id="productNameLabel" layoutX="209.0" layoutY="63.0" prefHeight="20.0" prefWidth="261.0" styleClass="text-normal" text="Produktnamn" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="60.0" />
+      <Label fx:id="priceLabel" layoutX="703.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="60.0" />
+      <Label fx:id="totalPriceLabel" layoutX="787.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="60.0" />
+      <Button fx:id="deleteButton" layoutX="934.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#deleteButtonPressed" text="ta bort" AnchorPane.topAnchor="60.0">
          <styleClass>
             <String fx:value="button-red" />
             <String fx:value="text-normal" />
          </styleClass>
       </Button>
-      <Spinner fx:id="amountSpinner" layoutX="645.0" layoutY="60.0" onInputMethodTextChanged="#spinnerPressed" prefHeight="27.0" prefWidth="85.0" AnchorPane.rightAnchor="375.0" />
+      <Spinner fx:id="amountSpinner" layoutX="645.0" layoutY="60.0" onInputMethodTextChanged="#spinnerPressed" prefHeight="27.0" prefWidth="85.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>
