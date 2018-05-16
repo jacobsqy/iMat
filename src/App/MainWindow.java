@@ -32,6 +32,7 @@ public class MainWindow {
 
     public void initialize() {
 
+        // autocomplete sök, det som skrivs i textfield visas på en dropdown
         txtSearch.textProperty().addListener(((observable, oldValue, newValue) -> {
 
             productItems.clear();
@@ -56,6 +57,7 @@ public class MainWindow {
 
         }));
 
+        // knappen till varukorg/försätt handla visas eller döljs
         shoppingCardButton.setVisible(true);
         continueToShopButton.setVisible(false);
 
@@ -77,6 +79,7 @@ public class MainWindow {
                 txtSearch.setVisible(true);
             }
         });
+
         showView(productView);
 
     }

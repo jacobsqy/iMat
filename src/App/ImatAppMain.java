@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import static App.BackendController.backend;
+
 public class ImatAppMain extends Application {
 
     @Override
@@ -16,6 +18,15 @@ public class ImatAppMain extends Application {
         scene.getStylesheets().add(MainWindow.class.getResource("StyleSheet.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    /**
+     * sparar text filer innan programmet stängs
+     * @throws Exception
+     */
+    @Override
+    public void stop() throws Exception {
+        backend.shutDown();
     }
 
     public static void main(String[] args) {

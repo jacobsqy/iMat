@@ -45,6 +45,7 @@ public class ProductItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        // lägga till favoriter
         imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + (backend.isFavorite(product) ? "favorite.png":"favorite_empty.png"))));
         imgFavorite.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -59,6 +60,7 @@ public class ProductItem extends AnchorPane {
             }
         });
 
+        // hämta och sätta produkt properties till relaterande element
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + product.getImageName())));
         lblName.setText(product.getName());
         lblPrice.setText(product.getPrice() + " " + product.getUnit());

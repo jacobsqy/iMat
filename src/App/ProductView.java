@@ -20,22 +20,32 @@ public class ProductView {
 
     @FXML private FlowPane productListFlowPane;
     @FXML private VBox vBox;
+    @FXML private Button favButton;
 
     public static List<Product> productItems = new ArrayList<Product>();
     public static Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
 
     @FXML
     public void initialize() {
-        System.out.println("ProductView.initialize()");
 
+        // Applicationen startas med favoriter som standart
+        favButton.setStyle("-fx-background-color: black;\n" +
+                "    -fx-text-fill: white;\n" +
+                "    -fx-border-radius: 0, 0;\n" +
+                "    -fx-border-insets: 1 1 1 1, 0;");
+        productListFlowPane.getChildren().clear();
+        for (Product product : backend.favorites()) {
+            ProductItem productItem = new ProductItem(product);
+            productListFlowPane.getChildren().add(productItem);
+        }
+
+        // laddar all produkter till map
         for (Product product : backend.getProducts()) {
             ProductItem productItem = new ProductItem(product);
             productMap.put(product.getName(), productItem);
         }
-/*
 
-*/
-        // will work on later, probably in another class, (this is for demonstration)
+        // hämtar alla knappar och sätter listener, så att valda produkter visas på vyn
         for (Node node: vBox.getChildren()) {
             if (node instanceof Button) {
                 ((Button) node).setOnAction(new EventHandler<ActionEvent>() {
@@ -61,15 +71,13 @@ public class ProductView {
         }
     }
 
+    /**
+     * uppdaterar produkt vyn beroende på varor som ligger i map
+     */
     public void updateList() {
         productListFlowPane.getChildren().clear();
         for (Product product : productItems) {
             productListFlowPane.getChildren().add(productMap.get(product.getName()));
         }
-    }
-
-    @FXML
-    public void test(){
-        System.out.println("test");
     }
 }

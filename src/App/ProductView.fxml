@@ -24,7 +24,7 @@
                               <Insets bottom="30.0" top="30.0" />
                            </padding>
                            <children>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#test" prefHeight="38.0" prefWidth="295.0" styleClass="catagory" text="Favoriter" textFill="RED">
+                              <Button fx:id="favButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="295.0" styleClass="catagory" text="Favoriter" textFill="RED">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>

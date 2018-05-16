@@ -13,11 +13,19 @@ public class BackendController {
 
     // Products
 
+    /**
+     *  hämtar all produkter från txt filen och lägger dem i en list
+     * @return produkt list
+     */
     public static List<Product> getProduct(){
         List<Product> products = backend.getProducts();
         return products;
     }
 
+    /**
+     * hämtar produkt namn  i en lista
+     * @return produkt list med bara namn
+     */
     public static ArrayList<String> getProductNames() {
         ArrayList<String> product = new ArrayList<>();
         for (Product item: getProduct()) {
@@ -26,6 +34,11 @@ public class BackendController {
         return product;
     }
 
+    /**
+     * hämtar all produkter som ligger i samma katagoriet
+     * @param s katagori namn
+     * @return produkt list som ligger i samma katagoriet
+     */
     public static List<Product> getProductByCategory(String s) {
 
         List<Product> l = new ArrayList<Product>();
@@ -77,6 +90,7 @@ public class BackendController {
         }
         return l;
     }
+
     // Favorites
     public static void addAsFavorite(Product p) {
         IMatDataHandler.getInstance().addFavorite(p);
