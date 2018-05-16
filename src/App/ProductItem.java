@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.util.List;
 
 import static App.BackendController.backend;
+import static App.ProductView.favoriteList;
+import static App.ProductView.observableList;
 
 public class ProductItem extends AnchorPane {
 
@@ -27,8 +29,8 @@ public class ProductItem extends AnchorPane {
     @FXML private Button buttonIncrease;
     @FXML private Button buttonDecrease;
 
-    ProductItemController pic;
-    Product product;
+    private ProductItemController pic;
+    private Product product;
 
 
     public ProductItem(Product product) {
@@ -53,9 +55,11 @@ public class ProductItem extends AnchorPane {
                 if (backend.isFavorite(product)) {
                     backend.removeFavorite(product);
                     imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite_empty.png")));
+                    observableList.remove(product);
                 } else {
                     backend.addFavorite(product.getProductId());
                     imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
+                    favoriteList.add(product);
                 }
             }
         });
@@ -76,6 +80,9 @@ public class ProductItem extends AnchorPane {
         buttonIncrease.setOnAction(e -> pic.increaseCount());
     }
 
+    public void setImageToUnFav() {
+        imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite_empty.png")));
+    }
     public Label getLabelCount() {
         return labelCount;
     }

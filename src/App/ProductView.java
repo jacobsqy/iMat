@@ -1,10 +1,15 @@
 package App;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.Product;
@@ -22,28 +27,37 @@ public class ProductView {
     @FXML private VBox vBox;
     @FXML private Button favButton;
 
-    public static List<Product> productItems = new ArrayList<Product>();
+    public static List<Product> productList = new ArrayList<Product>();
     public static Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
 
-    @FXML
+    public static ArrayList<Product> favoriteList = new ArrayList<Product>();
+    public static ObservableList observableList = FXCollections.observableList(favoriteList);
+
     public void initialize() {
+
+        // laddar all produkter till map
+        for (Product product : backend.getProducts()) {
+            ProductItem productItem = new ProductItem(product);
+            productMap.put(product.getName(), productItem);
+            if (backend.isFavorite(product)) {
+                favoriteList.add(product);
+            }
+        }
 
         // Applicationen startas med favoriter som standart
         favButton.setStyle("-fx-background-color: black;\n" +
                 "    -fx-text-fill: white;\n" +
                 "    -fx-border-radius: 0, 0;\n" +
                 "    -fx-border-insets: 1 1 1 1, 0;");
-        productListFlowPane.getChildren().clear();
-        for (Product product : backend.favorites()) {
-            ProductItem productItem = new ProductItem(product);
-            productListFlowPane.getChildren().add(productItem);
-        }
 
-        // laddar all produkter till map
-        for (Product product : backend.getProducts()) {
-            ProductItem productItem = new ProductItem(product);
-            productMap.put(product.getName(), productItem);
-        }
+        updateFavoriteList();
+
+        observableList.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(Change c) {
+                updateFavoriteList();
+            }
+        });
 
         // hämtar alla knappar och sätter listener, så att valda produkter visas på vyn
         for (Node node: vBox.getChildren()) {
@@ -63,7 +77,8 @@ public class ProductView {
                                 "    -fx-border-radius: 0, 0;\n" +
                                 "    -fx-border-insets: 1 1 1 1, 0;");
 
-                        productItems = BackendController.getProductByCategory(((Button) event.getSource()).getText());
+                        String btn = ((Button) node).getText();
+                        productList = BackendController.getProductByCategory(btn);
                         updateList();
                     }
                 });
@@ -76,8 +91,23 @@ public class ProductView {
      */
     public void updateList() {
         productListFlowPane.getChildren().clear();
-        for (Product product : productItems) {
+        for (Product product : productList) {
             productListFlowPane.getChildren().add(productMap.get(product.getName()));
+            if(!backend.isFavorite(product)) productMap.get(product.getName()).setImageToUnFav();
+        }
+        productList.clear();
+    }
+
+    /**
+     * tar bort och updaterar favorit item från vyn om favorite knapp stylat med svart bakgrund
+     */
+    private void updateFavoriteList() {
+        if (favButton.getStyle().contains("black")) {
+            productListFlowPane.getChildren().clear();
+            for (Product product : favoriteList) {
+                ProductItem productItem = new ProductItem(product);
+                productListFlowPane.getChildren().add(productItem);
+            }
         }
     }
 }

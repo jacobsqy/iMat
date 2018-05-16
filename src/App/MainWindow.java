@@ -15,34 +15,37 @@ import javafx.scene.layout.AnchorPane;
 import java.util.Optional;
 
 import static App.BackendController.backend;
-import static App.ProductView.productItems;
+import static App.ProductView.productList;
 
 public class MainWindow {
     @FXML private TextField txtSearch;
     @FXML private ChoiceBox choiceBox;
-    @FXML private Button shoppingCardButton;
-    @FXML private Button continueToShopButton;
-    @FXML Label amountOfProducts, totalPrice;
+    @FXML private Button shoppingCardButton,
+            helpButton,
+            historyButton,
+            continueToShopButton;
 
-    @FXML private AnchorPane contentPane;
-    @FXML private AnchorPane productView;
-    @FXML private ProductView productViewController;
-    @FXML private AnchorPane shoppingView;
-    @FXML private ShoppingCartView shoppingViewController;
+    @FXML Label amountOfProducts,
+            totalPrice;
+
+    @FXML private AnchorPane contentPane,
+            productView,
+            shoppingView;
+
+    private ProductView productViewController;
+    private ShoppingCartView shoppingViewController;
 
     public void initialize() {
 
         // autocomplete sök, det som skrivs i textfield visas på en dropdown
         txtSearch.textProperty().addListener(((observable, oldValue, newValue) -> {
 
-            productItems.clear();
-
             choiceBox.getItems().clear();
             if(!newValue.isEmpty()) {
                 for(String item:BackendController.getProductNames()) {
                     if(item.toLowerCase().startsWith(newValue.toLowerCase())) {
                         choiceBox.getItems().add(item);
-                        productItems.addAll(backend.findProducts(item));
+                        productList.addAll(backend.findProducts(item));
                     }
                 }
                 choiceBox.show();

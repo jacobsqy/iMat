@@ -9,7 +9,6 @@ public class ShoppingCartView {
     @FXML private Label totalAmountLabel;
     @FXML private Label totalPriceLabel;
 
-    @FXML
     public void initialize() {
 
     }
