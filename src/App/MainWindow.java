@@ -10,6 +10,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.CartEvent;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
+
+import javax.swing.text.html.ImageView;
+import java.text.DecimalFormat;
 
 public class MainWindow {
     @FXML private TextField txtSearch;
@@ -17,7 +23,7 @@ public class MainWindow {
     @FXML private Button shoppingCartButton;
     @FXML private Button helpButton;
     @FXML private Button continueToShopButton;
-    @FXML Label amountOfProducts, totalPrice;
+    @FXML private Label amountOfProducts, totalPrice;
 
     @FXML private AnchorPane contentPane;
     @FXML private AnchorPane productView;
@@ -91,10 +97,23 @@ public class MainWindow {
             }
         });
 
+        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                System.out.println("wow");
+                updateInfo();
+            }
+        });
 
 
         contentPane.getChildren().setAll(productView);
 
+    }
+
+    private void updateInfo() {
+        System.out.println("super cool");
+        amountOfProducts.setText(new DecimalFormat("#.##").format(BackendController.getTotalProductAmount()));
+        totalPrice.setText(new DecimalFormat("#.##").format(BackendController.getTotalPrice()));
     }
 
     public void changeToPaymentView(){

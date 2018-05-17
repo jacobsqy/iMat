@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
+<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
    <children>
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="198.0" prefWidth="1330.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -87,12 +87,12 @@
                   <Insets left="50.0" top="40.0" />
                </GridPane.margin>
             </Label>
-            <Label text="5 st." GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="amountOfProducts" text="5 st." GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="150.0" top="-30.0" />
                </GridPane.margin>
             </Label>
-            <Label text="150 kr." GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="totalPrice" text="150 kr." GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="150.0" top="40.0" />
                </GridPane.margin>
