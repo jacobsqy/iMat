@@ -30,7 +30,8 @@ public class MainWindow {
 
     @FXML private AnchorPane contentPane,
             productView,
-            shoppingView;
+            shoppingView,
+            helpView;
 
     private ProductView productViewController;
     private ShoppingCartView shoppingViewController;
@@ -67,7 +68,7 @@ public class MainWindow {
         shoppingCardButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                toggleView();
+                contentPane.getChildren().setAll(shoppingView);
                 continueToShopButton.setVisible(true);
                 shoppingCardButton.setVisible(false);
                 txtSearch.setVisible(false);
@@ -76,30 +77,26 @@ public class MainWindow {
         continueToShopButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                toggleView();
+                contentPane.getChildren().setAll(productView);
                 shoppingCardButton.setVisible(true);
                 continueToShopButton.setVisible(false);
+                helpButton.setDisable(false);
                 txtSearch.setVisible(true);
             }
         });
-
-        showView(productView);
-
-    }
-
-    private void showView(Node view) {
-        contentPane.getChildren().setAll(view);
-    }
-
-    private Optional<Node> getActiveView() {
-        ObservableList<Node> children = contentPane.getChildren();
-        return children.isEmpty() ? Optional.empty() : Optional.of(children.get(0));
-    }
-
-    private void toggleView() {
-        getActiveView().ifPresent(view -> {
-            if (view.equals(productView)) showView(shoppingView);
-            if (view.equals(shoppingView)) showView(productView);
+        helpButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                contentPane.getChildren().setAll(helpView);
+                continueToShopButton.setVisible(true);
+                shoppingCardButton.setVisible(false);
+                helpButton.setDisable(true);
+                txtSearch.setVisible(false);
+            }
         });
+
+        contentPane.getChildren().setAll(productView);
+
     }
+
 }
