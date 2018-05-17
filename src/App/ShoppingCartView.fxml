@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
    <children>
       <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
       <VBox prefHeight="601.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" prefHeight="219.0" prefWidth="1057.0">
+            <AnchorPane maxHeight="-Infinity" onMouseClicked="#toPaymentButtonPressed" prefHeight="219.0" prefWidth="1057.0">
                <children>
                   <Label layoutX="198.0" layoutY="89.0" styleClass="text-normal" text="Vara" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="90.0" />
                   <Label fx:id="shoppingCartLabel" layoutX="461.0" layoutY="21.0" styleClass="text-headlines" text="Varukorgen" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="15.0" />
@@ -40,19 +40,19 @@
                         <AnchorPane prefHeight="200.0" prefWidth="1059.0">
                            <children>
                               <Label layoutX="40.0" layoutY="22.0" styleClass="text-normal" text="Totalt:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalAmountLabel" layoutX="630.0" layoutY="42.0" styleClass="text-normal" text="x st" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalAmountLabel" layoutX="630.0" layoutY="42.0" styleClass="text-normal" text="x st" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="20.0" />
                               <Label fx:id="totalPrizeLabel" layoutX="900.0" layoutY="39.0" prefWidth="35.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="104.0" prefWidth="1059.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Töm varukorgen" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+                              <Button fx:id="clearShoppingcartButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Töm varukorgen" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
                                  <styleClass>
                                     <String fx:value="text-normal" />
                                     <String fx:value="button-red" />
                                  </styleClass>
                               </Button>
-                              <Button layoutX="226.0" layoutY="8.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Till betalning" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                              <Button fx:id="toPaymentButton" layoutX="226.0" layoutY="8.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Till betalning" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
                                  <styleClass>
                                     <String fx:value="text-normal" />
                                     <String fx:value="button-green" />

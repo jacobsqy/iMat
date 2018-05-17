@@ -28,6 +28,7 @@ public class MainWindow {
     @FXML private ProductView productViewController;
     @FXML private AnchorPane shoppingView;
     @FXML private AnchorPane helpView;
+    @FXML private AnchorPane paymentView;
     @FXML private ShoppingCartView shoppingViewController;
 
     public void initialize() {
@@ -89,6 +90,8 @@ public class MainWindow {
                 txtSearch.setVisible(false);
             }
         });
+
+
 
         contentPane.getChildren().setAll(productView);
 
