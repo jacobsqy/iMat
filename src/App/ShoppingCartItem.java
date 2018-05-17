@@ -2,6 +2,7 @@ package App;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
@@ -15,9 +16,11 @@ import java.io.IOException;
 public class ShoppingCartItem extends AnchorPane {
     @FXML private ImageView productImage;
     @FXML private Label productNameLabel;
-    @FXML private Spinner<Integer> amountSpinner;
     @FXML private Label priceLabel;
     @FXML private Label totalPriceLabel;
+    @FXML private Label labelCount;
+    @FXML private Button buttonDecrease;
+    @FXML private Button buttonIncrease;
     private ShoppingCartView parentView;
 
     private ShoppingItem shoppingItem;
@@ -36,14 +39,7 @@ public class ShoppingCartItem extends AnchorPane {
 
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productNameLabel.setText(shoppingItem.getProduct().getName());
-        updatePrice();
-
-        SpinnerValueFactory<Integer> valueFactory =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, (int) shoppingItem.getAmount(), 1);
-        amountSpinner.setValueFactory(valueFactory);
-        amountSpinner.setEditable(true);
-        amountSpinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
-
+        updateInfo();
 
     }
 
@@ -51,20 +47,26 @@ public class ShoppingCartItem extends AnchorPane {
         this.parentView = parentView;
     }
 
-    private void updatePrice() {
+    private void updateInfo() {
         priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
-        totalPriceLabel.setText(String.valueOf(shoppingItem.getTotal()));
+        totalPriceLabel.setText(String.valueOf(Math.round(shoppingItem.getTotal())));
+        labelCount.setText(String.valueOf(Math.round(shoppingItem.getAmount())));
     }
 
     @FXML private void deleteButtonPressed() {
-        System.out.println("super important output");
         BackendController.removeFromCart(shoppingItem);
         parentView.updateList();
 
     }
 
-    @FXML private void spinnerPressed() {
-        shoppingItem.setAmount(amountSpinner.getValue());
-        updatePrice();
+    @FXML private void increaseButtonPressed() {
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
+        parentView.updateList();
+        updateInfo();
+    }
+
+    @FXML private void decreaseButtonPressed() {
+        shoppingItem.setAmount(shoppingItem.getAmount() - 1);
+        parentView.updateList();
     }
 }
