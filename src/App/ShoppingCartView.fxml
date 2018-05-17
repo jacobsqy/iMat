@@ -41,7 +41,7 @@
                            <children>
                               <Label layoutX="40.0" layoutY="22.0" styleClass="text-normal" text="Totalt:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
                               <Label fx:id="totalAmountLabel" layoutX="630.0" layoutY="42.0" styleClass="text-normal" text="x st" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalPrizeLabel" layoutX="900.0" layoutY="39.0" prefWidth="35.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalPriceLabel" layoutX="900.0" layoutY="39.0" prefWidth="35.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="104.0" prefWidth="1059.0">
