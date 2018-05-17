@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.media.MediaView?>
 
-<AnchorPane prefHeight="599.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.HelpView">
+<AnchorPane prefHeight="599.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.HelpView">
    <children>
-      <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
-      <Label layoutX="545.0" layoutY="14.0" prefHeight="60.0" prefWidth="170.0" styleClass="text-normal" text="Kontakta oss:&#10;epost: imat@imat.se&#10;telefon: 031-123 456" wrapText="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="15.0" />
-      <Label layoutX="264.0" layoutY="16.0" styleClass="text-headlines" text="Hjälp" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="15.0" />
-      <Label layoutX="14.0" layoutY="99.0" styleClass="text-normal" text="Såhär handlar du:" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="85.0" />
-      <Label layoutX="209.0" layoutY="89.0" styleClass="text-normal" text="Vanliga frågor:" AnchorPane.leftAnchor="510.0" AnchorPane.topAnchor="85.0" />
-      <TextArea editable="false" layoutX="202.0" layoutY="119.0" prefHeight="271.0" prefWidth="393.0" styleClass="text-normal" text="1. Hur lägger jag till en vara i varukorgen?&#10;&#9;Genom att klicka på den gröna knappen&#10;&#9;med texten &quot;lägg till i varukorgen&quot; vid&#10;&#9;varan, så lägga varan till i varukorgen.&#10;&#10;2. Binder man upp sig på något sätt?&#10;&#9;Nej, det finns inga abonnemang eller &#10;&#9;bindningstider på iMat. Du handlar när du &#10;&#9;vill, helt utan förpliktelser.&#10;&#10;3. Var levererar iMat?&#10;&#9;Vi levererar till hela Sverige, med en &#10;&#9;dags leveranstid.&#10;&#10;4. Hur transporteras mina varor?&#10;&#9;Din beställning transporteras väl &#10;&#9;paketerad i våra kylbilar." wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="110.0" />
-      <MediaView fitHeight="180.0" fitWidth="180.0" layoutX="14.0" layoutY="120.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="120.0" />
+      <Label layoutX="91.0" layoutY="64.0" styleClass="text-headlines" text="Vanliga frågor:" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="98.0" layoutY="127.0" styleClass="text-arrows" text="Hur lägger jag till en vara i varukorgen?" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="135.0" />
+      <TextArea layoutX="88.0" layoutY="154.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så läggs varan till i varukorgen." wrapText="true" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="160.0">
+         <styleClass>
+            <String fx:value="text-normal" />
+            <String fx:value="text-area" />
+         </styleClass>
+      </TextArea>
+      <Label layoutX="705.0" layoutY="134.0" styleClass="text-arrows" text="Hur lägger jag till en vara i varukorgen?" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="135.0" />
+      <TextArea layoutX="695.0" layoutY="161.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så lägga varan till i varukorgen." wrapText="true" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="160.0">
+         <styleClass>
+            <String fx:value="text-normal" />
+            <String fx:value="text-area" />
+         </styleClass>
+      </TextArea>
+      <Label layoutX="179.0" layoutY="273.0" styleClass="text-arrows" text="Var levererar iMat?" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="260.0" />
+      <TextArea layoutX="169.0" layoutY="300.0" prefHeight="70.0" prefWidth="468.0" text="Vi levererar till hela Sverige, med en dags leveranstid." wrapText="true" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="285.0">
+         <styleClass>
+            <String fx:value="text-normal" />
+            <String fx:value="text-area" />
+         </styleClass>
+      </TextArea>
+      <Label layoutX="839.0" layoutY="268.0" styleClass="text-arrows" text="Hur lägger jag till en vara i varukorgen?" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="260.0" />
+      <TextArea layoutX="829.0" layoutY="295.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så lägga varan till i varukorgen." wrapText="true" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="285.0">
+         <styleClass>
+            <String fx:value="text-normal" />
+            <String fx:value="text-area" />
+         </styleClass>
+      </TextArea>
+      <ImageView fitHeight="82.0" fitWidth="61.0" layoutX="101.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="250.0">
+         <image>
+            <Image url="@resources/imat/images/phone-hi.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="171.0" layoutY="448.0" styleClass="text-arrows" text="Telefonnummer:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="320.0" />
+      <Label layoutX="171.0" layoutY="471.0" styleClass="text-arrows" text="031-123 456" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="320.0" />
+      <ImageView fitHeight="81.0" fitWidth="110.0" layoutX="535.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="560.0">
+         <image>
+            <Image url="@resources/imat/images/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="578.0" layoutY="448.0" styleClass="text-arrows" text="Epost:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="675.0" AnchorPane.rightAnchor="621.0" />
+      <Label layoutX="570.0" layoutY="477.0" styleClass="text-arrows" text="imat@imat.se" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="675.0" AnchorPane.rightAnchor="560.0" />
+      <ImageView fitHeight="87.0" fitWidth="86.0" layoutX="860.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="380.0">
+         <image>
+            <Image url="@resources/imat/images/house.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="964.0" layoutY="455.0" styleClass="text-arrows" text="Besöksadress:" AnchorPane.bottomAnchor="135.0" AnchorPane.rightAnchor="250.0" />
+      <Label layoutX="956.0" layoutY="484.0" styleClass="text-arrows" text="Imatvägen 1" AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="270.0" />
+      <Label layoutX="956.0" layoutY="508.0" styleClass="text-arrows" text="123 45 Imat" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="273.0" />
    </children>
 </AnchorPane>
