@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" type="AnchorPane">
    <children>
       <ImageView fx:id="productImage" fitHeight="140.0" fitWidth="140.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
          <image>
@@ -26,4 +26,4 @@
       </Button>
       <Spinner fx:id="amountSpinner" layoutX="645.0" layoutY="60.0" onInputMethodTextChanged="#spinnerPressed" prefHeight="27.0" prefWidth="85.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="60.0" />
    </children>
-</AnchorPane>
+</fx:root>
