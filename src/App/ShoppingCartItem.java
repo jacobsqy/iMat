@@ -22,8 +22,9 @@ public class ShoppingCartItem extends AnchorPane {
     private ShoppingItem shoppingItem;
 
     public ShoppingCartItem(ShoppingItem shoppingItem) {
+        this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ShoppingCartItem.fxml"));
-        fxmlLoader.setRoot(this);
+        //fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {
@@ -32,7 +33,7 @@ public class ShoppingCartItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        productImage.setImage(new Image("resources/imat/images/" + shoppingItem.getProduct().getImageName()));
+        productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productNameLabel.setText(shoppingItem.getProduct().getName());
         updatePrice();
 
@@ -42,7 +43,7 @@ public class ShoppingCartItem extends AnchorPane {
         amountSpinner.setEditable(true);
         amountSpinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
 
-        this.shoppingItem = shoppingItem;
+
     }
 
     private void updatePrice() {
