@@ -26,9 +26,7 @@ public class ShoppingCartView {
     //private List<Integer> productIdList = new LinkedList<>();
     //TODO
 
-    public ShoppingCartView(MainWindow parentController) {
-        this.parentController = parentController;
-    }
+
 
     public void initialize() {
         // add all shoppingCartItems to a Map
@@ -54,6 +52,9 @@ public class ShoppingCartView {
         }
     }
 
+    public void setParentController(MainWindow parentController) {
+        this.parentController = parentController;
+    }
 
     @FXML private void toPaymentButtonPressed() {
         // TODO

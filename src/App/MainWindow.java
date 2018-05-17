@@ -29,6 +29,8 @@ public class MainWindow {
 
     public void initialize() {
 
+        shoppingViewController.setParentController(this);
+
         Platform.runLater(() -> txtSearch.requestFocus());
 
         // autocomplete sök, det som skrivs i textfield visas på en dropdown
@@ -94,4 +96,11 @@ public class MainWindow {
 
     }
 
+    public void changeToPaymentView(){
+        contentPane.getChildren().setAll(paymentView);
+        continueToShopButton.setVisible(true);
+        shoppingCartButton.setVisible(false);
+        helpButton.setDisable(true);
+        txtSearch.setVisible(false);
+    }
 }
