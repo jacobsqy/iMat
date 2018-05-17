@@ -11,23 +11,64 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="80.0">
-                     <image>
-                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="80.0">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
                      <image>
                         <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.26.48.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="80.0">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="243.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="481.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="763.0" layoutY="90.0" styleClass="text-arrows" text="Slutför köp" textFill="WHITE" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
+                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" text="Bekräfta köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <styleClass>
+                        <String fx:value="button-green" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+                     <styleClass>
+                        <String fx:value="text-normal" />
+                        <String fx:value="button-red" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="201.0" layoutY="167.0" styleClass="text-headlines" text="Kontrollera dina uppgifter &amp; bekräfta köp" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="130.0" />
+                  <Label layoutX="96.0" layoutY="276.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="190.0" />
+                  <Label layoutX="448.0" layoutY="276.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="190.0" />
+                  <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="190.0" />
+                  <TextArea editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0" />
+                  <TextArea editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0" />
+                  <TextArea editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.26.48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
                      <image>
                         <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
@@ -44,94 +85,55 @@
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <Label layoutX="239.0" layoutY="377.0" text="CVC:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="380.0" />
-                  <Label layoutX="235.0" layoutY="308.0" text="Kortnummer:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="320.0" />
-                  <Label layoutX="231.0" layoutY="262.0" text="Kortinnehavarens namn:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="260.0" />
-                  <Label layoutX="238.0" layoutY="422.0" text="Utgångsdatum (Månad/År):" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="440.0" />
-                  <TextField layoutX="450.0" layoutY="373.0" minWidth="70.0" prefHeight="27.0" prefWidth="32.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="380.0" />
-                  <TextField layoutX="443.0" layoutY="317.0" prefWidth="125.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="320.0" />
-                  <TextField layoutX="444.0" layoutY="258.0" prefWidth="530.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="260.0" />
-                  <Label layoutX="486.0" layoutY="175.0" styleClass="text-headlines" text="Fyll i kortuppgifter" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="180.0" />
-                  <ChoiceBox layoutX="475.0" layoutY="427.0" prefWidth="150.0" AnchorPane.leftAnchor="350.0" />
-                  <ChoiceBox layoutX="705.0" layoutY="427.0" prefHeight="27.0" prefWidth="100.0" AnchorPane.leftAnchor="520.0" />
-                  <Label layoutX="483.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" textFill="WHITE" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="92.0" />
-                  <Label layoutX="224.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="92.0" />
-                  <Label layoutX="763.0" layoutY="96.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="92.0" />
-                  <TextField layoutX="587.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="320.0" />
-                  <TextField layoutX="796.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="755.0" AnchorPane.topAnchor="320.0" />
-                  <TextField layoutX="437.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="320.0" />
+                  <Label layoutX="414.0" layoutY="318.0" styleClass="text-normal" text="CVC:" AnchorPane.leftAnchor="414.0" AnchorPane.topAnchor="318.0" />
+                  <Label layoutX="354.0" layoutY="265.0" styleClass="text-normal" text="Kortnummer:" AnchorPane.leftAnchor="354.0" AnchorPane.topAnchor="265.0" />
+                  <Label layoutX="275.0" layoutY="203.0" styleClass="text-normal" text="Kortinnehavarens namn:" AnchorPane.leftAnchor="275.0" AnchorPane.topAnchor="203.0" />
+                  <Label layoutX="341.0" layoutY="383.0" styleClass="text-normal" text="Utgångsdatum:" AnchorPane.leftAnchor="341.0" AnchorPane.topAnchor="383.0" />
+                  <TextField layoutX="450.0" layoutY="373.0" minWidth="70.0" prefHeight="27.0" prefWidth="32.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
+                  <TextField layoutX="443.0" layoutY="317.0" prefWidth="125.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
+                  <TextField layoutX="444.0" layoutY="258.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
+                  <Label layoutX="486.0" layoutY="175.0" styleClass="text-headlines" text="Fyll i kortuppgifter" AnchorPane.leftAnchor="535.0" AnchorPane.topAnchor="130.0" />
+                  <ChoiceBox layoutX="475.0" layoutY="427.0" prefWidth="150.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="395.0" />
+                  <ChoiceBox layoutX="705.0" layoutY="427.0" prefHeight="27.0" prefWidth="100.0" AnchorPane.leftAnchor="660.0" AnchorPane.topAnchor="395.0" />
+                  <Label layoutX="483.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" textFill="WHITE" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="224.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="763.0" layoutY="96.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
+                  <TextField layoutX="587.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="260.0" />
+                  <TextField layoutX="796.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="885.0" AnchorPane.topAnchor="260.0" />
+                  <TextField layoutX="437.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="615.0" AnchorPane.topAnchor="260.0" />
+                  <Label layoutX="418.0" layoutY="385.0" styleClass="text-normal" text="Månad:" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="370.0" />
+                  <Label layoutX="648.0" layoutY="385.0" styleClass="text-normal" text="År:" AnchorPane.leftAnchor="665.0" AnchorPane.topAnchor="370.0" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="80.0">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
                      <image>
                         <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.26.48.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="80.0">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="50.0">
                      <image>
                         <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="80.0">
-                     <image>
-                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="243.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="92.0" />
-                  <Label layoutX="481.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="92.0" />
-                  <Label layoutX="763.0" layoutY="90.0" styleClass="text-arrows" text="Slutför köp" textFill="WHITE" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="92.0" />
-                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" text="Bekräfta köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
-                     <styleClass>
-                        <String fx:value="button-green" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
-                     <styleClass>
-                        <String fx:value="text-normal" />
-                        <String fx:value="button-red" />
-                     </styleClass>
-                  </Button>
-                  <Label layoutX="201.0" layoutY="167.0" styleClass="text-headlines" text="Kontrollera dina uppgifter &amp; bekräfta köp" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="180.0" />
-                  <Label layoutX="96.0" layoutY="276.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="240.0" />
-                  <Label layoutX="448.0" layoutY="276.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="240.0" />
-                  <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="240.0" />
-                  <TextArea editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="280.0" />
-                  <TextArea editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="280.0" />
-                  <TextArea editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="280.0" />
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
-               <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="80.0">
-                     <image>
-                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="80.0">
-                     <image>
-                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.26.48.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="80.0">
-                     <image>
-                        <Image url="@../../../../Desktop/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
-                     </image>
-                  </ImageView>
-                  <Label styleClass="text-normal" text="Namn:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="260.0" />
-                  <Label styleClass="text-normal" text="Adress:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="320.0" />
-                  <Label styleClass="text-normal" text="Postnummer:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="380.0" />
-                  <Label styleClass="text-normal" text="Postort:" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="440.0" />
-                  <TextField prefHeight="27.0" prefWidth="500.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="260.0" />
-                  <TextField prefHeight="27.0" prefWidth="500.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="320.0" />
-                  <TextField prefHeight="27.0" prefWidth="500.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="380.0" />
-                  <TextField prefHeight="27.0" prefWidth="500.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="440.0" />
-                  <Label styleClass="text-headlines" text="Fyll i uppgifter" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="180.0" />
-                  <Label styleClass="text-arrows" text="Uppgifter" textFill="WHITE" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="92.0" />
-                  <Label styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="92.0" />
-                  <Label styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="92.0" />
+                  <Label alignment="CENTER" styleClass="text-normal" text="Namn:" textAlignment="RIGHT" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="200.0" />
+                  <Label alignment="CENTER" contentDisplay="RIGHT" styleClass="text-normal" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="260.0" />
+                  <Label styleClass="text-normal" text="Postnummer:" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="320.0" />
+                  <Label styleClass="text-normal" text="Postort:" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="380.0" />
+                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
+                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
+                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
+                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="380.0" />
+                  <Label styleClass="text-headlines" text="Fyll i uppgifter" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="130.0" />
+                  <Label styleClass="text-arrows" text="Uppgifter" textFill="WHITE" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="65.0" />
+                  <Label styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="901.0" layoutY="60.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
                   <Button mnemonicParsing="false" text="Tillbaka" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
                      <styleClass>
                         <String fx:value="button-grey" />
