@@ -24,7 +24,7 @@ public class ShoppingCartItem extends AnchorPane {
     public ShoppingCartItem(ShoppingItem shoppingItem) {
         this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ShoppingCartItem.fxml"));
-        //fxmlLoader.setRoot(this);
+        fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {

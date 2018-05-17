@@ -39,7 +39,7 @@
                   <Insets top="80.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="shoppingCardButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="224.0" style="-fx-background-color: green;" text="Till Varukorgen" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="shoppingCartButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="224.0" style="-fx-background-color: green;" text="Till Varukorgen" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
