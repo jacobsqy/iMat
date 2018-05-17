@@ -60,13 +60,16 @@ public class ShoppingCartItem extends AnchorPane {
     }
 
     @FXML private void increaseButtonPressed() {
+        if (shoppingItem.getAmount() >= 99) return;
         shoppingItem.setAmount(shoppingItem.getAmount() + 1);
         parentView.updateList();
         updateInfo();
     }
 
     @FXML private void decreaseButtonPressed() {
+        if (shoppingItem.getAmount() <= 1) return;
         shoppingItem.setAmount(shoppingItem.getAmount() - 1);
         parentView.updateList();
+        updateInfo();
     }
 }
