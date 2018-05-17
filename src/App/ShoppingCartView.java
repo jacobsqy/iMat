@@ -42,6 +42,7 @@ public class ShoppingCartView {
         List<ShoppingCartItem> shoppingCartItemList = new ArrayList<>();
         for (ShoppingItem shoppingItem : backend.getShoppingCart().getItems()) {
             ShoppingCartItem shoppingCartItem = new ShoppingCartItem(shoppingItem);
+            shoppingCartItem.setParentView(this);
             shoppingCartItemList.add(shoppingCartItem);
             //shoppingCartItemMap.put(shoppingItem.getProduct().getProductId(), shoppingCartItem);
             //productIdList.add(shoppingItem.getProduct().getProductId());
@@ -64,5 +65,6 @@ public class ShoppingCartView {
 
     @FXML private void emptyShoppingCartButtonPressed() {
         BackendController.emptyShoppingCart();
+        updateList();
     }
 }

@@ -135,7 +135,9 @@ public class BackendController {
     //compare to removeFromCart(Product)
     public static void removeFromCart(ShoppingItem itemToRemove) {
         List<ShoppingItem> list = IMatDataHandler.getInstance().getShoppingCart().getItems();
-        for (ShoppingItem shoppingItem : list) {
+        ShoppingItem shoppingItem;
+        for (int i = 0; i < list.size(); i++) {
+            shoppingItem = list.get(i);
             if (shoppingItem.getProduct().getName().equals(itemToRemove.getProduct().getName())) {
                 IMatDataHandler.getInstance().getShoppingCart().removeItem(itemToRemove);
             }

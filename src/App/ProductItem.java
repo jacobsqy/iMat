@@ -57,7 +57,7 @@ public class ProductItem extends AnchorPane {
                     observableList.remove(product);
                 } else {
                     backend.addFavorite(product.getProductId());
-                    setImageToUnFav();
+                    imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
                     favoriteList.add(product);
                 }
             }

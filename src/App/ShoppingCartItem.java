@@ -18,6 +18,7 @@ public class ShoppingCartItem extends AnchorPane {
     @FXML private Spinner<Integer> amountSpinner;
     @FXML private Label priceLabel;
     @FXML private Label totalPriceLabel;
+    private ShoppingCartView parentView;
 
     private ShoppingItem shoppingItem;
 
@@ -46,13 +47,20 @@ public class ShoppingCartItem extends AnchorPane {
 
     }
 
+    public void setParentView(ShoppingCartView parentView) {
+        this.parentView = parentView;
+    }
+
     private void updatePrice() {
         priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
         totalPriceLabel.setText(String.valueOf(shoppingItem.getTotal()));
     }
 
     @FXML private void deleteButtonPressed() {
+        System.out.println("super important output");
         BackendController.removeFromCart(shoppingItem);
+        parentView.updateList();
+
     }
 
     @FXML private void spinnerPressed() {
