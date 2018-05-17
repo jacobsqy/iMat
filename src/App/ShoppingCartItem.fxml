@@ -7,24 +7,24 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1200.0" stylesheets="@StyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="productImage" fitHeight="140.0" fitWidth="140.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+      <ImageView fx:id="productImage" fitHeight="60.0" fitWidth="117.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="10.0">
          <image>
             <Image url="@resources/imat/images/product_41.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="productNameLabel" layoutX="209.0" layoutY="63.0" prefHeight="20.0" prefWidth="261.0" styleClass="text-normal" text="Produktnamn" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="60.0" />
-      <Label fx:id="priceLabel" layoutX="703.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="60.0" />
-      <Label fx:id="totalPriceLabel" layoutX="787.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="60.0" />
-      <Button fx:id="deleteButton" layoutX="934.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#deleteButtonPressed" text="ta bort" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="60.0">
+      <Label fx:id="productNameLabel" layoutX="209.0" layoutY="63.0" prefHeight="20.0" prefWidth="261.0" styleClass="text-normal" text="Produktnamn" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="30.0" />
+      <Label fx:id="priceLabel" layoutX="703.0" layoutY="66.0" styleClass="text-normal" text="x kr" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="30.0" />
+      <Label fx:id="totalPriceLabel" layoutX="948.0" layoutY="30.0" styleClass="text-normal" text="x kr" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="30.0" />
+      <Button fx:id="deleteButton" layoutX="934.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#deleteButtonPressed" text="ta bort" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="25.0">
          <styleClass>
             <String fx:value="button-red" />
             <String fx:value="text-normal" />
          </styleClass>
       </Button>
-      <Label fx:id="labelCount" alignment="CENTER" contentDisplay="CENTER" layoutX="324.0" layoutY="162.0" text="1" textAlignment="CENTER" translateX="200.0" translateY="-100.0" />
-      <Button fx:id="buttonIncrease" layoutX="338.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#increaseButtonPressed" prefHeight="7.0" prefWidth="6.0" text="+" translateX="200.0" translateY="-100.0" />
-      <Button fx:id="buttonDecrease" layoutX="289.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#decreaseButtonPressed" prefHeight="17.0" prefWidth="26.0" text="-" translateX="200.0" translateY="-100.0" />
+      <Label fx:id="labelCount" alignment="CENTER" contentDisplay="CENTER" layoutX="324.0" layoutY="162.0" text="1" textAlignment="CENTER" translateX="200.0" translateY="-100.0" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="132.0" />
+      <Button fx:id="buttonIncrease" layoutX="338.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#increaseButtonPressed" prefHeight="7.0" prefWidth="6.0" text="+" translateX="200.0" translateY="-100.0" AnchorPane.leftAnchor="308.0" AnchorPane.topAnchor="127.0" />
+      <Button fx:id="buttonDecrease" layoutX="289.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#decreaseButtonPressed" prefHeight="17.0" prefWidth="26.0" text="-" translateX="200.0" translateY="-100.0" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="127.0" />
    </children>
 </fx:root>

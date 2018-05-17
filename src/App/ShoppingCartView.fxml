@@ -9,26 +9,25 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
    <children>
       <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
       <VBox prefHeight="601.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" onMouseClicked="#toPaymentButtonPressed" prefHeight="219.0" prefWidth="1057.0">
+            <AnchorPane maxHeight="-Infinity" prefHeight="0.0" prefWidth="1350.0">
                <children>
-                  <Label layoutX="198.0" layoutY="89.0" styleClass="text-normal" text="Vara" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="90.0" />
-                  <Label fx:id="shoppingCartLabel" layoutX="461.0" layoutY="21.0" styleClass="text-headlines" text="Varukorgen" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="15.0" />
-                  <Label layoutX="648.0" layoutY="85.0" styleClass="text-normal" text="Antal" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="90.0" />
-                  <Label layoutX="805.0" layoutY="90.0" styleClass="text-normal" text="Pris" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="90.0" />
-                  <Label layoutX="948.0" layoutY="87.0" styleClass="text-normal" text="Summa" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="200.0" layoutY="90.0" styleClass="text-normal" text="Vara" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="648.0" layoutY="85.0" styleClass="text-normal" text="Antal" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="706.0" layoutY="90.0" styleClass="text-normal" text="Pris" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="948.0" layoutY="87.0" styleClass="text-normal" text="Summa" AnchorPane.leftAnchor="898.0" AnchorPane.topAnchor="90.0" />
                   <Separator layoutY="3.0" prefHeight="1.0" prefWidth="1057.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="418.0" prefWidth="1057.0">
+            <AnchorPane prefHeight="933.0" prefWidth="1350.0">
                <children>
                   <ScrollPane layoutY="97.0" prefHeight="178.0" prefWidth="1058.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <FlowPane fx:id="flowPane" prefHeight="237.0" prefWidth="1048.0" />
+                        <FlowPane fx:id="flowPane" prefHeight="248.0" prefWidth="1200.0" />
                      </content>
                   </ScrollPane>
                </children>
@@ -40,8 +39,8 @@
                         <AnchorPane prefHeight="200.0" prefWidth="1059.0">
                            <children>
                               <Label layoutX="40.0" layoutY="22.0" styleClass="text-normal" text="Totalt:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalAmountLabel" layoutX="630.0" layoutY="42.0" styleClass="text-normal" text="x st" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalPrizeLabel" layoutX="900.0" layoutY="39.0" prefWidth="35.0" styleClass="text-normal" text="x kr" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalAmountLabel" layoutX="630.0" layoutY="42.0" styleClass="text-normal" text="x st" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalPrizeLabel" layoutX="900.0" layoutY="39.0" prefWidth="35.0" styleClass="text-normal" text="x kr" AnchorPane.leftAnchor="898.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="104.0" prefWidth="1059.0">
