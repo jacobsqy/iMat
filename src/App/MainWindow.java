@@ -67,6 +67,7 @@ public class MainWindow {
                 shoppingCartButton.setVisible(false);
                 txtSearch.setVisible(false);
                 shoppingViewController.updateList();
+                shoppingViewController.updateInfo();
             }
         });
         continueToShopButton.setOnMouseClicked(new EventHandler<MouseEvent>() {

@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class ShoppingCartItem extends AnchorPane {
     @FXML private ImageView productImage;
@@ -40,10 +41,9 @@ public class ShoppingCartItem extends AnchorPane {
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productNameLabel.setText(shoppingItem.getProduct().getName());
 
-        priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
-        totalPriceLabel.setText(String.valueOf(Math.round(shoppingItem.getTotal())));
-        labelCount.setText(String.valueOf((shoppingItem.getAmount())));
-        System.out.println(shoppingItem.getAmount());
+        priceLabel.setText(new DecimalFormat("#.##").format(shoppingItem.getProduct().getPrice()));
+        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
+        labelCount.setText(new DecimalFormat("#.##").format(shoppingItem.getAmount()));
     }
 
     public void setParentView(ShoppingCartView parentView) {
@@ -51,9 +51,9 @@ public class ShoppingCartItem extends AnchorPane {
     }
 
     private void updateInfo() {
-        priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
-        totalPriceLabel.setText(String.valueOf(Math.round(shoppingItem.getTotal())));
-        labelCount.setText(String.valueOf(shoppingItem.getAmount()));
+        priceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getProduct().getPrice())));
+        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
+        labelCount.setText(new DecimalFormat("#.##").format((shoppingItem.getAmount())));
         parentView.updateInfo();
     }
 

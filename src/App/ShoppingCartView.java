@@ -10,6 +10,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 import sun.applet.Main;
 
 import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -67,7 +68,7 @@ public class ShoppingCartView {
     }
 
     @FXML public void updateInfo() {
-        totalPriceLabel.setText(String.valueOf(BackendController.getTotalPrice()));
-        totalAmountLabel.setText(String.valueOf(BackendController.getShoppingItems().size()));
+        totalPriceLabel.setText(new DecimalFormat("#.##").format(BackendController.getTotalPrice()) + " kr");
+        totalAmountLabel.setText(new DecimalFormat("#.##").format(BackendController.getTotalProductAmount()) + " st");
     }
 }

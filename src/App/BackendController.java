@@ -3,7 +3,10 @@ package App;
 import se.chalmers.cse.dat216.project.*;
 import se.chalmers.cse.dat216.project.util.IOUtilities;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BackendController {
@@ -115,6 +118,14 @@ public class BackendController {
 
     public static double getTotalPrice() {
         return IMatDataHandler.getInstance().getShoppingCart().getTotal();
+    }
+
+    public static double getTotalProductAmount() {
+        double amount = 0;
+        for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()) {
+            amount += shoppingItem.getAmount();
+        }
+        return amount;
     }
 
     public static void addToCart(Product p) {
