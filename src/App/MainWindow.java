@@ -1,10 +1,9 @@
 package App;
 
 
-import javafx.collections.ObservableList;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -12,31 +11,27 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-import java.util.Optional;
-
 import static App.BackendController.backend;
 import static App.ProductView.productList;
 
 public class MainWindow {
     @FXML private TextField txtSearch;
     @FXML private ChoiceBox choiceBox;
-    @FXML private Button shoppingCardButton,
-            helpButton,
-            historyButton,
-            continueToShopButton;
+    @FXML private Button shoppingCardButton;
+    @FXML private Button helpButton;
+    @FXML private Button continueToShopButton;
+    @FXML Label amountOfProducts, totalPrice;
 
-    @FXML Label amountOfProducts,
-            totalPrice;
-
-    @FXML private AnchorPane contentPane,
-            productView,
-            shoppingView,
-            helpView;
-
-    private ProductView productViewController;
-    private ShoppingCartView shoppingViewController;
+    @FXML private AnchorPane contentPane;
+    @FXML private AnchorPane productView;
+    @FXML private ProductView productViewController;
+    @FXML private AnchorPane shoppingView;
+    @FXML private AnchorPane helpView;
+    @FXML private ShoppingCartView shoppingViewController;
 
     public void initialize() {
+
+        Platform.runLater(() -> txtSearch.requestFocus());
 
         // autocomplete sök, det som skrivs i textfield visas på en dropdown
         txtSearch.textProperty().addListener(((observable, oldValue, newValue) -> {
@@ -51,6 +46,7 @@ public class MainWindow {
                 }
                 choiceBox.show();
             }
+            System.out.println(productList);
             productViewController.updateList();
         }));
         choiceBox.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
