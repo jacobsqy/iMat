@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.Product;
 
 import static App.BackendController.backend;
 import static App.ProductView.productList;
@@ -36,18 +37,16 @@ public class MainWindow {
         // autocomplete sök, det som skrivs i textfield visas på en dropdown
         txtSearch.textProperty().addListener(((observable, oldValue, newValue) -> {
 
+            productViewController.updateSearch(newValue);
             choiceBox.getItems().clear();
             if(!newValue.isEmpty()) {
-                for(String item:BackendController.getProductNames()) {
-                    if(item.toLowerCase().startsWith(newValue.toLowerCase())) {
+                for(String item: BackendController.getProductNames()) {
+                    if(item.toLowerCase().startsWith(newValue.toLowerCase()))
                         choiceBox.getItems().add(item);
-                        productList.addAll(backend.findProducts(item));
-                    }
                 }
                 choiceBox.show();
             }
-            System.out.println(productList);
-            productViewController.updateList();
+
         }));
         choiceBox.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             if (choiceBox.getItems().size() > 0) {

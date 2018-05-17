@@ -40,7 +40,6 @@ public class ProductItem extends AnchorPane {
         this.pic = new ProductItemController(this);
         this.product = product;
 
-        List<Product> favorite = backend.favorites();
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -58,7 +57,7 @@ public class ProductItem extends AnchorPane {
                     observableList.remove(product);
                 } else {
                     backend.addFavorite(product.getProductId());
-                    imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
+                    setImageToUnFav();
                     favoriteList.add(product);
                 }
             }
@@ -80,6 +79,9 @@ public class ProductItem extends AnchorPane {
         buttonIncrease.setOnAction(e -> pic.increaseCount());
     }
 
+    /**
+     * unfov icon sätts (används även för att uppdatera fav. listan, det första som klickas kvar står)
+     */
     public void setImageToUnFav() {
         imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite_empty.png")));
     }

@@ -95,7 +95,19 @@ public class ProductView {
             productListFlowPane.getChildren().add(productMap.get(product.getName()));
             if(!backend.isFavorite(product)) productMap.get(product.getName()).setImageToUnFav();
         }
-        productList.clear();
+    }
+
+    /**
+     * uppdaterar produkt vyn via sök
+     * @param str tar sök text som parameter
+     */
+    public void updateSearch(String str) {
+        productListFlowPane.getChildren().clear();
+
+        for (Product product : backend.findProducts(str)) {
+            productListFlowPane.getChildren().add(productMap.get(product.getName()));
+            if(!backend.isFavorite(product)) productMap.get(product.getName()).setImageToUnFav();
+        }
     }
 
     /**
@@ -110,4 +122,5 @@ public class ProductView {
             }
         }
     }
+
 }
