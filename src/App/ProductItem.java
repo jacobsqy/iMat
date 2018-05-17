@@ -91,6 +91,7 @@ public class ProductItem extends AnchorPane {
 
     @FXML
     private void addToCartPressed() {
+        System.out.println(Integer.valueOf(labelCount.getText()));
         BackendController.addToCart(product, Integer.valueOf(labelCount.getText()));
     }
 }

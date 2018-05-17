@@ -58,13 +58,16 @@ public class ShoppingCartView {
     }
 
     @FXML private void toPaymentButtonPressed() {
-        // TODO
-        // change the current viwe to the payment view
         parentController.changeToPaymentView();
     }
 
     @FXML private void emptyShoppingCartButtonPressed() {
         BackendController.emptyShoppingCart();
         updateList();
+    }
+
+    @FXML public void updateInfo() {
+        totalPriceLabel.setText(String.valueOf(BackendController.getTotalPrice()));
+        totalAmountLabel.setText(String.valueOf(BackendController.getShoppingItems().size()));
     }
 }

@@ -113,6 +113,10 @@ public class BackendController {
         return IMatDataHandler.getInstance().getShoppingCart().getItems();
     }
 
+    public static double getTotalPrice() {
+        return IMatDataHandler.getInstance().getShoppingCart().getTotal();
+    }
+
     public static void addToCart(Product p) {
         if (cartContains(p)) {
             addProductToShoppingItem(p);
@@ -122,8 +126,9 @@ public class BackendController {
     }
 
     public static void addToCart(Product p, int amount) {
-        if (amount < 2) addToCart(p);
-        if (cartContains(p)) {
+        if (amount < 2) {
+            addToCart(p);
+        } else if (cartContains(p)) {
             for (int i = 0; i < amount; i++)
                 addProductToShoppingItem(p);
         } else {

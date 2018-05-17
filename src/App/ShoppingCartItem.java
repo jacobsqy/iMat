@@ -39,8 +39,11 @@ public class ShoppingCartItem extends AnchorPane {
 
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productNameLabel.setText(shoppingItem.getProduct().getName());
-        updateInfo();
 
+        priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
+        totalPriceLabel.setText(String.valueOf(Math.round(shoppingItem.getTotal())));
+        labelCount.setText(String.valueOf((shoppingItem.getAmount())));
+        System.out.println(shoppingItem.getAmount());
     }
 
     public void setParentView(ShoppingCartView parentView) {
@@ -50,13 +53,13 @@ public class ShoppingCartItem extends AnchorPane {
     private void updateInfo() {
         priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
         totalPriceLabel.setText(String.valueOf(Math.round(shoppingItem.getTotal())));
-        labelCount.setText(String.valueOf(Math.round(shoppingItem.getAmount())));
+        labelCount.setText(String.valueOf(shoppingItem.getAmount()));
+        parentView.updateInfo();
     }
 
     @FXML private void deleteButtonPressed() {
         BackendController.removeFromCart(shoppingItem);
         parentView.updateList();
-
     }
 
     @FXML private void increaseButtonPressed() {
