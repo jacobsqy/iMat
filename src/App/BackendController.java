@@ -1,12 +1,11 @@
 package App;
 
-import se.chalmers.cse.dat216.project.*;
-import se.chalmers.cse.dat216.project.util.IOUtilities;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class BackendController {
@@ -60,11 +59,13 @@ public class BackendController {
                 l.addAll(backend.getProducts(ProductCategory.MELONS));
                 l.addAll(backend.getProducts(ProductCategory.BERRY));
                 break;
-            case "Grönsakser & Örtkryddor":
+            case "Grönsakser":
                 l.addAll(backend.getProducts(ProductCategory.VEGETABLE_FRUIT));
                 l.addAll(backend.getProducts(ProductCategory.CABBAGE));
-                l.addAll(backend.getProducts(ProductCategory.HERB));
                 l.addAll(backend.getProducts(ProductCategory.POD));
+                break;
+            case "Örter":
+                l.addAll(backend.getProducts(ProductCategory.HERB));
                 break;
             case "Pasta, Potatis & Ris":
                 l.addAll(backend.getProducts(ProductCategory.PASTA));
@@ -81,10 +82,10 @@ public class BackendController {
             case "Mejeriprodukter":
                 l.addAll(backend.getProducts(ProductCategory.DAIRIES));
                 break;
-            case "Mjöl, Socker, Salt":
+            case "Skafferi":
                 l.addAll(backend.getProducts(ProductCategory.FLOUR_SUGAR_SALT));
                 break;
-            case "Nötter och frön":
+            case "Nötter & Frön":
                 l.addAll(backend.getProducts(ProductCategory.NUTS_AND_SEEDS));
                 break;
             case "Sötsaker":

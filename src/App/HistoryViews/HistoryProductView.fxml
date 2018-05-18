@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<AnchorPane prefHeight="599.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.HistoryProductView">
+   <children>
+      <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="516.0" prefWidth="1043.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <FlowPane fx:id="historyFlowPane" hgap="10.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="200.0" right="10.0" top="10.0" />
+               </padding>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

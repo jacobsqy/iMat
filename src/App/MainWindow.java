@@ -14,8 +14,9 @@ import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
-import javax.swing.text.html.ImageView;
 import java.text.DecimalFormat;
+
+import static App.Controllers.HistoryView.historyViews;
 
 public class MainWindow {
     @FXML private TextField txtSearch;
@@ -23,6 +24,7 @@ public class MainWindow {
     @FXML private Button shoppingCartButton;
     @FXML private Button helpButton;
     @FXML private Button continueToShopButton;
+    @FXML private Button historyButton;
     @FXML private Label amountOfProducts, totalPrice;
 
     @FXML private AnchorPane contentPane;
@@ -31,6 +33,7 @@ public class MainWindow {
     @FXML private AnchorPane shoppingView;
     @FXML private AnchorPane helpView;
     @FXML private AnchorPane paymentView;
+    @FXML private AnchorPane historyView;
     @FXML private ShoppingCartView shoppingViewController;
 
     public void initialize() {
@@ -76,23 +79,47 @@ public class MainWindow {
                 shoppingViewController.updateInfo();
             }
         });
+
         continueToShopButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+
+                historyViews.get(0).getChildren().clear();
+                historyViews.get(0).getChildren().setAll(historyViews.get(1));
+
                 contentPane.getChildren().setAll(productView);
                 shoppingCartButton.setVisible(true);
                 continueToShopButton.setVisible(false);
                 helpButton.setDisable(false);
+                historyButton.setDisable(false);
                 txtSearch.setVisible(true);
             }
         });
+
         helpButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+
+                historyViews.get(0).getChildren().clear();
+                historyViews.get(0).getChildren().setAll(historyViews.get(1));
+
                 contentPane.getChildren().setAll(helpView);
                 continueToShopButton.setVisible(true);
                 shoppingCartButton.setVisible(false);
                 helpButton.setDisable(true);
+                historyButton.setDisable(false);
+                txtSearch.setVisible(false);
+            }
+        });
+
+        historyButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                contentPane.getChildren().setAll(historyView);
+                continueToShopButton.setVisible(true);
+                shoppingCartButton.setVisible(false);
+                helpButton.setDisable(false);
+                historyButton.setDisable(true);
                 txtSearch.setVisible(false);
             }
         });

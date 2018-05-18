@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="599.0" prefWidth="1057.0" stylesheets="@../StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.HistoryView">
+    <children>
+        <Label layoutX="700.0" layoutY="19.0" styleClass="text-headlines" text="Historik" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="19.0" />
+       <AnchorPane fx:id="contentPane" prefHeight="599.0" prefWidth="1057.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0">
+           <fx:include fx:id="historyProductView" source="HistoryProductView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+           <fx:include fx:id="historyDetailView" source="HistoryDetailView.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+       </AnchorPane>
+    </children>
+</AnchorPane>

@@ -12,7 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
-import java.util.List;
 
 import static App.BackendController.backend;
 import static App.ProductView.favoriteList;
