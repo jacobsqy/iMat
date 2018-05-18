@@ -19,6 +19,8 @@ import static App.ProductView.observableList;
 
 public class ProductItem extends AnchorPane {
 
+    private ProductView parentView;
+
     @FXML private ImageView productImage;
     @FXML private Label lblName;
     @FXML private Label lblPrice;
@@ -90,7 +92,11 @@ public class ProductItem extends AnchorPane {
 
     @FXML
     private void addToCartPressed() {
-        System.out.println(Integer.valueOf(labelCount.getText()));
         BackendController.addToCart(product, Integer.valueOf(labelCount.getText()));
+        parentView.updateInfo();
+    }
+
+    public void setParentView(ProductView parentView) {
+        this.parentView = parentView;
     }
 }

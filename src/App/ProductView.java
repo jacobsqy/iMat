@@ -21,6 +21,8 @@ import static App.BackendController.backend;
 
 public class ProductView {
 
+    private MainWindow parentController;
+
     @FXML private FlowPane productListFlowPane;
     @FXML private VBox vBox;
     @FXML private Button favButton;
@@ -36,6 +38,7 @@ public class ProductView {
         // laddar all produkter till map
         for (Product product : backend.getProducts()) {
             ProductItem productItem = new ProductItem(product);
+            productItem.setParentView(this);
             productMap.put(product.getName(), productItem);
             if (backend.isFavorite(product)) {
                 favoriteList.add(product);
@@ -121,4 +124,11 @@ public class ProductView {
         }
     }
 
+    public void setParentController(MainWindow parentController) {
+        this.parentController = parentController;
+    }
+
+    public void updateInfo() {
+        parentController.updateInfo();
+    }
 }

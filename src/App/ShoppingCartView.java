@@ -63,5 +63,6 @@ public class ShoppingCartView {
     @FXML public void updateInfo() {
         totalPriceLabel.setText(new DecimalFormat("#.##").format(BackendController.getTotalPrice()) + " kr");
         totalAmountLabel.setText(new DecimalFormat("#.##").format(BackendController.getTotalProductAmount()) + " st");
+        parentController.updateInfo();
     }
 }

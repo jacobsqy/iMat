@@ -58,6 +58,7 @@ public class ShoppingCartItem extends AnchorPane {
     @FXML private void deleteButtonPressed() {
         BackendController.removeFromCart(shoppingItem);
         parentView.updateList();
+        updateInfo();
     }
 
     @FXML private void increaseButtonPressed() {

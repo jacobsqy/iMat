@@ -39,6 +39,8 @@ public class MainWindow {
     public void initialize() {
 
         shoppingViewController.setParentController(this);
+        productViewController.setParentController(this);
+        updateInfo();
 
         Platform.runLater(() -> txtSearch.requestFocus());
 
@@ -124,21 +126,12 @@ public class MainWindow {
             }
         });
 
-        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
-            @Override
-            public void shoppingCartChanged(CartEvent cartEvent) {
-                System.out.println("wow");
-                updateInfo();
-            }
-        });
-
 
         contentPane.getChildren().setAll(productView);
 
     }
 
-    private void updateInfo() {
-        System.out.println("super cool");
+    public void updateInfo() {
         amountOfProducts.setText(new DecimalFormat("#.##").format(BackendController.getTotalProductAmount()));
         totalPrice.setText(new DecimalFormat("#.##").format(BackendController.getTotalPrice()));
     }
