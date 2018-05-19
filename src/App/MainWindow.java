@@ -35,6 +35,7 @@ public class MainWindow {
     @FXML private AnchorPane paymentView;
     @FXML private AnchorPane historyView;
     @FXML private ShoppingCartView shoppingViewController;
+    @FXML private Label headlineLabel;
 
     public void initialize() {
 
@@ -69,6 +70,7 @@ public class MainWindow {
         // knappen till varukorg/försätt handla visas eller döljs
         shoppingCartButton.setVisible(true);
         continueToShopButton.setVisible(false);
+        headlineLabel.setVisible(false);
 
         shoppingCartButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -79,6 +81,8 @@ public class MainWindow {
                 txtSearch.setVisible(false);
                 shoppingViewController.updateList();
                 shoppingViewController.updateInfo();
+                headlineLabel.setText("Varukorgen");
+                headlineLabel.setVisible(true);
             }
         });
 
@@ -95,6 +99,7 @@ public class MainWindow {
                 helpButton.setDisable(false);
                 historyButton.setDisable(false);
                 txtSearch.setVisible(true);
+                headlineLabel.setVisible(false);
             }
         });
 
@@ -111,6 +116,9 @@ public class MainWindow {
                 helpButton.setDisable(true);
                 historyButton.setDisable(false);
                 txtSearch.setVisible(false);
+                headlineLabel.setText("Hjälp");
+                headlineLabel.setVisible(true);
+
             }
         });
 
@@ -123,6 +131,8 @@ public class MainWindow {
                 helpButton.setDisable(false);
                 historyButton.setDisable(true);
                 txtSearch.setVisible(false);
+                headlineLabel.setText("Historik");
+                headlineLabel.setVisible(true);
             }
         });
 
@@ -142,5 +152,7 @@ public class MainWindow {
         shoppingCartButton.setVisible(false);
         helpButton.setDisable(true);
         txtSearch.setVisible(false);
+        headlineLabel.setText("Betalning");
+        headlineLabel.setVisible(true);
     }
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -85,10 +85,10 @@
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <Label layoutX="414.0" layoutY="318.0" styleClass="text-normal" text="CVC:" AnchorPane.leftAnchor="414.0" AnchorPane.topAnchor="318.0" />
-                  <Label layoutX="354.0" layoutY="265.0" styleClass="text-normal" text="Kortnummer:" AnchorPane.leftAnchor="354.0" AnchorPane.topAnchor="265.0" />
-                  <Label layoutX="275.0" layoutY="203.0" styleClass="text-normal" text="Kortinnehavarens namn:" AnchorPane.leftAnchor="275.0" AnchorPane.topAnchor="203.0" />
-                  <Label layoutX="341.0" layoutY="383.0" styleClass="text-normal" text="Utgångsdatum:" AnchorPane.leftAnchor="341.0" AnchorPane.topAnchor="383.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="414.0" layoutY="318.0" prefWidth="220.0" styleClass="text-normal" text="CVC:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="318.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="354.0" layoutY="265.0" prefWidth="220.0" styleClass="text-normal" text="Kortnummer:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="265.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="203.0" prefWidth="220.0" styleClass="text-normal" text="Kortinnehavarens namn:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="203.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="341.0" layoutY="383.0" prefWidth="220.0" styleClass="text-normal" text="Utgångsdatum:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="383.0" />
                   <TextField layoutX="450.0" layoutY="373.0" minWidth="70.0" prefHeight="27.0" prefWidth="32.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
                   <TextField layoutX="443.0" layoutY="317.0" prefWidth="125.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
                   <TextField layoutX="444.0" layoutY="258.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
@@ -122,10 +122,10 @@
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" styleClass="text-normal" text="Namn:" textAlignment="RIGHT" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="200.0" />
-                  <Label alignment="CENTER" contentDisplay="RIGHT" styleClass="text-normal" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="260.0" />
-                  <Label styleClass="text-normal" text="Postnummer:" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="320.0" />
-                  <Label styleClass="text-normal" text="Postort:" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="380.0" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Namn:" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="200.0" />
+                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="260.0" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="120.0" styleClass="text-normal" text="Postnummer:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="334.0" layoutY="380.0" prefWidth="120.0" styleClass="text-normal" text="Postort:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="380.0" />
                   <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
                   <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
                   <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
