@@ -16,19 +16,8 @@ public class ShoppingCartView {
     @FXML private Label totalPriceLabel;
     @FXML private FlowPane flowPane;
     private MainWindow parentController;
-    //private Map<Integer, ShoppingCartItem> shoppingCartItemMap;
-    //private List<Integer> productIdList = new LinkedList<>();
-    //TODO
-
-
 
     public void initialize() {
-        // add all shoppingCartItems to a Map
-        /*for (ShoppingItem shoppingItem : backend.getShoppingCart().getItems()) {
-            ShoppingCartItem shoppingCartItem = new ShoppingCartItem(shoppingItem);
-            shoppingCartItemMap.put(shoppingItem.getProduct().getProductId(), shoppingCartItem);
-            productIdList.add(shoppingItem.getProduct().getProductId());
-        }*/
         updateList();
     }
 
@@ -38,8 +27,6 @@ public class ShoppingCartView {
             ShoppingCartItem shoppingCartItem = new ShoppingCartItem(shoppingItem);
             shoppingCartItem.setParentView(this);
             shoppingCartItemList.add(shoppingCartItem);
-            //shoppingCartItemMap.put(shoppingItem.getProduct().getProductId(), shoppingCartItem);
-            //productIdList.add(shoppingItem.getProduct().getProductId());
         }
         flowPane.getChildren().clear();
         for (ShoppingCartItem shoppingCartItem : shoppingCartItemList) {
