@@ -1,13 +1,12 @@
 package App;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import se.chalmers.cse.dat216.project.Customer;
 
-import java.awt.*;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +24,12 @@ public class PaymentView extends AnchorPane {
     @FXML private Button goBackCardButton;
     @FXML private Button confirmButton;
     @FXML private Button backToShoppingCartButton;
+
+    @FXML private TextField firstNameTextArea;
+    @FXML private TextField lastNameTextArea;
+    @FXML private TextField addressTextArea;
+    @FXML private TextField postCodeTextArea;
+    @FXML private TextField postAddressTextArea;
 
     private List<AnchorPane> anchorPaneList = new ArrayList<AnchorPane>();
     private int anchorPaneListIndex;
@@ -48,6 +53,7 @@ public class PaymentView extends AnchorPane {
         } else {
             //TODO make the payment
         }
+        saveData();
     }
 
     private void focusPrevious() {
@@ -67,11 +73,27 @@ public class PaymentView extends AnchorPane {
         this.parentController = parentController;
     }
 
+    private void saveData() {
+        Customer c = BackendController.getCustomer();
+        //First screen
+
+        c.setFirstName(firstNameTextArea.getText());
+        c.setLastName(lastNameTextArea.getText());
+        c.setAddress(addressTextArea.getText());
+        c.setPostCode(postCodeTextArea.getText());
+        c.setPostAddress(postAddressTextArea.getText());
+
+        //Second screen
+
+    }
+
     @FXML public void goBackButtonPressed() {
         focusPrevious();
     }
 
     @FXML public void goForwardButtonPressed() {
         focusNext();
+        Customer c = BackendController.getCustomer();
+
     }
 }

@@ -1,9 +1,6 @@
 package App;
 
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ProductCategory;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -198,5 +195,10 @@ public class BackendController {
                 shoppingItem.setAmount(shoppingItem.getAmount() + 1);
             }
         }
+    }
+
+    // Customer info
+    public static Customer getCustomer() {
+        return IMatDataHandler.getInstance().getCustomer();
     }
 }

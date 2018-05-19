@@ -15,14 +15,9 @@
    <children>
       <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="confirmPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
-                     <image>
-                        <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
                      <image>
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.26.48.png" />
                      </image>
@@ -32,30 +27,33 @@
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Namn:" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="200.0" />
-                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="260.0" />
-                  <Label alignment="CENTER_RIGHT" prefWidth="120.0" styleClass="text-normal" text="Postnummer:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="334.0" layoutY="380.0" prefWidth="120.0" styleClass="text-normal" text="Postort:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="380.0" />
-                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
-                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
-                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
-                  <TextField prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="380.0" />
-                  <Label styleClass="text-headlines" text="Fyll i uppgifter" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="130.0" />
-                  <Label styleClass="text-arrows" text="Uppgifter" textFill="WHITE" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="65.0" />
-                  <Label styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
-                  <Label layoutX="901.0" layoutY="60.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
-                  <Button fx:id="goBackAdressButton" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
-                     <styleClass>
-                        <String fx:value="button-grey" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                  </Button>
-                  <Button fx:id="nextStepAddressButton" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Nästa steg" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="243.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="481.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="763.0" layoutY="90.0" styleClass="text-arrows" text="Slutför köp" textFill="WHITE" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
+                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" text="Bekräfta köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
                      <styleClass>
                         <String fx:value="button-green" />
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
+                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="41.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+                     <styleClass>
+                        <String fx:value="text-normal" />
+                        <String fx:value="button-red" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="201.0" layoutY="167.0" styleClass="text-headlines" text="Kontrollera dina uppgifter &amp; bekräfta köp" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="130.0" />
+                  <Label layoutX="96.0" layoutY="276.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="190.0" />
+                  <Label layoutX="448.0" layoutY="276.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="190.0" />
+                  <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="190.0" />
+                  <TextArea editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0" />
+                  <TextArea editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0" />
+                  <TextArea editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="cardInfoPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
@@ -107,9 +105,14 @@
                   <Label layoutX="648.0" layoutY="385.0" styleClass="text-normal" text="År:" AnchorPane.leftAnchor="665.0" AnchorPane.topAnchor="370.0" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="confirmPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
                      <image>
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.26.48.png" />
                      </image>
@@ -119,33 +122,31 @@
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="50.0">
-                     <image>
-                        <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="243.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
-                  <Label layoutX="481.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
-                  <Label layoutX="763.0" layoutY="90.0" styleClass="text-arrows" text="Slutför köp" textFill="WHITE" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
-                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" text="Bekräfta köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Namn:" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="200.0" />
+                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="260.0" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="120.0" styleClass="text-normal" text="Postnummer:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="334.0" layoutY="380.0" prefWidth="120.0" styleClass="text-normal" text="Postort:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="380.0" />
+                  <TextField fx:id="firstNameTextField" prefHeight="27.0" prefWidth="165.0" promptText="Förnamn" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
+                  <TextField fx:id="addressTextField" prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
+                  <TextField fx:id="postCodeTextField" prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
+                  <TextField fx:id="postAddressTextArea" prefHeight="27.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="380.0" />
+                  <Label styleClass="text-headlines" text="Fyll i uppgifter" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="130.0" />
+                  <Label styleClass="text-arrows" text="Uppgifter" textFill="WHITE" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="65.0" />
+                  <Label styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
+                  <Label layoutX="901.0" layoutY="60.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
+                  <Button fx:id="goBackAdressButton" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
+                     <styleClass>
+                        <String fx:value="button-grey" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="nextStepAddressButton" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Nästa steg" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-green" />
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="41.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
-                     <styleClass>
-                        <String fx:value="text-normal" />
-                        <String fx:value="button-red" />
-                     </styleClass>
-                  </Button>
-                  <Label layoutX="201.0" layoutY="167.0" styleClass="text-headlines" text="Kontrollera dina uppgifter &amp; bekräfta köp" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="130.0" />
-                  <Label layoutX="96.0" layoutY="276.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="190.0" />
-                  <Label layoutX="448.0" layoutY="276.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="190.0" />
-                  <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="190.0" />
-                  <TextArea editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0" />
-                  <TextArea editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0" />
-                  <TextArea editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0" />
+                  <TextField fx:id="lastNameTextField" layoutX="671.0" layoutY="200.0" prefHeight="27.0" prefWidth="340.0" promptText="Efternamn" />
                </children>
             </AnchorPane>
          </children>
