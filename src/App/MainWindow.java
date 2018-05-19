@@ -14,6 +14,8 @@ import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
+import javax.swing.text.html.ImageView;
+import java.awt.*;
 import java.text.DecimalFormat;
 
 import static App.Controllers.HistoryView.historyViews;
@@ -26,6 +28,7 @@ public class MainWindow {
     @FXML private Button continueToShopButton;
     @FXML private Button historyButton;
     @FXML private Label amountOfProducts, totalPrice;
+    @FXML private javafx.scene.image.ImageView logoImageView;
 
     @FXML private AnchorPane contentPane;
     @FXML private AnchorPane productView;
@@ -89,17 +92,7 @@ public class MainWindow {
         continueToShopButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-
-                historyViews.get(0).getChildren().clear();
-                historyViews.get(0).getChildren().setAll(historyViews.get(1));
-
-                contentPane.getChildren().setAll(productView);
-                shoppingCartButton.setVisible(true);
-                continueToShopButton.setVisible(false);
-                helpButton.setDisable(false);
-                historyButton.setDisable(false);
-                txtSearch.setVisible(true);
-                headlineLabel.setVisible(false);
+                continueToShop();
             }
         });
 
@@ -136,9 +129,28 @@ public class MainWindow {
             }
         });
 
+        logoImageView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                continueToShop();
+            }
+        });
 
         contentPane.getChildren().setAll(productView);
 
+    }
+
+    private void continueToShop() {
+        historyViews.get(0).getChildren().clear();
+        historyViews.get(0).getChildren().setAll(historyViews.get(1));
+
+        contentPane.getChildren().setAll(productView);
+        shoppingCartButton.setVisible(true);
+        continueToShopButton.setVisible(false);
+        helpButton.setDisable(false);
+        historyButton.setDisable(false);
+        txtSearch.setVisible(true);
+        headlineLabel.setVisible(false);
     }
 
     public void updateInfo() {

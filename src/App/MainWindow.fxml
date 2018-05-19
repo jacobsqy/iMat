@@ -56,7 +56,7 @@
                   <String fx:value="button-grey" />
                </styleClass>
             </Button>
-            <ImageView fitHeight="199.0" fitWidth="286.0" pickOnBounds="true" GridPane.rowSpan="2">
+            <ImageView id="logo" fx:id="logoImageView" fitHeight="199.0" fitWidth="286.0" pickOnBounds="true" GridPane.rowSpan="2">
                <image>
                   <Image url="@resources/imat/images/logo.png" />
                </image>
