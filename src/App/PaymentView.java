@@ -15,7 +15,6 @@ import java.util.List;
 import static App.BackendController.backend;
 
 public class PaymentView extends AnchorPane {
-
     @FXML private StackPane stackPane;
 
     @FXML private AnchorPane addressInfoPane;
@@ -57,7 +56,6 @@ public class PaymentView extends AnchorPane {
 
         updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
         updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
-
 
         */
         // Murat
