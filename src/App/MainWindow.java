@@ -38,6 +38,7 @@ public class MainWindow {
     @FXML private AnchorPane shoppingView;
     @FXML private AnchorPane helpView;
     @FXML private AnchorPane paymentView;
+    @FXML private PaymentView paymentViewController;
     @FXML private AnchorPane historyView;
     @FXML private ShoppingCartView shoppingViewController;
     @FXML private Label headlineLabel;
@@ -51,6 +52,7 @@ public class MainWindow {
 
         shoppingViewController.setParentController(this);
         productViewController.setParentController(this);
+        paymentViewController.setParentController(this);
         updateInfo();
 
         Platform.runLater(() -> txtSearch.requestFocus());
@@ -85,14 +87,7 @@ public class MainWindow {
         shoppingCartButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                contentPane.getChildren().setAll(shoppingView);
-                continueToShopButton.setVisible(true);
-                shoppingCartButton.setVisible(false);
-                txtSearch.setVisible(false);
-                shoppingViewController.updateList();
-                shoppingViewController.updateInfo();
-                headlineLabel.setText("Varukorgen");
-                headlineLabel.setVisible(true);
+                goToShoppingCart();
             }
         });
 
@@ -172,6 +167,17 @@ public class MainWindow {
         helpButton.setDisable(true);
         txtSearch.setVisible(false);
         headlineLabel.setText("Betalning");
+        headlineLabel.setVisible(true);
+    }
+
+    public void goToShoppingCart() {
+        contentPane.getChildren().setAll(shoppingView);
+        continueToShopButton.setVisible(true);
+        shoppingCartButton.setVisible(false);
+        txtSearch.setVisible(false);
+        shoppingViewController.updateList();
+        shoppingViewController.updateInfo();
+        headlineLabel.setText("Varukorgen");
         headlineLabel.setVisible(true);
     }
 }

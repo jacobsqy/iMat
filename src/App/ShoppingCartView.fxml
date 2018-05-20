@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ShoppingCartView">
    <children>
       <VBox prefHeight="601.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -44,7 +44,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="104.0" prefWidth="1059.0">
                            <children>
-                              <Button fx:id="clearShoppingcartButton" layoutX="13.0" layoutY="-19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" text="Töm varukorgen" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
+                              <Button fx:id="clearShoppingcartButton" layoutX="13.0" layoutY="-19.0" mnemonicParsing="false" onMouseClicked="#emptyShoppingCartButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Töm varukorgen" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
                                  <styleClass>
                                     <String fx:value="text-normal" />
                                     <String fx:value="button-red" />
