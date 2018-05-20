@@ -17,6 +17,8 @@ import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import javax.swing.text.html.ImageView;
 import java.awt.*;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import static App.Controllers.HistoryView.historyViews;
 
@@ -40,7 +42,12 @@ public class MainWindow {
     @FXML private ShoppingCartView shoppingViewController;
     @FXML private Label headlineLabel;
 
+    public static List<Label> updateInfoLabels = new ArrayList<Label>();
+
     public void initialize() {
+
+        updateInfoLabels.add(amountOfProducts);
+        updateInfoLabels.add(totalPrice);
 
         shoppingViewController.setParentController(this);
         productViewController.setParentController(this);

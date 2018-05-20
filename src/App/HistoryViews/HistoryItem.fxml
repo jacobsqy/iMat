@@ -12,21 +12,21 @@
 
 <fx:root prefHeight="179.0" prefWidth="1024.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="product" layoutX="236.0" layoutY="59.0" styleClass="text-normal" text="x varor" />
+      <Label fx:id="product" layoutX="236.0" layoutY="49.0" styleClass="text-normal" text="x produkter" />
       <Label fx:id="price" layoutX="236.0" layoutY="91.0" styleClass="text-normal" text="x kr" />
-      <Button layoutX="599.0" layoutY="72.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" text="Lägg Till Alla Varor">
+      <Button fx:id="addAllProduct" layoutX="599.0" layoutY="72.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" text="Lägg Till Alla Varor">
          <styleClass>
             <String fx:value="text-normal" />
             <String fx:value="button-grey" />
          </styleClass>
       </Button>
-      <Button layoutX="828.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#showButtonPressed" prefHeight="38.0" prefWidth="196.0" style="-fx-background-color: #0077BE;" text="Visa Varor">
+      <Button fx:id="showProduct" layoutX="828.0" layoutY="71.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" style="-fx-background-color: #0077BE;" text="Visa Varor">
          <styleClass>
             <String fx:value="text-normal" />
             <String fx:value="button-green" />
          </styleClass>
       </Button>
-      <GridPane layoutX="14.0" layoutY="55.0">
+      <GridPane layoutX="9.0" layoutY="29.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" />
           <ColumnConstraints hgrow="SOMETIMES" />
@@ -46,11 +46,6 @@
          </children>
       </GridPane>
       <Separator layoutX="14.0" layoutY="164.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Button layoutX="365.0" layoutY="72.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" text="Ta Bort">
-         <styleClass>
-            <String fx:value="button-red" />
-            <String fx:value="text-normal" />
-         </styleClass>
-      </Button>
+      <Label fx:id="time" layoutX="33.0" layoutY="101.0" styleClass="text-headlines" text="13:51" AnchorPane.leftAnchor="33.0" />
    </children>
 </fx:root>

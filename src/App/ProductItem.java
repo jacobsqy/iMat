@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import static App.BackendController.backend;
 import static App.ProductView.favoriteList;
@@ -67,7 +68,7 @@ public class ProductItem extends AnchorPane {
         // hämta och sätta produkt properties till relaterande element
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + product.getImageName())));
         lblName.setText(product.getName());
-        lblPrice.setText(product.getPrice() + " " + product.getUnit());
+        lblPrice.setText(new DecimalFormat("#.##").format((product.getPrice())) + " " + product.getUnit());
         labelCount.setText("1");
 
         /*SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
