@@ -14,6 +14,14 @@
     -fx-font-weight: Bolder;
 }
 
+
+.text-headlines-big {
+    -fx-font-size: 50px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: Bolder;
+}
+
+
 .text-arrows {
     -fx-font-size: 18px;
     -fx-font-family: "Avenir Book";
@@ -47,7 +55,7 @@
      -fx-border-color: transparent;
       -fx-border-width: 0;
       -fx-background-radius: 0;
-      -fx-background-color: "grey";
+      -fx-background-color:  #757C88;
       -fx-text-fill:    "white";
 }
 
@@ -76,4 +84,10 @@
 
 .text-area  {
     -fx-background-color: -fx-background;
+}
+
+#logo:pressed {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-scale-z: 1.05;
 }

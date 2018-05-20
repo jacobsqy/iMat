@@ -2,22 +2,25 @@ package App;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class ShoppingCartItem extends AnchorPane {
     @FXML private ImageView productImage;
     @FXML private Label productNameLabel;
-    @FXML private Spinner<Integer> amountSpinner;
     @FXML private Label priceLabel;
     @FXML private Label totalPriceLabel;
+    @FXML private Label labelCount;
+    @FXML private Button buttonDecrease;
+    @FXML private Button buttonIncrease;
+    private ShoppingCartView parentView;
 
     private ShoppingItem shoppingItem;
 
@@ -35,28 +38,40 @@ public class ShoppingCartItem extends AnchorPane {
 
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productNameLabel.setText(shoppingItem.getProduct().getName());
-        updatePrice();
 
-        SpinnerValueFactory<Integer> valueFactory =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, (int) shoppingItem.getAmount(), 1);
-        amountSpinner.setValueFactory(valueFactory);
-        amountSpinner.setEditable(true);
-        amountSpinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
-
-
+        priceLabel.setText(new DecimalFormat("#.##").format(shoppingItem.getProduct().getPrice()));
+        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
+        labelCount.setText(new DecimalFormat("#.##").format(shoppingItem.getAmount()));
     }
 
-    private void updatePrice() {
-        priceLabel.setText(String.valueOf(shoppingItem.getProduct().getPrice()));
-        totalPriceLabel.setText(String.valueOf(shoppingItem.getTotal()));
+    public void setParentView(ShoppingCartView parentView) {
+        this.parentView = parentView;
+    }
+
+    private void updateInfo() {
+        priceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getProduct().getPrice())));
+        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
+        labelCount.setText(new DecimalFormat("#.##").format((shoppingItem.getAmount())));
+        parentView.updateInfo();
     }
 
     @FXML private void deleteButtonPressed() {
         BackendController.removeFromCart(shoppingItem);
+        parentView.updateList();
+        updateInfo();
     }
 
-    @FXML private void spinnerPressed() {
-        shoppingItem.setAmount(amountSpinner.getValue());
-        updatePrice();
+    @FXML private void increaseButtonPressed() {
+        if (shoppingItem.getAmount() >= 99) return;
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
+        parentView.updateList();
+        updateInfo();
+    }
+
+    @FXML private void decreaseButtonPressed() {
+        if (shoppingItem.getAmount() <= 1) return;
+        shoppingItem.setAmount(shoppingItem.getAmount() - 1);
+        parentView.updateList();
+        updateInfo();
     }
 }

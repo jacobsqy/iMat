@@ -8,8 +8,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.Product;
@@ -22,6 +20,8 @@ import java.util.Map;
 import static App.BackendController.backend;
 
 public class ProductView {
+
+    private MainWindow parentController;
 
     @FXML private FlowPane productListFlowPane;
     @FXML private VBox vBox;
@@ -38,6 +38,7 @@ public class ProductView {
         // laddar all produkter till map
         for (Product product : backend.getProducts()) {
             ProductItem productItem = new ProductItem(product);
+            productItem.setParentView(this);
             productMap.put(product.getName(), productItem);
             if (backend.isFavorite(product)) {
                 favoriteList.add(product);
@@ -118,9 +119,21 @@ public class ProductView {
             productListFlowPane.getChildren().clear();
             for (Product product : favoriteList) {
                 ProductItem productItem = new ProductItem(product);
+                productItem.setParentView(this);
                 productListFlowPane.getChildren().add(productItem);
             }
         }
     }
 
+    public void setParentController(MainWindow parentController) {
+        this.parentController = parentController;
+    }
+
+    public void updateInfo() {
+        parentController.updateInfo();
+    }
+
+    public MainWindow getParentController() {
+        return parentController;
+    }
 }

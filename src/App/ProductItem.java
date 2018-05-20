@@ -12,13 +12,15 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
-import java.util.List;
+import java.text.DecimalFormat;
 
 import static App.BackendController.backend;
 import static App.ProductView.favoriteList;
 import static App.ProductView.observableList;
 
 public class ProductItem extends AnchorPane {
+
+    private ProductView parentView;
 
     @FXML private ImageView productImage;
     @FXML private Label lblName;
@@ -57,7 +59,7 @@ public class ProductItem extends AnchorPane {
                     observableList.remove(product);
                 } else {
                     backend.addFavorite(product.getProductId());
-                    setImageToUnFav();
+                    imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
                     favoriteList.add(product);
                 }
             }
@@ -66,7 +68,7 @@ public class ProductItem extends AnchorPane {
         // hämta och sätta produkt properties till relaterande element
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + product.getImageName())));
         lblName.setText(product.getName());
-        lblPrice.setText(product.getPrice() + " " + product.getUnit());
+        lblPrice.setText(new DecimalFormat("#.##").format((product.getPrice())) + " " + product.getUnit());
         labelCount.setText("1");
 
         /*SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
@@ -92,5 +94,11 @@ public class ProductItem extends AnchorPane {
     @FXML
     private void addToCartPressed() {
         BackendController.addToCart(product, Integer.valueOf(labelCount.getText()));
+        parentView.updateInfo();
+        parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(labelCount.getText()));
+    }
+
+    public void setParentView(ProductView parentView) {
+        this.parentView = parentView;
     }
 }

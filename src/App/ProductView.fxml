@@ -16,10 +16,182 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ProductView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ProductView">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75)rgba(0, 0, 0, 0.75);">
+               <children>
+                  <AnchorPane layoutX="507.0" prefHeight="441.0" prefWidth="823.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <ImageView fx:id="itemPictureImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label styleClass="text-arrows" text="Innehållsförteckning:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="260.0" />
+                        <TextArea layoutX="25.0" layoutY="273.0" prefHeight="152.0" prefWidth="274.0" styleClass="text-normal" text="Mjöl (VETE, fullkorn av RÅG, dinkelVETE 3%, siktad RÅG, durumVETE), vatten, dinkelVETEflingor 5,5, jäst, , surdeg av dinkelVETEmjöl 3,5%, VETEgluten, rapsolja, havssalt, ättika, malt av KORN och VETE" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="282.0" />
+                        <Label fx:id="itemNameLabel" layoutX="283.0" layoutY="28.0" prefHeight="37.0" prefWidth="343.0" styleClass="text-headlines" text="Namn" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="25.0" />
+                        <Label fx:id="priceLabel" layoutX="300.0" layoutY="62.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-arrows" text="Pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="70.0" />
+                        <Label fx:id="pricePerUnitLabel" layoutX="310.0" layoutY="72.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-normal" text="jämf.pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="10.0" layoutY="10.0" styleClass="text-arrows" text="Produktbeskrivning:" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="150.0" />
+                        <TextArea layoutX="300.0" layoutY="172.0" prefHeight="102.0" prefWidth="313.0" styleClass="text-normal" text="Surdegsbröd med bland annat vetegroddar. Gör en bruschetta med tomat, basilika, vitlök och olivolja. In i ugnen i 10 minuter i 200 grader. Klart!" wrapText="true" AnchorPane.leftAnchor="290.0" />
+                        <Button fx:id="increaseButton" layoutX="412.0" layoutY="360.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="18.0" styleClass="button-grey" text="+" AnchorPane.bottomAnchor="50.0" />
+                        <TextField fx:id="numberTextField" layoutX="377.0" layoutY="360.0" prefHeight="27.0" prefWidth="35.0" text="1" AnchorPane.bottomAnchor="50.0" />
+                        <Button fx:id="decreaseButton" layoutX="352.0" layoutY="360.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="18.0" styleClass="button-grey" text="-" AnchorPane.bottomAnchor="50.0" />
+                        <Button fx:id="addToCartButton" layoutX="438.0" layoutY="360.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="179.0" styleClass="button-green" text="Lägg till i varukorgen" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="35.0">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/imat/images/cart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fx:id="favoriteImage" fitHeight="42.0" fitWidth="42.0" layoutX="569.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="35.0">
+                           <image>
+                              <Image url="@resources/imat/images/favorite.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="closeImageView" fitHeight="26.0" fitWidth="33.0" layoutX="602.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@resources/imat/images/icon_close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="175.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <Label layoutX="185.0" layoutY="50.0" styleClass="text-headlines" text="Välkommen till iMat!" AnchorPane.topAnchor="50.0" />
+                        <Button fx:id="startShoppingButton" layoutX="548.0" layoutY="388.0" mnemonicParsing="false" styleClass="button-green" text="Börja handla" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                        <TextArea layoutX="119.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" text="Börja handla genom att lägga till varor i varukorgen. Du kan hitta varorna du är ute efter genom att antingen använda sökfunktionen högst upp eller använda dig av de olika kategorierna till vänster. Om du behöver hjälp eller har några frågor kan du använda dig av hjälp-knappen högst upp till höger. " wrapText="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0">
+                           <styleClass>
+                              <String fx:value="text-area" />
+                              <String fx:value="text-arrows" />
+                           </styleClass>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane prefHeight="492.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox fx:id="vBox" prefHeight="608.0" prefWidth="295.0" spacing="15.0">
+                           <padding>
+                              <Insets bottom="30.0" top="30.0" />
+                           </padding>
+                           <children>
+                              <Button fx:id="favButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="295.0" styleClass="catagory" text="Favoriter" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/favorite.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Bröd">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/bread.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Frukter">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/fruitfoodorange.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Grönsakser">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/eggplant.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Örter">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/herb.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Pasta, Potatis &amp; Ris">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/pasta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Drycker">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/hotbeverage.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Fisk &amp; Kött">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/fish.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Mejeriprodukter">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/dairy.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Skafferi">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/sugar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Nötter &amp; Frön">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/nuts.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="295.0" styleClass="catagory" text="Sötsaker">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imat/images/sweet.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
             <SplitPane dividerPositions="0.22329376854599406" prefHeight="491.0" prefWidth="1350.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="250.0">
@@ -154,56 +326,6 @@
                   </AnchorPane>
                </items>
             </SplitPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75)rgba(0, 0, 0, 0.75);">
-               <children>
-                  <AnchorPane layoutX="507.0" prefHeight="441.0" prefWidth="823.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
-                     <children>
-                        <ImageView fx:id="itemPictureImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label styleClass="text-arrows" text="Innehållsförteckning:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="260.0" />
-                        <TextArea layoutX="25.0" layoutY="273.0" prefHeight="152.0" prefWidth="274.0" styleClass="text-normal" text="Mjöl (VETE, fullkorn av RÅG, dinkelVETE 3%, siktad RÅG, durumVETE), vatten, dinkelVETEflingor 5,5, jäst, , surdeg av dinkelVETEmjöl 3,5%, VETEgluten, rapsolja, havssalt, ättika, malt av KORN och VETE" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="282.0" />
-                        <Label fx:id="itemNameLabel" layoutX="283.0" layoutY="28.0" prefHeight="37.0" prefWidth="343.0" styleClass="text-headlines" text="Namn" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="25.0" />
-                        <Label fx:id="priceLabel" layoutX="300.0" layoutY="62.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-arrows" text="Pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="70.0" />
-                        <Label fx:id="pricePerUnitLabel" layoutX="310.0" layoutY="72.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-normal" text="jämf.pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="100.0" />
-                        <Label layoutX="10.0" layoutY="10.0" styleClass="text-arrows" text="Produktbeskrivning:" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="150.0" />
-                        <TextArea layoutX="300.0" layoutY="172.0" prefHeight="102.0" prefWidth="313.0" styleClass="text-normal" text="Surdegsbröd med bland annat vetegroddar. Gör en bruschetta med tomat, basilika, vitlök och olivolja. In i ugnen i 10 minuter i 200 grader. Klart!" wrapText="true" AnchorPane.leftAnchor="290.0" />
-                        <Button fx:id="increaseButton" layoutX="412.0" layoutY="360.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="18.0" styleClass="button-grey" text="+" AnchorPane.bottomAnchor="50.0" />
-                        <TextField fx:id="numberTextField" layoutX="377.0" layoutY="360.0" prefHeight="27.0" prefWidth="35.0" text="1" AnchorPane.bottomAnchor="50.0" />
-                        <Button fx:id="decreaseButton" layoutX="352.0" layoutY="360.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="18.0" styleClass="button-grey" text="-" AnchorPane.bottomAnchor="50.0" />
-                        <Button fx:id="addToCartButton" layoutX="438.0" layoutY="360.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="179.0" styleClass="button-green" text="Lägg till i varukorgen" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="35.0">
-                           <graphic>
-                              <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/imat/images/cart.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <ImageView fx:id="favoriteImage" fitHeight="42.0" fitWidth="42.0" layoutX="569.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="35.0">
-                           <image>
-                              <Image url="@resources/imat/images/favorite.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="closeImageView" fitHeight="26.0" fitWidth="33.0" layoutX="602.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
-                           <image>
-                              <Image url="@resources/imat/images/icon_close.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="175.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
-                     <children>
-                        <Label layoutX="185.0" layoutY="50.0" styleClass="text-headlines" text="Välkommen till iMat!" AnchorPane.topAnchor="50.0" />
-                        <Button fx:id="startShoppingButton" layoutX="548.0" layoutY="388.0" mnemonicParsing="false" styleClass="button-green" text="Börja handla" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-                        <TextArea layoutX="119.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" text="Börja handla genom att lägga till varor i varukorgen. Du kan hitta varorna du är ute efter genom att antingen använda sökfunktionen högst upp eller använda dig av de olika kategorierna till vänster. Om du behöver hjälp eller har några frågor kan du använda dig av hjälp-knappen högst upp till höger. " wrapText="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0">
-                           <styleClass>
-                              <String fx:value="text-area" />
-                              <String fx:value="text-arrows" />
-                           </styleClass>
-                        </TextArea>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
          </children>
       </StackPane>
    </children>

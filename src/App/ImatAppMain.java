@@ -14,7 +14,7 @@ public class ImatAppMain extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
         primaryStage.setTitle("IMat - Handla Enkelt & Snabbt");
-        Scene scene = new Scene(root, 1370, 850);
+        Scene scene = new Scene(root, 1370, 890);
         scene.getStylesheets().add(MainWindow.class.getResource("StyleSheet.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
