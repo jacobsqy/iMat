@@ -95,6 +95,7 @@ public class ProductItem extends AnchorPane {
     private void addToCartPressed() {
         BackendController.addToCart(product, Integer.valueOf(labelCount.getText()));
         parentView.updateInfo();
+        parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(labelCount.getText()));
     }
 
     public void setParentView(ProductView parentView) {

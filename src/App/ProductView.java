@@ -119,6 +119,7 @@ public class ProductView {
             productListFlowPane.getChildren().clear();
             for (Product product : favoriteList) {
                 ProductItem productItem = new ProductItem(product);
+                productItem.setParentView(this);
                 productListFlowPane.getChildren().add(productItem);
             }
         }
@@ -130,5 +131,9 @@ public class ProductView {
 
     public void updateInfo() {
         parentController.updateInfo();
+    }
+
+    public MainWindow getParentController() {
+        return parentController;
     }
 }

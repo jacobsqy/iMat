@@ -16,9 +16,13 @@ public class BackendController {
      *  hämtar all produkter från txt filen och lägger dem i en list
      * @return produkt list
      */
-    public static List<Product> getProduct(){
+    public static List<Product> getProducts(){
         List<Product> products = backend.getProducts();
         return products;
+    }
+
+    public static Product getProduct(int ID) {
+        return IMatDataHandler.getInstance().getProduct(ID);
     }
 
     /**
@@ -27,7 +31,7 @@ public class BackendController {
      */
     public static ArrayList<String> getProductNames() {
         ArrayList<String> product = new ArrayList<>();
-        for (Product item: getProduct()) {
+        for (Product item: getProducts()) {
             product.add(item.getName());
         }
         return product;

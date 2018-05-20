@@ -1,7 +1,12 @@
 package App;
 
 
+import javafx.animation.FadeTransition;
+import javafx.animation.PauseTransition;
+import javafx.animation.SequentialTransition;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,12 +15,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import javafx.util.Duration;
+import se.chalmers.cse.dat216.project.Product;
 
-import javax.swing.text.html.ImageView;
-import java.awt.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +44,9 @@ public class MainWindow {
     @FXML private AnchorPane historyView;
     @FXML private ShoppingCartView shoppingViewController;
     @FXML private Label headlineLabel;
+
+    @FXML private AnchorPane productAddedToShoppingCartInfo;
+    @FXML private Label productAddedToShoppingCartInfoLabel;
 
     public static List<Label> updateInfoLabels = new ArrayList<Label>();
 
@@ -179,5 +184,37 @@ public class MainWindow {
         shoppingViewController.updateInfo();
         headlineLabel.setText("Varukorgen");
         headlineLabel.setVisible(true);
+    }
+
+    public void showProductAddedToShoppingCartInfo(Product product, int amount) {
+        String info;
+        if (amount == 1) {
+            info = "1 " + product.getName() + " tillagd i varukorgen!";
+        } else {
+            info = amount + " " + product.getName() + " tillagda i varukorgen!";
+        }
+        productAddedToShoppingCartInfoLabel.setText(info);
+        double duration = 1000;
+        double delay = 2000;
+
+        FadeTransition ft = new FadeTransition(Duration.millis(duration), productAddedToShoppingCartInfo);
+        ft.setFromValue(0.0);
+        ft.setToValue(1.0);
+        ft.setCycleCount(1);
+
+        FadeTransition reverseFadeTransition = new FadeTransition(Duration.millis(duration), productAddedToShoppingCartInfo);
+        reverseFadeTransition.setFromValue(1.0);
+        reverseFadeTransition.setToValue(0.0);
+        reverseFadeTransition.setCycleCount(1);
+        reverseFadeTransition.setDelay(Duration.millis(delay));
+
+        ft.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                reverseFadeTransition.play();
+            }
+        });
+
+        ft.play();
     }
 }
