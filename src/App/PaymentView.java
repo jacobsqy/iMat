@@ -3,11 +3,8 @@ package App;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-<<<<<<< HEAD
-import javafx.scene.input.MouseEvent;
-=======
+
 import javafx.scene.control.TextField;
->>>>>>> 16fab340bb280fd6ed1bf563b251ddc0ac538c06
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import se.chalmers.cse.dat216.project.Customer;
@@ -46,6 +43,27 @@ public class PaymentView extends AnchorPane {
     public void initialize() {
         fillAnchorPaneList();
         focus(0);
+
+
+        /********* READ ME ***********/
+
+        /*Lägg dessa koder i bekräfta köp för att spara historik, kontakter etc. och rensa shopingcart
+
+        Order order = new Order();
+        order.setItems(backend.getShoppingCart().getItems());
+
+        backend.placeOrder(); //sparar historik och rensar shopingcart
+        backend.shutDown(); // sparar alla data
+
+        updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
+        updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
+
+
+        */
+        // Murat
+        /* ********** END ************/
+
+
     }
 
     private void fillAnchorPaneList() {
