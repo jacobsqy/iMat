@@ -98,6 +98,10 @@ public class ProductItem extends AnchorPane {
         parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(labelCount.getText()));
     }
 
+    @FXML private void moreInfoPressed() {
+        parentView.changeToMoreInfo();
+    }
+
     public void setParentView(ProductView parentView) {
         this.parentView = parentView;
     }

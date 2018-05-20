@@ -177,6 +177,8 @@ public class MainWindow {
     }
 
     public void goToShoppingCart() {
+        productViewController.changeToDefaultView();
+
         contentPane.getChildren().setAll(shoppingView);
         continueToShopButton.setVisible(true);
         shoppingCartButton.setVisible(false);
