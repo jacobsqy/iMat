@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
+<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
    <children>
       <Separator layoutY="194.0" prefHeight="0.0" prefWidth="1350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0" />
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="198.0" prefWidth="1330.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
@@ -65,7 +65,7 @@
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@resources/imat/images/help.png" />
+                        <Image url="@resources/imat/images/help3.png" />
                      </image>
                   </ImageView>
                </graphic>
