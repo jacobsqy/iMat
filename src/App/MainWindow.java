@@ -166,6 +166,7 @@ public class MainWindow {
     }
 
     public void changeToPaymentView(){
+        if (BackendController.getShoppingItems().isEmpty()) return;
         contentPane.getChildren().setAll(paymentView);
         continueToShopButton.setVisible(true);
         shoppingCartButton.setVisible(false);
