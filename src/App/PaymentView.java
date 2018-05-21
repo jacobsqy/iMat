@@ -333,8 +333,7 @@ public class PaymentView extends AnchorPane {
         backend.placeOrder(); //sparar historik och rensar shopingcart
         backend.shutDown(); // sparar alla data
 
-        parentController.updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
-        parentController.updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
+        parentController.orderComplete();
     }
 
 

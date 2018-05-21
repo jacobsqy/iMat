@@ -233,4 +233,10 @@ public class MainWindow {
 
         ft.play();
     }
+
+    public void orderComplete() {
+        continueToShop();
+        updateInfo();
+        productViewController.changeToConfirmationView();
+    }
 }

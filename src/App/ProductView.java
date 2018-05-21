@@ -199,6 +199,11 @@ public class ProductView {
         defautView.toFront();
     }
 
+    public void changeToConfirmationView() {
+        lightBox.toFront();
+        confirmationAnchorPane.toFront();
+    }
+
     private void mouseTrap(Event event){
         event.consume();
     }
