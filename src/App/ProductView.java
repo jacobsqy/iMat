@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 import static App.BackendController.backend;
+import static App.MainWindow.updatextSearchText;
 
 public class ProductView {
 
@@ -171,6 +172,7 @@ public class ProductView {
         lightBox.toBack();
         moreInfo.toBack();
         firstTimeView.toBack();
+        updatextSearchText.get(0).setDisable(false);
     }
 
     public void changeToMoreInfo() {
