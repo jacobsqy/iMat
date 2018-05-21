@@ -50,6 +50,9 @@ public class MainWindow {
 
     public static List<Label> updateInfoLabels = new ArrayList<Label>();
 
+    private FadeTransition ft;
+    private FadeTransition reverseFadeTransition;
+
     public void initialize() {
 
         updateInfoLabels.add(amountOfProducts);
@@ -145,6 +148,32 @@ public class MainWindow {
 
         contentPane.getChildren().setAll(productView);
 
+        initAnimation();
+    }
+
+    private void initAnimation() {
+        double delay = 2000;
+        double duration = 1000;
+
+        ft = new FadeTransition(Duration.millis(duration), productAddedToShoppingCartInfo);
+        reverseFadeTransition = new FadeTransition(Duration.millis(duration), productAddedToShoppingCartInfo);
+
+
+        ft.setFromValue(0.0);
+        ft.setToValue(1.0);
+        ft.setCycleCount(1);
+
+        reverseFadeTransition.setFromValue(1.0);
+        reverseFadeTransition.setToValue(0.0);
+        reverseFadeTransition.setCycleCount(1);
+        reverseFadeTransition.setDelay(Duration.millis(delay));
+
+        ft.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                reverseFadeTransition.play();
+            }
+        });
     }
 
     private void continueToShop() {
@@ -197,26 +226,6 @@ public class MainWindow {
             info = amount + " " + product.getName() + " tillagda i varukorgen!";
         }
         productAddedToShoppingCartInfoLabel.setText(info);
-        double duration = 1000;
-        double delay = 2000;
-
-        FadeTransition ft = new FadeTransition(Duration.millis(duration), productAddedToShoppingCartInfo);
-        ft.setFromValue(0.0);
-        ft.setToValue(1.0);
-        ft.setCycleCount(1);
-
-        FadeTransition reverseFadeTransition = new FadeTransition(Duration.millis(duration), productAddedToShoppingCartInfo);
-        reverseFadeTransition.setFromValue(1.0);
-        reverseFadeTransition.setToValue(0.0);
-        reverseFadeTransition.setCycleCount(1);
-        reverseFadeTransition.setDelay(Duration.millis(delay));
-
-        ft.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                reverseFadeTransition.play();
-            }
-        });
 
         ft.play();
     }
