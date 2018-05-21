@@ -38,6 +38,7 @@ public class ProductView {
     @FXML private AnchorPane lightBox;
     @FXML private AnchorPane moreInfo;
     @FXML private AnchorPane firstTimeView;
+    @FXML private AnchorPane confirmationAnchorPane;
 
     public static List<Product> productList = new ArrayList<Product>();
     public static Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
@@ -172,6 +173,7 @@ public class ProductView {
         lightBox.toBack();
         moreInfo.toBack();
         firstTimeView.toBack();
+        confirmationAnchorPane.toBack();
         updatextSearchText.get(0).setDisable(false);
     }
 
