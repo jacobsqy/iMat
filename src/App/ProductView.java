@@ -111,7 +111,8 @@ public class ProductView {
                 mouseTrap(mouseEvent);
             }
         });
-        
+
+        deactivateLightBox();
         if (BackendController.isFirstRun()) {
             changeToFirstTimeView();
         } else {
