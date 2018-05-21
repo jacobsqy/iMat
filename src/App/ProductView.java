@@ -111,7 +111,14 @@ public class ProductView {
                 mouseTrap(mouseEvent);
             }
         });
-        
+        confirmationAnchorPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                mouseTrap(mouseEvent);
+            }
+        });
+
+        deactivateLightBox();
         if (BackendController.isFirstRun()) {
             changeToFirstTimeView();
         } else {
@@ -174,7 +181,7 @@ public class ProductView {
         moreInfo.toBack();
         firstTimeView.toBack();
         confirmationAnchorPane.toBack();
-        updatextSearchText.get(0).setDisable(false);
+        //updatextSearchText.get(0).setDisable(false);
     }
 
     public void changeToMoreInfo() {
