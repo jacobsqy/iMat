@@ -22,6 +22,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import static App.BackendController.backend;
 import static App.Controllers.HistoryView.historyViews;
 
 public class MainWindow {
@@ -49,6 +50,7 @@ public class MainWindow {
     @FXML private Label productAddedToShoppingCartInfoLabel;
 
     public static List<Label> updateInfoLabels = new ArrayList<Label>();
+    public static List<TextField> updatextSearchText = new ArrayList<TextField>();
 
     private FadeTransition ft;
     private FadeTransition reverseFadeTransition;
@@ -57,6 +59,8 @@ public class MainWindow {
 
         updateInfoLabels.add(amountOfProducts);
         updateInfoLabels.add(totalPrice);
+
+        updatextSearchText.add(txtSearch);
 
         shoppingViewController.setParentController(this);
         productViewController.setParentController(this);
