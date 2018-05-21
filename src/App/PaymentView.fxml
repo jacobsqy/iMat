@@ -7,13 +7,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.PaymentView">
+<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.PaymentView">
 
    <children>
       <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -146,41 +147,43 @@
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Namn:" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="200.0" />
-                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefWidth="120.0" styleClass="text-normal" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="260.0" />
-                  <Label alignment="CENTER_RIGHT" prefWidth="120.0" styleClass="text-normal" text="Postnummer:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="334.0" layoutY="380.0" prefWidth="120.0" styleClass="text-normal" text="Postort:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="380.0" />
-                  <TextField fx:id="firstNameTextField" prefHeight="27.0" prefWidth="165.0" promptText="Förnamn" stylesheets="@StyleSheet.css" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
-                  <TextField fx:id="lastNameTextField" layoutX="671.0" layoutY="200.0" prefHeight="27.0" prefWidth="340.0" promptText="Efternamn" />
-                  <TextField fx:id="addressTextField" prefHeight="27.0" prefWidth="530.0" promptText="Exempelvägen 123" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
-                  <TextField fx:id="postCodeTextField" prefHeight="27.0" prefWidth="530.0" promptText="123 45" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="320.0" />
-                  <TextField fx:id="postAddressTextField" prefHeight="27.0" prefWidth="530.0" promptText="Stockholm" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="380.0" />
-                  <Label styleClass="text-headlines" text="Fyll i uppgifter" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="130.0" />
-                  <Label styleClass="text-arrows" text="Uppgifter" textFill="WHITE" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="65.0" />
-                  <Label styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
-                  <Label layoutX="901.0" layoutY="60.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
-                  <Button fx:id="goBackAdressButton" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
+                  <Label layoutX="901.0" layoutY="60.0" styleClass="text-arrows" stylesheets="@StyleSheet.css" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
+                  <Label styleClass="text-arrows" stylesheets="@StyleSheet.css" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
+                  <Label styleClass="text-arrows" stylesheets="@StyleSheet.css" text="Uppgifter" textFill="WHITE" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="65.0" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="320.0" layoutY="186.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Namn:" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="186.0" />
+                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="320.0" layoutY="231.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="231.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="320.0" layoutY="275.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Postnummer:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="275.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="320.0" layoutY="319.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Postort:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="319.0" />
+                  <TextField fx:id="firstNameTextField" layoutX="480.0" layoutY="187.0" prefHeight="27.0" prefWidth="165.0" promptText="Förnamn" stylesheets="@../../../iMat_5/src/App/StyleSheet.css" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="187.0" />
+                  <TextField fx:id="lastNameTextField" layoutX="671.0" layoutY="186.0" prefHeight="27.0" prefWidth="340.0" promptText="Efternamn" />
+                  <TextField fx:id="addressTextField" layoutX="480.0" layoutY="231.0" prefHeight="27.0" prefWidth="530.0" promptText="Exempelvägen 123" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="231.0" />
+                  <TextField fx:id="postCodeTextField" layoutX="480.0" layoutY="275.0" prefHeight="27.0" prefWidth="530.0" promptText="123 45" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="275.0" />
+                  <TextField fx:id="postAddressTextField" layoutX="480.0" layoutY="319.0" prefHeight="27.0" prefWidth="530.0" promptText="Stockholm" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="319.0" />
+                  <Label styleClass="text-headlines" stylesheets="@StyleSheet.css" text="Fyll i uppgifter" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="130.0" />
+                  <Button fx:id="goBackAdressButton" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" stylesheets="@StyleSheet.css" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-grey" />
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-
-
-
-                  <Button fx:id="nextStepAddressButton" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Nästa steg" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
-
+                  <Button fx:id="nextStepAddressButton" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" stylesheets="@StyleSheet.css" text="Nästa steg" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-green" />
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <CheckBox fx:id="saveCheckBox" layoutX="480.0" layoutY="418.0" mnemonicParsing="false" selected="true" text="Spara dina uppgifter till kommande köp" />
-                  <Label fx:id="firstPageWarningLabel" layoutX="478.0" layoutY="446.0" text="Alla fält måste fyllas i innan du kan fortsätta!" textFill="RED">
+                  <CheckBox fx:id="saveCheckBox" layoutX="480.0" layoutY="438.0" mnemonicParsing="false" selected="true" text="Spara dina uppgifter till kommande köp" />
+                  <Label fx:id="firstPageWarningLabel" layoutX="478.0" layoutY="461.0" text="Alla fält måste fyllas i innan du kan fortsätta!" textFill="RED">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="320.0" layoutY="363.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Email:" textAlignment="RIGHT" />
+                  <TextField fx:id="eMailTextField" layoutX="480.0" layoutY="363.0" prefHeight="27.0" prefWidth="530.0" promptText="1234@exempel.se" />
+                  <Label alignment="CENTER_RIGHT" layoutX="283.0" layoutY="403.0" prefHeight="20.0" prefWidth="157.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Leveransdatum:" textAlignment="RIGHT" />
+                  <ToggleButton fx:id="firstDateToggleButton" layoutX="480.0" layoutY="401.0" mnemonicParsing="false" onAction="#firstToggle" text="15/5" />
+                  <ToggleButton fx:id="secondDateToggleButton" layoutX="553.0" layoutY="401.0" mnemonicParsing="false" onAction="#secondToggle" text="16/5" />
+                  <ToggleButton fx:id="thirdDateToggleButton" layoutX="623.0" layoutY="401.0" mnemonicParsing="false" onAction="#thirdToggle" text="17/5" />
                </children>
             </AnchorPane>
          </children>
