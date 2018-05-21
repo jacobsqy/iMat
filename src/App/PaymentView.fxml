@@ -38,13 +38,13 @@
                   <Label layoutX="243.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="481.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="763.0" layoutY="90.0" styleClass="text-arrows" text="Slutför köp" textFill="WHITE" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
-                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" text="Bekräfta köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Bekräfta köp" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-green" />
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="41.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
                      <styleClass>
                         <String fx:value="text-normal" />
                         <String fx:value="button-red" />
@@ -56,7 +56,7 @@
                   <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="190.0" />
                   <TextArea fx:id="addressTextArea" editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0" />
                   <TextArea fx:id="creditCardTextArea" editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0" />
-                  <TextArea fx:id="chartTextArea" editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0" />
+                  <TextArea fx:id="cartTextArea" editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="cardInfoPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
@@ -76,13 +76,13 @@
                         <Image url="@resources/imat/images/Skärmavbild%202018-05-15%20kl.%2014.27.25.png" />
                      </image>
                   </ImageView>
-                  <Button mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" text="Tillbaka" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+                  <Button mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-grey" />
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <Button mnemonicParsing="false" onMouseClicked="#setConfirmPage" text="Nästa steg" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                  <Button mnemonicParsing="false" onMouseClicked="#setConfirmPage" prefHeight="38.0" prefWidth="196.0" text="Nästa steg" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-green" />
                         <String fx:value="text-normal" />

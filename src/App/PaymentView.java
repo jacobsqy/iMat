@@ -1,14 +1,9 @@
 package App;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.StackPane;
 import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.Order;
@@ -55,7 +50,7 @@ public class PaymentView extends AnchorPane {
 
     @FXML private TextArea addressTextArea;
     @FXML private TextArea creditCardTextArea;
-    @FXML private TextArea chartTextArea;
+    @FXML private TextArea cartTextArea;
 
     @FXML private CheckBox saveCheckBox;
     @FXML private CheckBox saveCreditCheckBox;
@@ -79,12 +74,14 @@ public class PaymentView extends AnchorPane {
         firstPageWarningLabel.setVisible(false);
         secondPageWarningLabel.setVisible(false);
 
-        creditCardMonthTextField.getItems().addAll("Januari", "Fabruari", "Mars", "April", "Maj","Juni", "Juli", "Augusti","September","Oktober","November","December");
+        creditCardMonthTextField.getItems().addAll("01", "02", "03", "04", "05","06", "07", "08","09","10","11","12");
 
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 
         creditCardYearTextField.getItems().addAll(currentYear,currentYear+1,currentYear+2,currentYear+3,currentYear+4);
 
+
+        //Checking CVC
         creditCardCVCTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {
                 creditCardCVCTextField.setText(newValue.replaceAll("[^\\d]", ""));
@@ -151,26 +148,6 @@ public class PaymentView extends AnchorPane {
                 creditCardForthNumberTextField.setText(oldValue);
             }
         });
-
-
-        /********* READ ME ***********/
-
-        /*Lägg dessa koder i bekräfta köp för att spara historik, kontakter etc. och rensa shopingcart
-
-        Order order = new Order();
-        order.setItems(backend.getShoppingCart().getItems());
-
-        backend.placeOrder(); //sparar historik och rensar shopingcart
-        backend.shutDown(); // sparar alla data
-
-        updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
-        updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
-
-
-        */
-        // Murat
-        /* ********** END ************/
-
 
     }
 
@@ -331,14 +308,18 @@ public class PaymentView extends AnchorPane {
 
     @FXML public void setConfirmPage(){
         Customer c = BackendController.getCustomer();
-        System.out.println(c.getMobilePhoneNumber());
+        addressTextArea.clear();
+        creditCardTextArea.clear();
+        cartTextArea.clear();
+
+
         addressTextArea.appendText(firstNameTextField.getText()+ "\n" + lastNameTextField.getText() + "\n" + addressTextField.getText() + "\n" + postCodeTextField.getText() + "\n" + postAddressTextField.getText());
         creditCardTextArea.appendText(creditCardNameTextField.getText() + "\n" + creditCardFirstNumberTextField.getText() + creditCardSecondNumberTextField.getText() + creditCardThirdNumberTextField.getText() + creditCardForthNumberTextField.getText() + "\n" + creditCardMonthTextField.getSelectionModel().getSelectedItem().toString() + " " +  creditCardYearTextField.getSelectionModel().getSelectedItem().toString());
 
         for (ShoppingItem product: backend.getShoppingCart().getItems()) {
-            chartTextArea.appendText(product.getProduct().getName() + " " + product.getAmount() + product.getProduct().getUnitSuffix() + "\n");
+            cartTextArea.appendText(product.getProduct().getName() + " " + product.getAmount() + product.getProduct().getUnitSuffix() + "\n");
         }
-        chartTextArea.appendText("\nTotalt pris: " + Double.toString(backend.getShoppingCart().getTotal()) + "kr");
+        cartTextArea.appendText("\nTotalt pris: " + Double.toString(backend.getShoppingCart().getTotal()) + "kr");
 
         goForwardButtonPressed();
     }
