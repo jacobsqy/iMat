@@ -91,3 +91,8 @@
     -fx-scale-y: 1.05;
     -fx-scale-z: 1.05;
 }
+
+.text-field.error {
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+}

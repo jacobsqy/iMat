@@ -1,18 +1,27 @@
 package App;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.StackPane;
 import se.chalmers.cse.dat216.project.Customer;
+import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
+//import javax.xml.soap.Text;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import static App.BackendController.backend;
+
 
 public class PaymentView extends AnchorPane {
 
@@ -29,20 +38,119 @@ public class PaymentView extends AnchorPane {
     @FXML private Button confirmButton;
     @FXML private Button backToShoppingCartButton;
 
-    @FXML private TextField firstNameTextArea;
-    @FXML private TextField lastNameTextArea;
-    @FXML private TextField addressTextArea;
-    @FXML private TextField postCodeTextArea;
-    @FXML private TextField postAddressTextArea;
+    @FXML private TextField firstNameTextField;
+    @FXML private TextField lastNameTextField;
+    @FXML private TextField addressTextField;
+    @FXML private TextField postCodeTextField;
+    @FXML private TextField postAddressTextField;
+
+    @FXML private TextField creditCardNameTextField;
+    @FXML private TextField creditCardFirstNumberTextField;
+    @FXML private TextField creditCardSecondNumberTextField;
+    @FXML private TextField creditCardThirdNumberTextField;
+    @FXML private TextField creditCardForthNumberTextField;
+    @FXML private TextField creditCardCVCTextField;
+    @FXML private ChoiceBox creditCardMonthTextField;
+    @FXML private ChoiceBox creditCardYearTextField;
+
+    @FXML private TextArea addressTextArea;
+    @FXML private TextArea creditCardTextArea;
+    @FXML private TextArea chartTextArea;
+
+    @FXML private CheckBox saveCheckBox;
+    @FXML private CheckBox saveCreditCheckBox;
+
+    @FXML private Label firstPageWarningLabel;
+    @FXML private Label secondPageWarningLabel;
 
     private List<AnchorPane> anchorPaneList = new ArrayList<AnchorPane>();
     private int anchorPaneListIndex;
+
+    private List<TextField> firstPage = new ArrayList<>();
+    private List<TextField> secondPage = new ArrayList<>();
 
     private MainWindow parentController;
 
     public void initialize() {
         fillAnchorPaneList();
+        fillTextFieldList();
+        setCustomer();
         focus(0);
+        firstPageWarningLabel.setVisible(false);
+        secondPageWarningLabel.setVisible(false);
+
+        creditCardMonthTextField.getItems().addAll("Januari", "Fabruari", "Mars", "April", "Maj","Juni", "Juli", "Augusti","September","Oktober","November","December");
+
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+
+        creditCardYearTextField.getItems().addAll(currentYear,currentYear+1,currentYear+2,currentYear+3,currentYear+4);
+
+        creditCardCVCTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                creditCardCVCTextField.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+            if(newValue.length() >= 3){
+                creditCardMonthTextField.requestFocus();
+            }
+            if(newValue.length() > 3){
+                creditCardCVCTextField.setText(oldValue);
+            }
+        });
+
+
+            creditCardFirstNumberTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+                if (!newValue.matches("\\d*")) {
+                    creditCardFirstNumberTextField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+
+                if(newValue.length() >= 4){
+                    creditCardSecondNumberTextField.requestFocus();
+                }
+
+                if(newValue.length() > 4){
+                    creditCardFirstNumberTextField.setText(oldValue);
+                }
+
+            });
+
+        creditCardSecondNumberTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                creditCardSecondNumberTextField.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+            if(newValue.length() >= 4){
+                creditCardThirdNumberTextField.requestFocus();
+            }
+
+            if(newValue.length() > 4){
+                creditCardSecondNumberTextField.setText(oldValue);
+            }
+        });
+
+        creditCardThirdNumberTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                creditCardThirdNumberTextField.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+            if(newValue.length() >= 4){
+                creditCardForthNumberTextField.requestFocus();
+            }
+
+            if(newValue.length() > 4){
+                creditCardThirdNumberTextField.setText(oldValue);
+            }
+        });
+
+        creditCardForthNumberTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                creditCardForthNumberTextField.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+            if(newValue.length() >= 4){
+                creditCardCVCTextField.requestFocus();
+            }
+
+            if(newValue.length() > 4){
+                creditCardForthNumberTextField.setText(oldValue);
+            }
+        });
 
 
         /********* READ ME ***********/
@@ -66,6 +174,39 @@ public class PaymentView extends AnchorPane {
 
     }
 
+    private void setCustomer(){
+        Customer c = BackendController.getCustomer();
+
+        firstNameTextField.setText(c.getFirstName());
+        lastNameTextField.setText(c.getLastName());
+        postAddressTextField.setText(c.getPostAddress());
+        postCodeTextField.setText(c.getPostCode());
+        addressTextField.setText(c.getAddress());
+
+        creditCardNameTextField.setText(c.getPhoneNumber());
+        /*creditCardFirstNumberTextField.setText(c.getMobilePhoneNumber().substring(0,3));
+        creditCardSecondNumberTextField.setText(c.getMobilePhoneNumber().substring(4,7));
+        creditCardThirdNumberTextField.setText(c.getMobilePhoneNumber().substring(8,11));
+        creditCardForthNumberTextField.setText(c.getMobilePhoneNumber().substring(12,15));
+        creditCardMonthTextField.getSelectionModel().select(Integer.parseInt(c.getEmail().substring(0,1)));
+        creditCardYearTextField.getSelectionModel().select(Integer.parseInt(c.getEmail().substring(1,2)));*/
+    }
+
+    private void fillTextFieldList() {
+        firstPage.add(firstNameTextField);
+        firstPage.add(lastNameTextField);
+        firstPage.add(addressTextField);
+        firstPage.add(postAddressTextField);
+        firstPage.add(postCodeTextField);
+
+        secondPage.add(creditCardCVCTextField);
+        secondPage.add(creditCardNameTextField);
+        secondPage.add(creditCardFirstNumberTextField);
+        secondPage.add(creditCardSecondNumberTextField);
+        secondPage.add(creditCardThirdNumberTextField);
+        secondPage.add(creditCardForthNumberTextField);
+    }
+
     private void fillAnchorPaneList() {
         anchorPaneList.add(addressInfoPane);
         anchorPaneList.add(cardInfoPane);
@@ -76,9 +217,20 @@ public class PaymentView extends AnchorPane {
         if (anchorPaneListIndex < 2) {
             focus(anchorPaneListIndex + 1);
         } else {
-            //TODO make the payment
+            purchase();
         }
-        saveData();
+
+        if(saveCheckBox.isSelected()) {
+            saveAddressData();
+        }else {
+            //Clear customer
+        }
+
+        if(saveCreditCheckBox.isSelected()) {
+            saveCreditCardData();
+        }else{
+            //Clear customer
+        }
     }
 
     private void focusPrevious() {
@@ -98,16 +250,23 @@ public class PaymentView extends AnchorPane {
         this.parentController = parentController;
     }
 
-    private void saveData() {
+    private void saveAddressData() {
         Customer c = BackendController.getCustomer();
         //First screen
+        c.setFirstName(firstNameTextField.getText());
+        c.setLastName(lastNameTextField.getText());
+        c.setAddress(addressTextField.getText());
+        c.setPostCode(postCodeTextField.getText());
+        c.setPostAddress(postAddressTextField.getText());
+    }
 
-        c.setFirstName(firstNameTextArea.getText());
-        c.setLastName(lastNameTextArea.getText());
-        c.setAddress(addressTextArea.getText());
-        c.setPostCode(postCodeTextArea.getText());
-        c.setPostAddress(postAddressTextArea.getText());
+    private void saveCreditCardData() {
+        Customer c = BackendController.getCustomer();
 
+        /*c.setMobilePhoneNumber(creditCardFirstNumberTextField.getText() + creditCardSecondNumberTextField.getText() +
+                creditCardThirdNumberTextField.getText() + creditCardForthNumberTextField.getText());*/
+        c.setPhoneNumber(creditCardNameTextField.getText());
+        //c.setEmail(Integer.toString(creditCardMonthTextField.getSelectionModel().getSelectedIndex() + creditCardYearTextField.getSelectionModel().getSelectedIndex()));
         //Second screen
 
     }
@@ -117,8 +276,86 @@ public class PaymentView extends AnchorPane {
     }
 
     @FXML public void goForwardButtonPressed() {
-        focusNext();
-        Customer c = BackendController.getCustomer();
-
+        if(checkTextFields()){
+            focusNext();
+        }
     }
+
+    boolean checkTextFields(){
+        boolean bool = true;
+        switch (anchorPaneListIndex){
+            case 0:
+                firstPageWarningLabel.setVisible(false);
+
+                for (TextField text : firstPage) {
+                    if(text.getText().isEmpty()){
+                        firstPageWarningLabel.setVisible(true);
+                        text.setStyle("-fx-text-box-border: red ; -fx-focus-color: red ;");
+                        bool = false;
+                    }else{
+                        text.setStyle("");
+                    }
+                }
+                return bool;
+            case 1:
+                secondPageWarningLabel.setVisible(false);
+
+                for (TextField text : secondPage) {
+                    if(text.getText().isEmpty()){
+                        secondPageWarningLabel.setVisible(true);
+                        text.setStyle("-fx-text-box-border: red ; -fx-focus-color: red ;");
+                        bool = false;
+                    } else{
+                        text.setStyle("");
+                    }
+                }
+                if(creditCardYearTextField.getSelectionModel().isEmpty()) {
+                    secondPageWarningLabel.setVisible(true);
+                    creditCardYearTextField.setStyle("-fx-border-color: red");
+                    bool = false;
+                } else{
+                    creditCardYearTextField.setStyle("");
+                }
+
+                if(creditCardMonthTextField.getSelectionModel().isEmpty()){
+                    secondPageWarningLabel.setVisible(true);
+                    creditCardMonthTextField.setStyle("-fx-border-color: red");
+                    bool = false;
+                } else{
+                   creditCardMonthTextField.setStyle("");
+                }
+
+                default: return bool;
+        }
+    }
+
+    @FXML public void setConfirmPage(){
+        Customer c = BackendController.getCustomer();
+        System.out.println(c.getMobilePhoneNumber());
+        addressTextArea.appendText(firstNameTextField.getText()+ "\n" + lastNameTextField.getText() + "\n" + addressTextField.getText() + "\n" + postCodeTextField.getText() + "\n" + postAddressTextField.getText());
+        creditCardTextArea.appendText(creditCardNameTextField.getText() + "\n" + creditCardFirstNumberTextField.getText() + creditCardSecondNumberTextField.getText() + creditCardThirdNumberTextField.getText() + creditCardForthNumberTextField.getText() + "\n" + creditCardMonthTextField.getSelectionModel().getSelectedItem().toString() + " " +  creditCardYearTextField.getSelectionModel().getSelectedItem().toString());
+
+        for (ShoppingItem product: backend.getShoppingCart().getItems()) {
+            chartTextArea.appendText(product.getProduct().getName() + " " + product.getAmount() + product.getProduct().getUnitSuffix() + "\n");
+        }
+        chartTextArea.appendText("\nTotalt pris: " + Double.toString(backend.getShoppingCart().getTotal()) + "kr");
+
+        goForwardButtonPressed();
+    }
+
+    @FXML public void purchase(){
+        Order order = new Order();
+        order.setItems(backend.getShoppingCart().getItems());
+
+        backend.placeOrder(); //sparar historik och rensar shopingcart
+        backend.shutDown(); // sparar alla data
+
+        parentController.updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
+        parentController.updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
+    }
+
+
+
+
+
 }
