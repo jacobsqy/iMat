@@ -194,8 +194,8 @@ public class MainWindow {
     }
 
     public void updateInfo() {
-        amountOfProducts.setText(new DecimalFormat("#.##").format(BackendController.getTotalProductAmount()));
-        totalPrice.setText(new DecimalFormat("#.##").format(BackendController.getTotalPrice()));
+        amountOfProducts.setText(new DecimalFormat("#.##").format(BackendController.getTotalProductAmount()) + " st");
+        totalPrice.setText(new DecimalFormat("#.##").format(BackendController.getTotalPrice()) + " kr");
     }
 
     public void changeToPaymentView(){

@@ -9,7 +9,11 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -17,6 +21,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.Product;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +31,8 @@ import static App.BackendController.backend;
 import static App.MainWindow.updatextSearchText;
 
 public class ProductView {
+
+
 
     private MainWindow parentController;
 
@@ -39,6 +46,13 @@ public class ProductView {
     @FXML private AnchorPane moreInfo;
     @FXML private AnchorPane firstTimeView;
     @FXML private AnchorPane confirmationAnchorPane;
+
+    @FXML private Label itemNameLabel;
+    @FXML private Label priceLabel;
+    @FXML private ImageView itemPictureImageView;
+    @FXML private ImageView favoriteImage;
+    @FXML private Button addToCartButton;
+    @FXML private TextField numberTextField;
 
     public static List<Product> productList = new ArrayList<Product>();
     public static Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
@@ -98,6 +112,7 @@ public class ProductView {
                 });
             }
         }
+
 
         moreInfo.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -187,9 +202,30 @@ public class ProductView {
         updatextSearchText.get(0).setDisable(false);
     }
 
-    public void changeToMoreInfo() {
+    public void changeToMoreInfo(Product product, ProductItem productItem) {
         lightBox.toFront();
         moreInfo.toFront();
+        itemNameLabel.setText(product.getName());
+        priceLabel.setText((new DecimalFormat("#.##").format((product.getPrice())) + " " + product.getUnit()));
+        itemPictureImageView.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + product.getImageName())));
+        favoriteImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + (backend.isFavorite(product) ? "favorite.png":"favorite_empty.png"))));
+        favoriteImage.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (backend.isFavorite(product)) {
+                    backend.removeFavorite(product);
+                    favoriteImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite_empty.png")));
+                    observableList.remove(product);
+                    productItem.setImageToUnFav();
+                } else {
+                    backend.addFavorite(product.getProductId());
+                    favoriteImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
+                    favoriteList.add(product);
+                    productItem.setImageToFav();
+                }
+            }
+        });
+
     }
 
     public void changeToFirstTimeView() {

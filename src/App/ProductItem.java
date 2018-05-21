@@ -87,6 +87,10 @@ public class ProductItem extends AnchorPane {
     public void setImageToUnFav() {
         imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite_empty.png")));
     }
+
+    public void setImageToFav(){
+        imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
+    }
     public Label getLabelCount() {
         return labelCount;
     }
@@ -99,7 +103,7 @@ public class ProductItem extends AnchorPane {
     }
 
     @FXML private void moreInfoPressed() {
-        parentView.changeToMoreInfo();
+        parentView.changeToMoreInfo(product,this);
     }
 
     public void setParentView(ProductView parentView) {
