@@ -1,6 +1,7 @@
 package App;
 
 
+import App.Controllers.HistoryProductView;
 import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;
 import javafx.animation.SequentialTransition;
@@ -9,6 +10,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -18,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import se.chalmers.cse.dat216.project.Product;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -133,6 +137,7 @@ public class MainWindow {
             @Override
             public void handle(MouseEvent event) {
                 contentPane.getChildren().setAll(historyView);
+                updateOrderList();
                 continueToShopButton.setVisible(true);
                 shoppingCartButton.setVisible(false);
                 helpButton.setDisable(false);
@@ -153,6 +158,26 @@ public class MainWindow {
         contentPane.getChildren().setAll(productView);
 
         initAnimation();
+    }
+
+    private void updateOrderList() {
+        FXMLLoader loader = new FXMLLoader();
+        Node node = null;
+        loader.setLocation(getClass().getResource("HistoryViews/HistoryProductView.fxml"));
+        try {
+            node = (Node)loader.load();
+            AnchorPane.setTopAnchor(node, 0.0);
+            AnchorPane.setRightAnchor(node, 0.0);
+            AnchorPane.setLeftAnchor(node, 0.0);
+            AnchorPane.setBottomAnchor(node, 0.0);
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+        HistoryProductView historyDetailView = loader.getController();
+        historyDetailView.updateList(backend.getOrders());
+
+        historyViews.get(0).getChildren().clear();
+        historyViews.get(0).getChildren().setAll(node);
     }
 
     private void initAnimation() {

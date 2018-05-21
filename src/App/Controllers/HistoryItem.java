@@ -53,17 +53,14 @@ public class HistoryItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        Date date = order.getDate();
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(date);
+        String pattern = "yyyy;M;dd;HH;mm";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        String[] date = simpleDateFormat.format(order.getDate()).split(";");
 
-        cal.set(Calendar.HOUR_OF_DAY, 24);
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm",Locale.ENGLISH);
-
-        time.setText(sdf.format(cal.getTime()));
-        day.setText(Integer.toString(cal.get(Calendar.DAY_OF_MONTH)));
-        month.setText(nameofmonth[cal.get(Calendar.MONTH)]);
-        year.setText(Integer.toString(cal.get(Calendar.YEAR)));
+        time.setText(date[3] + ":" + date[4]);
+        day.setText(date[2]);
+        month.setText(nameofmonth[Integer.parseInt(date[1])]);
+        year.setText(date[0]);
         int orderSize = order.getItems().size();
         product.setText(orderSize + (orderSize > 1 ? " produkter" : " produkt"));
         price.setText(totalPrice + " kr.");
