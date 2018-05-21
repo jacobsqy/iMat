@@ -45,6 +45,7 @@ public class ShoppingCartView {
     @FXML private void emptyShoppingCartButtonPressed() {
         BackendController.emptyShoppingCart();
         updateList();
+        updateInfo();
     }
 
     @FXML public void updateInfo() {
