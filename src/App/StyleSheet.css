@@ -43,12 +43,28 @@
       -fx-text-fill:    "white";
 }
 
+.button-red:hover{
+   -fx-background-color: #DD0000 ;
+}
+
+.button-red:pressed{
+    -fx-background-color: "red";
+}
+
 .button-green{
      -fx-border-color: transparent;
-      -fx-border-width: 0;
-      -fx-background-radius: 0;
-      -fx-background-color: "green";
-      -fx-text-fill:    "white";
+     -fx-border-width: 0;
+     -fx-background-radius: 0;
+     -fx-background-color: "green";
+     -fx-text-fill:    "white";
+}
+
+.button-green:hover{
+    -fx-background-color: #006000;
+}
+
+.button-green:pressed{
+    -fx-background-color: "green";
 }
 
 .button-grey{
@@ -57,6 +73,14 @@
       -fx-background-radius: 0;
       -fx-background-color:  #757C88;
       -fx-text-fill:    "white";
+}
+
+.button-grey:hover{
+    -fx-background-color: #665A66;
+}
+
+.button-grey:pressed{
+    -fx-background-color: #757C88;
 }
 
 .button:pressed {
