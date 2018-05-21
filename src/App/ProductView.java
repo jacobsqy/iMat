@@ -117,8 +117,11 @@ public class ProductView {
                 mouseTrap(mouseEvent);
             }
         });
-
-        deactivateLightBox();
+        
+        lightBox.toBack();
+        moreInfo.toBack();
+        firstTimeView.toBack();
+        confirmationAnchorPane.toBack();
         if (BackendController.isFirstRun()) {
             changeToFirstTimeView();
         } else {
@@ -181,7 +184,7 @@ public class ProductView {
         moreInfo.toBack();
         firstTimeView.toBack();
         confirmationAnchorPane.toBack();
-        //updatextSearchText.get(0).setDisable(false);
+        updatextSearchText.get(0).setDisable(false);
     }
 
     public void changeToMoreInfo() {
