@@ -221,6 +221,10 @@ public class PaymentView extends AnchorPane {
     private void focus(int i) {
         anchorPaneListIndex = i;
         anchorPaneList.get(anchorPaneListIndex).toFront();
+
+        if(i == 2){
+            setConfirmPage();
+        }
     }
 
     public void setParentController(MainWindow parentController) {
@@ -320,8 +324,6 @@ public class PaymentView extends AnchorPane {
             cartTextArea.appendText(product.getProduct().getName() + " " + product.getAmount() + product.getProduct().getUnitSuffix() + "\n");
         }
         cartTextArea.appendText("\nTotalt pris: " + Double.toString(backend.getShoppingCart().getTotal()) + "kr");
-
-        goForwardButtonPressed();
     }
 
     @FXML public void purchase(){
