@@ -65,7 +65,7 @@ public class PaymentView extends AnchorPane {
     private List<TextField> secondPage = new ArrayList<>();
 
     private MainWindow parentController;
-
+    //h
     public void initialize() {
         fillAnchorPaneList();
         fillTextFieldList();
