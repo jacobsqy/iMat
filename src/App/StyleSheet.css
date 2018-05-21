@@ -79,11 +79,11 @@
 }
 
 .text-area .content {
-    -fx-background-color: -fx-background;
+    -fx-background-color: white;
 }
 
 .text-area  {
-    -fx-background-color: -fx-background;
+    -fx-background-color: white;
 }
 
 #logo:pressed {

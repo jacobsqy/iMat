@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.PaymentView">
+<AnchorPane fx:id="paymentView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.PaymentView">
 
    <children>
       <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -54,9 +54,24 @@
                   <Label layoutX="96.0" layoutY="276.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="190.0" />
                   <Label layoutX="448.0" layoutY="276.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="190.0" />
                   <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="190.0" />
-                  <TextArea fx:id="addressTextArea" editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0" />
-                  <TextArea fx:id="creditCardTextArea" editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0" />
-                  <TextArea fx:id="cartTextArea" editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" styleClass="text-normal" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0" />
+                  <TextArea fx:id="addressTextArea" editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0">
+                     <styleClass>
+                        <String fx:value="text-normal" />
+                        <String fx:value="text-area" />
+                        <String fx:value="product-pane" />
+                     </styleClass></TextArea>
+                  <TextArea fx:id="creditCardTextArea" editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0">
+                     <styleClass>
+                        <String fx:value="text-normal" />
+                        <String fx:value="text-area" />
+                        <String fx:value="product-pane" />
+                     </styleClass></TextArea>
+                  <TextArea fx:id="cartTextArea" editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0">
+                     <styleClass>
+                        <String fx:value="text-normal" />
+                        <String fx:value="text-area" />
+                        <String fx:value="product-pane" />
+                     </styleClass></TextArea>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="cardInfoPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
