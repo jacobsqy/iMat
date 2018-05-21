@@ -4,11 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.Product;
 
@@ -23,9 +28,15 @@ public class ProductView {
 
     private MainWindow parentController;
 
+    @FXML private SplitPane defautView;
+
     @FXML private FlowPane productListFlowPane;
     @FXML private VBox vBox;
     @FXML private Button favButton;
+
+    @FXML private AnchorPane lightBox;
+    @FXML private AnchorPane moreInfo;
+    @FXML private AnchorPane firstTimeView;
 
     public static List<Product> productList = new ArrayList<Product>();
     public static Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
@@ -85,6 +96,25 @@ public class ProductView {
                 });
             }
         }
+
+        moreInfo.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                mouseTrap(mouseEvent);
+            }
+        });
+        firstTimeView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                mouseTrap(mouseEvent);
+            }
+        });
+        
+        if (BackendController.isFirstRun()) {
+            changeToFirstTimeView();
+        } else {
+            changeToDefaultView();
+        }
     }
 
     /**
@@ -135,5 +165,30 @@ public class ProductView {
 
     public MainWindow getParentController() {
         return parentController;
+    }
+
+    private void deactivateLightBox() {
+        lightBox.toBack();
+        moreInfo.toBack();
+        firstTimeView.toBack();
+    }
+
+    public void changeToMoreInfo() {
+        lightBox.toFront();
+        moreInfo.toFront();
+    }
+
+    public void changeToFirstTimeView() {
+        lightBox.toFront();
+        firstTimeView.toFront();
+    }
+
+    public void changeToDefaultView() {
+        deactivateLightBox();
+        defautView.toFront();
+    }
+
+    private void mouseTrap(Event event){
+        event.consume();
     }
 }

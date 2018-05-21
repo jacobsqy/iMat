@@ -201,6 +201,10 @@ public class BackendController {
         }
     }
 
+    public static boolean isFirstRun() {
+        return IMatDataHandler.getInstance().isFirstRun();
+    }
+
     // Customer info
     public static Customer getCustomer() {
         return IMatDataHandler.getInstance().getCustomer();
