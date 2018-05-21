@@ -209,4 +209,8 @@ public class BackendController {
     public static Customer getCustomer() {
         return IMatDataHandler.getInstance().getCustomer();
     }
+
+    public static CreditCard getCreditCard() {
+        return IMatDataHandler.getInstance().getCreditCard();
+    }
 }
