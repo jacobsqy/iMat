@@ -52,27 +52,28 @@
                      </styleClass>
                   </Button>
                   <Label layoutX="201.0" layoutY="167.0" styleClass="text-headlines" text="Kontrollera dina uppgifter &amp; bekräfta köp" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="130.0" />
-                  <Label layoutX="96.0" layoutY="276.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="190.0" />
-                  <Label layoutX="448.0" layoutY="276.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="190.0" />
-                  <Label layoutX="838.0" layoutY="276.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="190.0" />
-                  <TextArea fx:id="addressTextArea" editable="false" layoutX="170.0" layoutY="354.0" prefHeight="230.0" prefWidth="200.0" wrapText="true" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="230.0">
+                  <Label layoutX="302.0" layoutY="183.0" styleClass="text-arrows" text="Adressuppgifter" AnchorPane.leftAnchor="302.0" AnchorPane.topAnchor="183.0" />
+                  <Label layoutX="602.0" layoutY="183.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="602.0" AnchorPane.topAnchor="183.0" />
+                  <Label layoutX="941.0" layoutY="183.0" styleClass="text-arrows" text="Varor" AnchorPane.leftAnchor="941.0" AnchorPane.topAnchor="183.0" />
+                  <TextArea fx:id="addressTextArea" editable="false" layoutX="228.0" layoutY="209.0" prefHeight="295.0" prefWidth="286.0" wrapText="true" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="209.0">
                      <styleClass>
                         <String fx:value="text-normal" />
                         <String fx:value="text-area" />
                         <String fx:value="product-pane" />
                      </styleClass></TextArea>
-                  <TextArea fx:id="creditCardTextArea" editable="false" layoutX="459.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" wrapText="true" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="230.0">
+                  <TextArea fx:id="creditCardTextArea" editable="false" layoutX="524.0" layoutY="209.0" prefHeight="295.0" prefWidth="286.0" wrapText="true" AnchorPane.leftAnchor="524.0" AnchorPane.topAnchor="209.0">
                      <styleClass>
                         <String fx:value="text-normal" />
                         <String fx:value="text-area" />
                         <String fx:value="product-pane" />
                      </styleClass></TextArea>
-                  <TextArea fx:id="cartTextArea" editable="false" layoutX="724.0" layoutY="379.0" prefHeight="230.0" prefWidth="200.0" wrapText="true" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="230.0">
+                  <TextArea fx:id="cartTextArea" editable="false" layoutX="821.0" layoutY="209.0" prefHeight="295.0" prefWidth="286.0" wrapText="true" AnchorPane.leftAnchor="821.0" AnchorPane.topAnchor="209.0">
                      <styleClass>
                         <String fx:value="text-normal" />
                         <String fx:value="text-area" />
                         <String fx:value="product-pane" />
                      </styleClass></TextArea>
+                  <TextArea fx:id="deliveryTextArea" editable="false" layoutX="1126.0" layoutY="424.0" prefHeight="80.0" prefWidth="210.0" styleClass="product-pane" AnchorPane.leftAnchor="1126.0" AnchorPane.topAnchor="424.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="cardInfoPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
@@ -107,7 +108,7 @@
                   <Label alignment="CENTER_RIGHT" layoutX="240.0" layoutY="307.0" prefWidth="220.0" styleClass="text-normal" text="CVC:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="307.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="354.0" layoutY="265.0" prefWidth="220.0" styleClass="text-normal" text="Kortnummer:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="265.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="203.0" prefWidth="220.0" styleClass="text-normal" text="Kortinnehavarens namn:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="203.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="341.0" layoutY="383.0" prefWidth="220.0" styleClass="text-normal" text="Datum:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="383.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="341.0" layoutY="383.0" prefWidth="220.0" styleClass="text-normal" text="Giltigt till:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="383.0" />
                   <TextField fx:id="creditCardNameTextField" layoutX="444.0" layoutY="258.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
                   <TextField fx:id="creditCardFirstNumberTextField" layoutX="443.0" layoutY="317.0" prefWidth="125.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
                   <TextField fx:id="creditCardSecondNumberTextField" layoutX="437.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="615.0" AnchorPane.topAnchor="260.0" />
@@ -120,8 +121,8 @@
                   <Label layoutX="483.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" textFill="WHITE" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="224.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="763.0" layoutY="96.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
-                  <Label layoutX="485.0" layoutY="346.0" styleClass="text-normal" text="Månad:" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="346.0" />
-                  <Label layoutX="630.0" layoutY="346.0" styleClass="text-normal" text="År:" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="346.0" />
+                  <Label layoutX="485.0" layoutY="351.0" styleClass="text-normal" text="Månad:" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="351.0" />
+                  <Label layoutX="630.0" layoutY="350.0" styleClass="text-normal" text="År:" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="350.0" />
                   <Label fx:id="secondPageWarningLabel" layoutX="475.0" layoutY="453.0" text="Alla fält måste fyllas i innan du kan fortsätta!" textFill="RED">
                      <font>
                         <Font size="19.0" />
