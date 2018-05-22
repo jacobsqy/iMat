@@ -35,6 +35,40 @@
     -fx-background-color: transparent;
 }
 
+.button-lightblue{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: "lightblue";
+    -fx-text-fill: "white";
+}
+
+.button-lightblue:hover{
+    -fx-background-color: #9CC7D5;
+}
+
+.button-lightblue:pressed{
+    -fx-background-color: "lightblue";
+}
+
+
+.button-blue{
+    -fx-border-color:   transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #0077BE;
+    -fx-text-fill: "white";
+}
+
+.button-blue:hover{
+    -fx-background-color: #00559C;
+}
+
+.button-blue:pressed{
+    -fx-background-color: #0077BE;
+}
+
+
 .button-red{
       -fx-border-color: transparent;
       -fx-border-width: 0;
