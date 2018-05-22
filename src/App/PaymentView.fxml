@@ -45,10 +45,10 @@
                         <String fx:value="text-normal" />
                      </styleClass>
                   </Button>
-                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka till varukorg" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
+                  <Button layoutX="58.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
                      <styleClass>
                         <String fx:value="text-normal" />
-                        <String fx:value="button-red" />
+                        <String fx:value="button-grey" />
                      </styleClass>
                   </Button>
                   <Label layoutX="201.0" layoutY="167.0" styleClass="text-headlines" text="Kontrollera dina uppgifter &amp; bekräfta köp" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="130.0" />
