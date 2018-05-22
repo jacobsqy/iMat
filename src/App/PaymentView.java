@@ -52,6 +52,8 @@ public class PaymentView extends AnchorPane {
     @FXML private TextArea addressTextArea;
     @FXML private TextArea creditCardTextArea;
     @FXML private TextArea cartTextArea;
+    @FXML private TextArea deliveryTextArea;
+
 
     @FXML private ToggleButton firstDateToggleButton;
     @FXML private ToggleButton secondDateToggleButton;
@@ -406,10 +408,23 @@ public class PaymentView extends AnchorPane {
         addressTextArea.clear();
         creditCardTextArea.clear();
         cartTextArea.clear();
+        deliveryTextArea.clear();
+
+        String delivery;
+        if(firstDateToggleButton.isSelected()){
+            delivery = firstDateToggleButton.getText();
+        } else if(secondDateToggleButton.isSelected()){
+            delivery = secondDateToggleButton.getText();
+        } else{
+            delivery = thirdDateToggleButton.getText();
+        }
+
+        deliveryTextArea.appendText("Ditt leveransdatum:" + "\n" + delivery);
 
 
-        addressTextArea.appendText(firstNameTextField.getText()+ "\n" + lastNameTextField.getText() + "\n" + addressTextField.getText() + "\n" + postCodeTextField.getText() + "\n" + postAddressTextField.getText());
-        creditCardTextArea.appendText(creditCardNameTextField.getText() + "\n" + creditCardFirstNumberTextField.getText() + creditCardSecondNumberTextField.getText() + creditCardThirdNumberTextField.getText() + creditCardForthNumberTextField.getText() + "\n" + creditCardMonthTextField.getSelectionModel().getSelectedItem().toString() + " " +  creditCardYearTextField.getSelectionModel().getSelectedItem().toString());
+        addressTextArea.appendText("Namn: " + "\n" + firstNameTextField.getText() + " " + lastNameTextField.getText() + "\n \n" + "Adress: " + "\n" + addressTextField.getText() + "\n\n" + "Postnummer: " + "\n" + postCodeTextField.getText() + "\n\n" + "Ort: " + "\n" + postAddressTextField.getText() + "\n\n" + "Mail: " + "\n"+ eMailTextField.getText());
+        creditCardTextArea.appendText("Kortinnehavare: " + "\n" + creditCardNameTextField.getText() + "\n\n" + "Kortnummer: " + "\n" + creditCardFirstNumberTextField.getText() + " " + creditCardSecondNumberTextField.getText() + " " + creditCardThirdNumberTextField.getText() + " " + creditCardForthNumberTextField.getText() +
+                "\n\n" + "CVC: " + "\n" + creditCardCVCTextField.getText() + "\n\n" + "Giltigt till: " + "\n" + creditCardMonthTextField.getSelectionModel().getSelectedItem().toString() + "-" +  creditCardYearTextField.getSelectionModel().getSelectedItem().toString());
 
         for (ShoppingItem product: backend.getShoppingCart().getItems()) {
             cartTextArea.appendText(product.getProduct().getName() + " " + product.getAmount() + product.getProduct().getUnitSuffix() + "\n");
