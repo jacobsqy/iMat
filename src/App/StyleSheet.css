@@ -118,6 +118,23 @@
     -fx-background-color: -fx-background;
 }
 
+.product-added-headline  {
+    -fx-opacity: 0;
+    -fx-background-color: "green";
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+
+}
+
+.product-added-text  {
+    -fx-font-size: 37px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: Bolder;
+    -fx-text-fill: "white";
+
+}
+
 #logo:pressed {
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;

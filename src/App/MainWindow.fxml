@@ -100,9 +100,9 @@
                </GridPane.margin>
             </Label>
             <Label fx:id="headlineLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="128.0" prefWidth="597.0" styleClass="text-headlines-big" text="Headline" textAlignment="CENTER" GridPane.columnIndex="1" />
-            <AnchorPane fx:id="productAddedToShoppingCartInfo" prefHeight="200.0" prefWidth="669.0" style="-fx-background-color: #00ff00; -fx-opacity: 0;" GridPane.columnIndex="1" GridPane.columnSpan="2">
+            <AnchorPane fx:id="productAddedToShoppingCartInfo" prefHeight="200.0" prefWidth="669.0" styleClass="product-added-headline" stylesheets="@StyleSheet.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
                <children>
-                  <Label fx:id="productAddedToShoppingCartInfoLabel" alignment="CENTER" styleClass="text-headlines" text="X Lorem Ipsum tillagda i varukorgen!" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="productAddedToShoppingCartInfoLabel" alignment="CENTER" styleClass="product-added-text" text="X Lorem Ipsum tillagda i varukorgen!" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
          </children>
