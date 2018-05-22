@@ -173,6 +173,7 @@
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
     -fx-scale-z: 1.05;
+    -fx-opacity: 1;
 }
 
 #add-remove-buttons:pressed {
