@@ -201,6 +201,7 @@ public class MainWindow {
     }
 
     private void continueToShop() {
+        productViewController.changeToDefaultView();
         historyViews.get(0).getChildren().clear();
         historyViews.get(0).getChildren().setAll(historyViews.get(1));
 
