@@ -22,10 +22,17 @@ public class ShoppingCartView {
     }
 
     public void updateList() {
+        boolean even = false;
         List<ShoppingCartItem> shoppingCartItemList = new ArrayList<>();
         for (ShoppingItem shoppingItem : backend.getShoppingCart().getItems()) {
             ShoppingCartItem shoppingCartItem = new ShoppingCartItem(shoppingItem);
             shoppingCartItem.setParentView(this);
+            if (even) {
+                shoppingCartItem.setStyle("-fx-background-color: #ddd");
+                even = false;
+            } else {
+                even = true;
+            }
             shoppingCartItemList.add(shoppingCartItem);
         }
         flowPane.getChildren().clear();
