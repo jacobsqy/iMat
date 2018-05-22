@@ -11,6 +11,7 @@ import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 //import javax.xml.soap.Text;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -409,6 +410,8 @@ public class PaymentView extends AnchorPane {
         creditCardTextArea.clear();
         cartTextArea.clear();
         deliveryTextArea.clear();
+        confirmButton.setText("");
+
 
         String delivery;
         if(firstDateToggleButton.isSelected()){
@@ -426,11 +429,11 @@ public class PaymentView extends AnchorPane {
         creditCardTextArea.appendText("Kortinnehavare: " + "\n" + creditCardNameTextField.getText() + "\n\n" + "Kortnummer: " + "\n" + creditCardFirstNumberTextField.getText() + " " + creditCardSecondNumberTextField.getText() + " " + creditCardThirdNumberTextField.getText() + " " + creditCardForthNumberTextField.getText() +
                 "\n\n" + "CVC: " + "\n" + creditCardCVCTextField.getText() + "\n\n" + "Giltigt till: " + "\n" + creditCardMonthTextField.getSelectionModel().getSelectedItem().toString() + "-" +  creditCardYearTextField.getSelectionModel().getSelectedItem().toString());
 
+        cartTextArea.appendText("Totalt pris: " + new DecimalFormat("#.##").format(BackendController.getTotalPrice()) + " kr\n\n");
+
         for (ShoppingItem product: backend.getShoppingCart().getItems()) {
-            cartTextArea.appendText(product.getProduct().getName() + " " + product.getAmount() + product.getProduct().getUnitSuffix() + "\n");
-        }
-        cartTextArea.appendText("\nTotalt pris: " + Double.toString(backend.getShoppingCart().getTotal()) + "kr");
-    }
+            cartTextArea.appendText(product.getAmount() + product.getProduct().getUnitSuffix() + " " + product.getProduct().getName() + "\n");
+        } }
 
     @FXML public void purchase(){
         Order order = new Order();

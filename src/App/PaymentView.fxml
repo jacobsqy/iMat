@@ -39,7 +39,7 @@
                   <Label layoutX="243.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="481.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="763.0" layoutY="90.0" styleClass="text-arrows" text="Slutför köp" textFill="WHITE" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
-                  <Button layoutX="939.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Bekräfta köp" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
+                  <Button fx:id="confirmButton" layoutX="939.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#goForwardButtonPressed" prefHeight="38.0" prefWidth="196.0" text="Bekräfta köp" wrapText="true" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="14.0">
                      <styleClass>
                         <String fx:value="button-green" />
                         <String fx:value="text-normal" />
@@ -73,7 +73,7 @@
                         <String fx:value="text-area" />
                         <String fx:value="product-pane" />
                      </styleClass></TextArea>
-                  <TextArea fx:id="deliveryTextArea" editable="false" layoutX="1126.0" layoutY="424.0" prefHeight="80.0" prefWidth="210.0" styleClass="product-pane" AnchorPane.leftAnchor="1126.0" AnchorPane.topAnchor="424.0" />
+                  <TextArea fx:id="deliveryTextArea" editable="false" layoutX="1119.0" layoutY="424.0" prefHeight="80.0" prefWidth="220.0" styleClass="product-pane" AnchorPane.leftAnchor="1119.0" AnchorPane.topAnchor="424.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="cardInfoPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
@@ -107,7 +107,7 @@
                   </Button>
                   <Label alignment="CENTER_RIGHT" layoutX="240.0" layoutY="307.0" prefWidth="220.0" styleClass="text-normal" text="CVC:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="307.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="354.0" layoutY="265.0" prefWidth="220.0" styleClass="text-normal" text="Kortnummer:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="265.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="203.0" prefWidth="220.0" styleClass="text-normal" text="Kortinnehavarens namn:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="203.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="203.0" prefWidth="220.0" styleClass="text-normal" text="Kortinnehavare:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="203.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="341.0" layoutY="383.0" prefWidth="220.0" styleClass="text-normal" text="Giltigt till:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="383.0" />
                   <TextField fx:id="creditCardNameTextField" layoutX="444.0" layoutY="258.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
                   <TextField fx:id="creditCardFirstNumberTextField" layoutX="443.0" layoutY="317.0" prefWidth="125.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
@@ -115,20 +115,25 @@
                   <TextField fx:id="creditCardThirdNumberTextField" layoutX="587.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="260.0" />
                   <TextField fx:id="creditCardForthNumberTextField" layoutX="796.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="885.0" AnchorPane.topAnchor="260.0" />
                   <TextField fx:id="creditCardCVCTextField" layoutX="477.0" layoutY="305.0" minWidth="70.0" prefHeight="27.0" prefWidth="32.0" AnchorPane.leftAnchor="477.0" AnchorPane.topAnchor="305.0" />
-                  <ChoiceBox fx:id="creditCardMonthTextField" layoutX="480.0" layoutY="381.0" prefHeight="27.0" prefWidth="120.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="381.0" />
-                  <ChoiceBox fx:id="creditCardYearTextField" layoutX="628.0" layoutY="381.0" prefHeight="27.0" prefWidth="81.0" AnchorPane.leftAnchor="628.0" AnchorPane.topAnchor="381.0" />
+                  <ChoiceBox fx:id="creditCardMonthTextField" layoutX="480.0" layoutY="381.0" prefHeight="27.0" prefWidth="56.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="381.0" />
+                  <ChoiceBox fx:id="creditCardYearTextField" layoutX="561.0" layoutY="381.0" prefHeight="27.0" prefWidth="81.0" AnchorPane.leftAnchor="561.0" AnchorPane.topAnchor="381.0" />
                   <Label layoutX="486.0" layoutY="175.0" styleClass="text-headlines" text="Fyll i kortuppgifter" AnchorPane.leftAnchor="535.0" AnchorPane.topAnchor="130.0" />
                   <Label layoutX="483.0" layoutY="96.0" styleClass="text-arrows" text="Kortuppgifter" textFill="WHITE" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="224.0" layoutY="98.0" styleClass="text-arrows" text="Uppgifter" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="763.0" layoutY="96.0" styleClass="text-arrows" text="Slutför köp" AnchorPane.leftAnchor="870.0" AnchorPane.topAnchor="65.0" />
                   <Label layoutX="485.0" layoutY="351.0" styleClass="text-normal" text="Månad:" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="351.0" />
-                  <Label layoutX="630.0" layoutY="350.0" styleClass="text-normal" text="År:" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="350.0" />
+                  <Label layoutX="589.0" layoutY="352.0" styleClass="text-normal" text="År:" AnchorPane.leftAnchor="589.0" AnchorPane.topAnchor="352.0" />
                   <Label fx:id="secondPageWarningLabel" layoutX="475.0" layoutY="453.0" text="Alla fält måste fyllas i innan du kan fortsätta!" textFill="RED">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Label>
                   <CheckBox fx:id="saveCreditCheckBox" layoutX="475.0" layoutY="421.0" mnemonicParsing="false" selected="true" text="Spara dina uppgifter till kommande köp" />
+                  <Label layoutX="543.0" layoutY="372.0" prefHeight="37.0" prefWidth="31.0" text="/">
+                     <font>
+                        <Font name="Apple Color Emoji" size="25.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
@@ -155,8 +160,8 @@
                   <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="320.0" layoutY="231.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Adress:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="231.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="320.0" layoutY="275.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Postnummer:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="275.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="320.0" layoutY="319.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Postort:" textAlignment="RIGHT" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="319.0" />
-                  <TextField fx:id="firstNameTextField" layoutX="480.0" layoutY="187.0" prefHeight="27.0" prefWidth="165.0" promptText="Förnamn" stylesheets="@StyleSheet.css" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="187.0" />
-                  <TextField fx:id="lastNameTextField" layoutX="671.0" layoutY="186.0" prefHeight="27.0" prefWidth="340.0" promptText="Efternamn" />
+                  <TextField fx:id="firstNameTextField" layoutX="480.0" layoutY="187.0" prefHeight="27.0" prefWidth="240.0" promptText="Förnamn" stylesheets="@StyleSheet.css" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="187.0" />
+                  <TextField fx:id="lastNameTextField" layoutX="733.0" layoutY="186.0" prefHeight="27.0" prefWidth="278.0" promptText="Efternamn" />
                   <TextField fx:id="addressTextField" layoutX="480.0" layoutY="231.0" prefHeight="27.0" prefWidth="530.0" promptText="Exempelvägen 123" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="231.0" />
                   <TextField fx:id="postCodeTextField" layoutX="480.0" layoutY="275.0" prefHeight="27.0" prefWidth="530.0" promptText="12345" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="275.0" />
                   <TextField fx:id="postAddressTextField" layoutX="480.0" layoutY="319.0" prefHeight="27.0" prefWidth="530.0" promptText="Stockholm" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="319.0" />
