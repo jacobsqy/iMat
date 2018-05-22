@@ -110,6 +110,15 @@
     -fx-background-color: white;
 }
 
+.text-area-clear .content {
+    -fx-background-color: -fx-background;
+}
+
+.text-area-clear {
+    -fx-background-color: -fx-background;
+}
+
+
 #logo:pressed {
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
