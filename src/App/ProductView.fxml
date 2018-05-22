@@ -198,9 +198,9 @@
                   </AnchorPane>
                   <AnchorPane fx:id="moreInfo" layoutX="507.0" prefHeight="441.0" prefWidth="823.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
                      <children>
-                        <ImageView fx:id="itemPictureImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label styleClass="text-arrows" text="Innehållsförteckning:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="260.0" />
-                        <TextArea layoutX="25.0" layoutY="273.0" prefHeight="152.0" prefWidth="274.0" styleClass="text-normal" text="Mjöl (VETE, fullkorn av RÅG, dinkelVETE 3%, siktad RÅG, durumVETE), vatten, dinkelVETEflingor 5,5, jäst, , surdeg av dinkelVETEmjöl 3,5%, VETEgluten, rapsolja, havssalt, ättika, malt av KORN och VETE" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="282.0" />
+                        <ImageView fx:id="itemPictureImageView" fitHeight="212.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label styleClass="text-arrows" text="Innehållsförteckning:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="245.0" />
+                        <TextArea layoutX="25.0" layoutY="273.0" prefHeight="152.0" prefWidth="274.0" styleClass="text-normal" text="Mjöl (VETE, fullkorn av RÅG, dinkelVETE 3%, siktad RÅG, durumVETE), vatten, dinkelVETEflingor 5,5, jäst, , surdeg av dinkelVETEmjöl 3,5%, VETEgluten, rapsolja, havssalt, ättika, malt av KORN och VETE" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="268.0" />
                         <Label fx:id="itemNameLabel" layoutX="283.0" layoutY="28.0" prefHeight="37.0" prefWidth="343.0" styleClass="text-headlines" text="Namn" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="25.0" />
                         <Label fx:id="priceLabel" layoutX="300.0" layoutY="62.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-arrows" text="Pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="70.0" />
                         <Label fx:id="pricePerUnitLabel" layoutX="310.0" layoutY="72.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-normal" text="jämf.pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="100.0" />
