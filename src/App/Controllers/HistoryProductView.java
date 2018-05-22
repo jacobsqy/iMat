@@ -1,6 +1,5 @@
 package App.Controllers;
 
-import App.BackendController;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Order;
@@ -8,8 +7,6 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.util.Comparator;
 import java.util.List;
-
-import static App.BackendController.backend;
 
 
 public class HistoryProductView {
@@ -20,7 +17,6 @@ public class HistoryProductView {
 
     public void updateList(List<Order> orders) {
 
-        //List<Order> orders = backend.getOrders();
         orders.sort(new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {

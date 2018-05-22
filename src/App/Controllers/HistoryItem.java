@@ -9,18 +9,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
 import static App.Controllers.HistoryView.historyViews;
-import static App.MainWindow.updateInfoLabels;
+import static App.MainWindow.main;
 
 public class HistoryItem extends AnchorPane {
 
@@ -96,8 +92,8 @@ public class HistoryItem extends AnchorPane {
                 for (ShoppingItem shoppingItem:order.getItems()) {
                     BackendController.addToCart(shoppingItem.getProduct(),(int) shoppingItem.getAmount());
                 }
-                updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
-                updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
+                main.get(0).updateInfo();
+                main.get(0).showProductAddedToShoppingCartInfo();
             }
         });
 

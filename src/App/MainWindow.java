@@ -3,9 +3,6 @@ package App;
 
 import App.Controllers.HistoryProductView;
 import javafx.animation.FadeTransition;
-import javafx.animation.PauseTransition;
-import javafx.animation.SequentialTransition;
-import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -53,16 +50,16 @@ public class MainWindow {
     @FXML private AnchorPane productAddedToShoppingCartInfo;
     @FXML private Label productAddedToShoppingCartInfoLabel;
 
-    public static List<Label> updateInfoLabels = new ArrayList<Label>();
     public static List<TextField> updatextSearchText = new ArrayList<TextField>();
 
     private FadeTransition ft;
     private FadeTransition reverseFadeTransition;
 
+    public static List<MainWindow> main = new ArrayList<MainWindow>();
+
     public void initialize() {
 
-        updateInfoLabels.add(amountOfProducts);
-        updateInfoLabels.add(totalPrice);
+        main.add(this);
 
         updatextSearchText.add(txtSearch);
 
@@ -70,9 +67,7 @@ public class MainWindow {
         productViewController.setParentController(this);
         paymentViewController.setParentController(this);
         updateInfo();
-
-        Platform.runLater(() -> txtSearch.requestFocus());
-
+        
         // autocomplete sök, det som skrivs i textfield visas på en dropdown
         txtSearch.textProperty().addListener(((observable, oldValue, newValue) -> {
 
@@ -160,7 +155,7 @@ public class MainWindow {
         initAnimation();
     }
 
-    private void updateOrderList() {
+    public void updateOrderList() {
         FXMLLoader loader = new FXMLLoader();
         Node node = null;
         loader.setLocation(getClass().getResource("HistoryViews/HistoryProductView.fxml"));
@@ -256,6 +251,11 @@ public class MainWindow {
         }
         productAddedToShoppingCartInfoLabel.setText(info);
 
+        ft.play();
+    }
+
+    public void showProductAddedToShoppingCartInfo() {
+        productAddedToShoppingCartInfoLabel.setText("Alla Produkter är tillagda i varukorgen!");
         ft.play();
     }
 

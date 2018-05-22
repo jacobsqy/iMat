@@ -6,15 +6,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
-
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 import static App.Controllers.HistoryView.historyViews;
-import static App.MainWindow.updateInfoLabels;
+import static App.MainWindow.main;
 
 public class HistoryDetailView {
 
@@ -60,8 +55,7 @@ public class HistoryDetailView {
     }
     @FXML
     public void backButtonPressed() {
-        historyViews.get(0).getChildren().clear();
-        historyViews.get(0).getChildren().setAll(historyViews.get(1));
+        main.get(0).updateOrderList();
     }
 
     @FXML
@@ -69,7 +63,7 @@ public class HistoryDetailView {
         for (ShoppingItem shoppingItem:this.order.getItems()) {
             BackendController.addToCart(shoppingItem.getProduct(),(int) shoppingItem.getAmount());
         }
-        updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
-        updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
+        main.get(0).updateInfo();
+        main.get(0).showProductAddedToShoppingCartInfo();
     }
 }

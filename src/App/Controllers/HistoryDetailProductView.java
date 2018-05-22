@@ -1,7 +1,6 @@
 package App.Controllers;
 
 import App.BackendController;
-import App.MainWindow;
 import App.ProductItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +8,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import se.chalmers.cse.dat216.project.ShoppingItem;
 import java.io.IOException;
-import java.text.DecimalFormat;
 
-import static App.MainWindow.updateInfoLabels;
+import se.chalmers.cse.dat216.project.ShoppingItem;
+
+import static App.MainWindow.main;
 
 public class HistoryDetailProductView extends AnchorPane {
 
@@ -68,8 +67,8 @@ public class HistoryDetailProductView extends AnchorPane {
     @FXML
     private void addProduct() {
         BackendController.addToCart(shoppingItem.getProduct(), Integer.valueOf(labelCount.getText()));
-        updateInfoLabels.get(0).setText(new DecimalFormat("#.##").format((BackendController.getTotalProductAmount())));
-        updateInfoLabels.get(1).setText(new DecimalFormat("#.##").format((BackendController.getTotalPrice())));
+        main.get(0).updateInfo();
+        main.get(0).showProductAddedToShoppingCartInfo(shoppingItem.getProduct(), Integer.valueOf(labelCount.getText()));
     }
 
 }
