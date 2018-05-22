@@ -140,7 +140,7 @@ public class ProductView {
         if (BackendController.isFirstRun()) {
             changeToFirstTimeView();
         } else {
-            changeToDefaultView();
+            defautView.toFront();
         }
     }
 
