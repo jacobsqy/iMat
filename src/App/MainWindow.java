@@ -245,9 +245,9 @@ public class MainWindow {
     public void showProductAddedToShoppingCartInfo(Product product, int amount) {
         String info;
         if (amount == 1) {
-            info = "1 " + product.getName() + " tillagd i varukorgen!";
+            info =  amount + product.getUnitSuffix() + " " + product.getName() + " tillagd i varukorgen!";
         } else {
-            info = amount + " " + product.getName() + " tillagda i varukorgen!";
+            info = amount + product.getUnitSuffix() + " " + product.getName() + " tillagda i varukorgen!";
         }
         productAddedToShoppingCartInfoLabel.setText(info);
 

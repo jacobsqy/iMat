@@ -18,8 +18,8 @@
       </ImageView>
       <Label fx:id="lblName" layoutX="188.0" layoutY="31.0" text="Gröna ärter" />
       <Label fx:id="lblPrice" layoutX="188.0" layoutY="53.0" text="19.50 kr/kg" />
-      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="284.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#addToCartPressed" prefHeight="36.0" prefWidth="206.0" style="-fx-background-color: green;" text="Lägg till i Varukorg" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="120.0" />
-      <Button layoutX="182.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#moreInfoPressed" prefHeight="36.0" prefWidth="308.0" style="-fx-background-color: lightblue;" text="Mer Information" textFill="WHITE" AnchorPane.rightAnchor="13.0" />
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="284.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#addToCartPressed" prefHeight="36.0" prefWidth="206.0" styleClass="button-green" text="Lägg till i Varukorg" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="120.0" />
+      <Button layoutX="182.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#moreInfoPressed" prefHeight="36.0" prefWidth="308.0" styleClass="button-lightblue" text="Mer Information" textFill="WHITE" AnchorPane.rightAnchor="13.0" />
       <ImageView fx:id="imgFavorite" fitHeight="35.0" fitWidth="35.0" layoutX="454.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/imat/images/favorite.png" />
@@ -28,7 +28,7 @@
       <Separator layoutX="174.0" layoutY="3.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <TextField fx:id="txtCount" layoutX="206.0" layoutY="128.0" prefHeight="27.0" prefWidth="50.0" text="88" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="125.0" />
       <Button id="add-remove-buttons" fx:id="buttonIncrease" layoutX="250.0" layoutY="128.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="6.0" styleClass="button-grey" text="+" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="125.0" />
-      <Button fx:id="buttonDecrease" layoutX="182.0" layoutY="128.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="29.0" styleClass="button-grey" text="-" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="292.0" AnchorPane.topAnchor="125.0" />
+      <Button id="add-remove-buttons" fx:id="buttonDecrease" layoutX="182.0" layoutY="128.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="29.0" styleClass="button-grey" text="-" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="292.0" AnchorPane.topAnchor="125.0" />
    </children>
    <styleClass>
       <String fx:value="text-normal," />

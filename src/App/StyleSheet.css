@@ -35,6 +35,40 @@
     -fx-background-color: transparent;
 }
 
+.button-lightblue{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: "lightblue";
+    -fx-text-fill: "white";
+}
+
+.button-lightblue:hover{
+    -fx-background-color: #9CC7D5;
+}
+
+.button-lightblue:pressed{
+    -fx-background-color: "lightblue";
+}
+
+
+.button-blue{
+    -fx-border-color:   transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #0077BE;
+    -fx-text-fill: "white";
+}
+
+.button-blue:hover{
+    -fx-background-color: #00559C;
+}
+
+.button-blue:pressed{
+    -fx-background-color: #0077BE;
+}
+
+
 .button-red{
       -fx-border-color: transparent;
       -fx-border-width: 0;
@@ -110,6 +144,31 @@
     -fx-background-color: white;
 }
 
+.text-area-clear .content {
+    -fx-background-color: -fx-background;
+}
+
+.text-area-clear {
+    -fx-background-color: -fx-background;
+}
+
+.product-added-headline  {
+    -fx-opacity: 0;
+    -fx-background-color: "green";
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+
+}
+
+.product-added-text  {
+    -fx-font-size: 37px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: Bolder;
+    -fx-text-fill: "white";
+
+}
+
 #logo:pressed {
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
@@ -118,4 +177,8 @@
 
 #add-remove-buttons:pressed {
     -fx-font-size: 16px;
+}
+
+#logo:hover{
+    -fx-opacity: 0.75;
 }

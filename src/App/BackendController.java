@@ -45,14 +45,14 @@ public class BackendController {
     public static List<Product> getProductByCategory(String s) {
 
         List<Product> l = new ArrayList<Product>();
-        switch (s) {
-            case "Favoriter":
+        switch (s.toLowerCase()) {
+            case "favoriter":
                 l.addAll(backend.favorites());
                 break;
-            case "Bröd":
+            case "bröd":
                 l.addAll(backend.getProducts(ProductCategory.BREAD));
                 break;
-            case "Frukter":
+            case "frukter":
                 l.addAll(backend.getProducts(ProductCategory.CITRUS_FRUIT));
                 l.addAll(backend.getProducts(ProductCategory.EXOTIC_FRUIT));
                 l.addAll(backend.getProducts(ProductCategory.ROOT_VEGETABLE));
@@ -60,36 +60,36 @@ public class BackendController {
                 l.addAll(backend.getProducts(ProductCategory.MELONS));
                 l.addAll(backend.getProducts(ProductCategory.BERRY));
                 break;
-            case "Grönsakser":
+            case "grönsakser":
                 l.addAll(backend.getProducts(ProductCategory.VEGETABLE_FRUIT));
                 l.addAll(backend.getProducts(ProductCategory.CABBAGE));
                 l.addAll(backend.getProducts(ProductCategory.POD));
                 break;
-            case "Örter":
+            case "örter":
                 l.addAll(backend.getProducts(ProductCategory.HERB));
                 break;
-            case "Pasta, Potatis & Ris":
+            case "pasta, potatis & ris":
                 l.addAll(backend.getProducts(ProductCategory.PASTA));
                 l.addAll(backend.getProducts(ProductCategory.POTATO_RICE));
                 break;
-            case "Drycker":
+            case "drycker":
                 l.addAll(backend.getProducts(ProductCategory.HOT_DRINKS));
                 l.addAll(backend.getProducts(ProductCategory.COLD_DRINKS));
                 break;
-            case "Fisk & Kött":
+            case "fisk & kött":
                 l.addAll(backend.getProducts(ProductCategory.FISH));
                 l.addAll(backend.getProducts(ProductCategory.MEAT));
                 break;
-            case "Mejeriprodukter":
+            case "mejeriprodukter":
                 l.addAll(backend.getProducts(ProductCategory.DAIRIES));
                 break;
-            case "Skafferi":
+            case "skafferi":
                 l.addAll(backend.getProducts(ProductCategory.FLOUR_SUGAR_SALT));
                 break;
-            case "Nötter & Frön":
+            case "nötter & frön":
                 l.addAll(backend.getProducts(ProductCategory.NUTS_AND_SEEDS));
                 break;
-            case "Sötsaker":
+            case "sötsaker":
                 l.addAll(backend.getProducts(ProductCategory.SWEET));
                 break;
         }

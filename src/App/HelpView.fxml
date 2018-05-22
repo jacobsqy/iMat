@@ -11,31 +11,31 @@
    <children>
       <Label layoutX="91.0" layoutY="64.0" styleClass="text-headlines" text="Vanliga frågor:" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="60.0" />
       <Label layoutX="98.0" layoutY="127.0" styleClass="text-arrows" text="Hur lägger jag till en vara i varukorgen?" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="135.0" />
-      <TextArea layoutX="88.0" layoutY="154.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så läggs varan till i varukorgen." wrapText="true" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="160.0">
+      <TextArea editable="false" layoutX="88.0" layoutY="154.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så läggs varan till i varukorgen." wrapText="true" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="160.0">
          <styleClass>
             <String fx:value="text-normal" />
-            <String fx:value="text-area" />
+            <String fx:value="text-area-clear" />
          </styleClass>
       </TextArea>
       <Label layoutX="705.0" layoutY="134.0" styleClass="text-arrows" text="Hur lägger jag till en vara i varukorgen?" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="135.0" />
-      <TextArea layoutX="695.0" layoutY="161.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så lägga varan till i varukorgen." wrapText="true" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="160.0">
+      <TextArea editable="false" layoutX="695.0" layoutY="161.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så lägga varan till i varukorgen." wrapText="true" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="160.0">
          <styleClass>
             <String fx:value="text-normal" />
-            <String fx:value="text-area" />
+            <String fx:value="text-area-clear" />
          </styleClass>
       </TextArea>
       <Label layoutX="179.0" layoutY="273.0" styleClass="text-arrows" text="Var levererar iMat?" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="260.0" />
-      <TextArea layoutX="169.0" layoutY="300.0" prefHeight="70.0" prefWidth="468.0" text="Vi levererar till hela Sverige, med en dags leveranstid." wrapText="true" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="285.0">
+      <TextArea editable="false" layoutX="169.0" layoutY="300.0" prefHeight="70.0" prefWidth="468.0" text="Vi levererar till hela Sverige, med en dags leveranstid." wrapText="true" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="285.0">
          <styleClass>
             <String fx:value="text-normal" />
-            <String fx:value="text-area" />
+            <String fx:value="text-area-clear" />
          </styleClass>
       </TextArea>
       <Label layoutX="839.0" layoutY="268.0" styleClass="text-arrows" text="Hur lägger jag till en vara i varukorgen?" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="260.0" />
-      <TextArea layoutX="829.0" layoutY="295.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så lägga varan till i varukorgen." wrapText="true" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="285.0">
+      <TextArea editable="false" layoutX="829.0" layoutY="295.0" prefHeight="70.0" prefWidth="468.0" text="Genom att klicka på den gröna knappen med texten &quot;lägg till i varukorgen&quot; vid varan, så lägga varan till i varukorgen." wrapText="true" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="285.0">
          <styleClass>
             <String fx:value="text-normal" />
-            <String fx:value="text-area" />
+            <String fx:value="text-area-clear" />
          </styleClass>
       </TextArea>
       <ImageView fitHeight="82.0" fitWidth="61.0" layoutX="101.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="250.0">
