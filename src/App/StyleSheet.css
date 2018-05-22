@@ -115,3 +115,7 @@
     -fx-scale-y: 1.05;
     -fx-scale-z: 1.05;
 }
+
+#add-remove-buttons:pressed {
+    -fx-font-size: 16px;
+}

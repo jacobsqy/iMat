@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -29,7 +30,6 @@ public class ProductItem extends AnchorPane {
     @FXML private TextField txtCount;
     @FXML private ImageView imgFavorite;
     //@FXML private Spinner spinnerCount;
-    @FXML private Label labelCount;
     @FXML private Button buttonIncrease;
     @FXML private Button buttonDecrease;
 
@@ -71,7 +71,9 @@ public class ProductItem extends AnchorPane {
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + product.getImageName())));
         lblName.setText(product.getName());
         lblPrice.setText(new DecimalFormat("#.##").format((product.getPrice())) + " " + product.getUnit());
-        labelCount.setText("1");
+        txtCount.setText("1");
+
+        txtCount.addEventFilter(KeyEvent.KEY_TYPED, maxLength(2));
 
         /*SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
         spinnerCount.setValueFactory(valueFactory);
@@ -81,6 +83,23 @@ public class ProductItem extends AnchorPane {
         buttonDecrease.setOnAction(e -> pic.decreaseCount());
 
         buttonIncrease.setOnAction(e -> pic.increaseCount());
+    }
+
+    public EventHandler<KeyEvent> maxLength(final Integer i) {
+        return new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(KeyEvent arg0) {
+
+                TextField tx = (TextField) arg0.getSource();
+                if (tx.getText().length() >= i) {
+                    arg0.consume();
+                }
+
+            }
+
+        };
+
     }
 
     /**
@@ -93,15 +112,15 @@ public class ProductItem extends AnchorPane {
     public void setImageToFav(){
         imgFavorite.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
     }
-    public Label getLabelCount() {
-        return labelCount;
+    public TextField getTxtCount() {
+        return txtCount;
     }
 
     @FXML
     private void addToCartPressed() {
-        BackendController.addToCart(product, Integer.valueOf(labelCount.getText()));
+        BackendController.addToCart(product, Integer.valueOf(txtCount.getText()));
         parentView.updateInfo();
-        parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(labelCount.getText()));
+        parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(txtCount.getText()));
     }
 
     @FXML private void moreInfoPressed() {

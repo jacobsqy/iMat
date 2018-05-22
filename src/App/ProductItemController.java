@@ -9,18 +9,18 @@ public class ProductItemController {
     }
 
     public void increaseCount(){
-       int count = Integer.parseInt(productItem.getLabelCount().getText().replaceAll("\\D+",""));
+       int count = Integer.parseInt(productItem.getTxtCount().getText().replaceAll("\\D+",""));
 
         if(count < 100) {
-            productItem.getLabelCount().setText(Integer.toString(count + 1));
+            productItem.getTxtCount().setText(Integer.toString(count + 1));
         }
     }
 
     public void decreaseCount(){
-        int count = Integer.parseInt(productItem.getLabelCount().getText().replaceAll("\\D+",""));
+        int count = Integer.parseInt(productItem.getTxtCount().getText().replaceAll("\\D+",""));
 
         if(count > 1) {
-            productItem.getLabelCount().setText(Integer.toString(count - 1));
+            productItem.getTxtCount().setText(Integer.toString(count - 1));
         }
     }
 }
