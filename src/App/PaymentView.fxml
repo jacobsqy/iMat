@@ -157,8 +157,12 @@
                   <TextField fx:id="firstNameTextField" layoutX="480.0" layoutY="187.0" prefHeight="27.0" prefWidth="165.0" promptText="Förnamn" stylesheets="@StyleSheet.css" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="187.0" />
                   <TextField fx:id="lastNameTextField" layoutX="671.0" layoutY="186.0" prefHeight="27.0" prefWidth="340.0" promptText="Efternamn" />
                   <TextField fx:id="addressTextField" layoutX="480.0" layoutY="231.0" prefHeight="27.0" prefWidth="530.0" promptText="Exempelvägen 123" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="231.0" />
-                  <TextField fx:id="postCodeTextField" layoutX="480.0" layoutY="275.0" prefHeight="27.0" prefWidth="530.0" promptText="123 45" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="275.0" />
+                  <TextField fx:id="postCodeTextField" layoutX="480.0" layoutY="275.0" prefHeight="27.0" prefWidth="530.0" promptText="12345" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="275.0" />
                   <TextField fx:id="postAddressTextField" layoutX="480.0" layoutY="319.0" prefHeight="27.0" prefWidth="530.0" promptText="Stockholm" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="319.0" />
+                  <TextField fx:id="eMailTextField" layoutX="480.0" layoutY="363.0" prefHeight="27.0" prefWidth="530.0" promptText="1234@exempel.se" />
+                  <ToggleButton fx:id="firstDateToggleButton" layoutX="480.0" layoutY="401.0" mnemonicParsing="false" onAction="#firstToggle" text="15/5" />
+                  <ToggleButton fx:id="secondDateToggleButton" layoutX="553.0" layoutY="401.0" mnemonicParsing="false" onAction="#secondToggle" text="16/5" />
+                  <ToggleButton fx:id="thirdDateToggleButton" layoutX="623.0" layoutY="401.0" mnemonicParsing="false" onAction="#thirdToggle" text="17/5" />
                   <Label styleClass="text-headlines" stylesheets="@StyleSheet.css" text="Fyll i uppgifter" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="130.0" />
                   <Button fx:id="goBackAdressButton" mnemonicParsing="false" onMouseClicked="#goBackButtonPressed" prefHeight="38.0" prefWidth="196.0" stylesheets="@StyleSheet.css" text="Tillbaka" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
                      <styleClass>
@@ -179,11 +183,7 @@
                      </font>
                   </Label>
                   <Label alignment="CENTER_RIGHT" layoutX="320.0" layoutY="363.0" prefWidth="120.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Email:" textAlignment="RIGHT" />
-                  <TextField fx:id="eMailTextField" layoutX="480.0" layoutY="363.0" prefHeight="27.0" prefWidth="530.0" promptText="1234@exempel.se" />
                   <Label alignment="CENTER_RIGHT" layoutX="283.0" layoutY="403.0" prefHeight="20.0" prefWidth="157.0" styleClass="text-normal" stylesheets="@StyleSheet.css" text="Leveransdatum:" textAlignment="RIGHT" />
-                  <ToggleButton fx:id="firstDateToggleButton" layoutX="480.0" layoutY="401.0" mnemonicParsing="false" onAction="#firstToggle" text="15/5" />
-                  <ToggleButton fx:id="secondDateToggleButton" layoutX="553.0" layoutY="401.0" mnemonicParsing="false" onAction="#secondToggle" text="16/5" />
-                  <ToggleButton fx:id="thirdDateToggleButton" layoutX="623.0" layoutY="401.0" mnemonicParsing="false" onAction="#thirdToggle" text="17/5" />
                </children>
             </AnchorPane>
          </children>
