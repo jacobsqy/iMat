@@ -183,3 +183,12 @@
     -fx-scale-z: 1.05;
     -fx-opacity: 1;
 }
+
+.text-big {
+    -fx-font-size: 20px;
+    -fx-font-family: "Avenir Book";
+}
+
+.text-big:pressed {
+    -fx-font-size: 22px;
+}
