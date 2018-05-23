@@ -85,7 +85,7 @@ public class ProductItem extends AnchorPane {
         buttonIncrease.setOnAction(e -> pic.increaseCount());
     }
 
-    public EventHandler<KeyEvent> maxLength(final Integer i) {
+    private EventHandler<KeyEvent> maxLength(final Integer i) {
         return new EventHandler<KeyEvent>() {
 
             @Override

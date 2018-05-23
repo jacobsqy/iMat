@@ -169,16 +169,26 @@
 
 }
 
-#logo:pressed {
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
-    -fx-scale-z: 1.05;
-}
-
 #add-remove-buttons:pressed {
     -fx-font-size: 16px;
 }
 
 #logo:hover{
     -fx-opacity: 0.75;
+}
+
+#logo:pressed {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-scale-z: 1.05;
+    -fx-opacity: 1;
+}
+
+.text-big {
+    -fx-font-size: 20px;
+    -fx-font-family: "Avenir Book";
+}
+
+.text-big:pressed {
+    -fx-font-size: 22px;
 }

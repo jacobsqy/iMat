@@ -1,11 +1,14 @@
 package App;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -17,7 +20,7 @@ public class ShoppingCartItem extends AnchorPane {
     @FXML private Label productNameLabel;
     @FXML private Label priceLabel;
     @FXML private Label totalPriceLabel;
-    @FXML private Label labelCount;
+    @FXML private TextField textFieldCount;
     @FXML private Button buttonDecrease;
     @FXML private Button buttonIncrease;
     private ShoppingCartView parentView;
@@ -41,7 +44,20 @@ public class ShoppingCartItem extends AnchorPane {
 
         priceLabel.setText(new DecimalFormat("#.##").format(shoppingItem.getProduct().getPrice()));
         totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
-        labelCount.setText(new DecimalFormat("#.##").format(shoppingItem.getAmount()));
+        textFieldCount.setText(new DecimalFormat("#.##").format(shoppingItem.getAmount()));
+        textFieldCount.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(KeyEvent arg0) {
+
+                TextField tx = (TextField) arg0.getSource();
+                if (tx.getText().length() >= 2) {
+                    arg0.consume();
+                }
+
+            }
+
+        });
     }
 
     public void setParentView(ShoppingCartView parentView) {
@@ -51,7 +67,7 @@ public class ShoppingCartItem extends AnchorPane {
     private void updateInfo() {
         priceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getProduct().getPrice())));
         totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
-        labelCount.setText(new DecimalFormat("#.##").format((shoppingItem.getAmount())));
+        textFieldCount.setText(new DecimalFormat("#.##").format((shoppingItem.getAmount())));
         parentView.updateInfo();
     }
 
@@ -62,7 +78,7 @@ public class ShoppingCartItem extends AnchorPane {
     }
 
     @FXML private void increaseButtonPressed() {
-        if (shoppingItem.getAmount() >= 99) return;
+        if (Integer.valueOf(textFieldCount.getText()) >= 99) return;
         shoppingItem.setAmount(shoppingItem.getAmount() + 1);
         parentView.updateList();
         updateInfo();
