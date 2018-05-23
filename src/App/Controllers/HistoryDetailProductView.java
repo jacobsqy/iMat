@@ -64,9 +64,11 @@ public class HistoryDetailProductView extends AnchorPane {
         txtCount.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if (!newValue.matches("\\d*") || (newValue.compareTo("1") < 0)) {
+                if (!newValue.matches("\\d*") || (!newValue.isEmpty() && newValue.compareTo("1") < 0)) {
                     txtCount.setText(oldValue);
-                } else {
+                }
+                else if (newValue.isEmpty()){}
+                else {
                     shoppingItem.setAmount(Integer.parseInt(newValue));
                     updateInfo();
                 }
