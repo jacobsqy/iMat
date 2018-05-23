@@ -101,9 +101,12 @@ public class HistoryDetailProductView extends AnchorPane {
 
     @FXML
     private void addProduct() {
-        BackendController.addToCart(shoppingItem.getProduct(), Integer.valueOf(txtCount.getText()));
-        main.get(0).updateInfo();
-        main.get(0).showProductAddedToShoppingCartInfo(shoppingItem.getProduct(), Integer.valueOf(txtCount.getText()));
+        if (!txtCount.getText().isEmpty()) {
+            BackendController.addToCart(shoppingItem.getProduct(), Integer.valueOf(txtCount.getText()));
+            main.get(0).updateInfo();
+            main.get(0).showProductAddedToShoppingCartInfo(shoppingItem.getProduct(), Integer.valueOf(txtCount.getText()));
+        }
+
     }
 
 }
