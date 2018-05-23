@@ -1,5 +1,7 @@
 package App;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,6 +66,15 @@ public class ShoppingCartItem extends AnchorPane {
                 textFieldCount.setText(newValue.replaceAll("[^\\d]", ""));
             }
 
+        });
+
+        textFieldCount.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+                shoppingItem.setAmount(Double.valueOf(newValue));
+                updateInfo();
+
+            }
         });
     }
 
