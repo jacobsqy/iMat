@@ -192,3 +192,8 @@
 .text-big:pressed {
     -fx-font-size: 22px;
 }
+
+.header {
+    -fx-background-color: #e0e0e0;
+}
+

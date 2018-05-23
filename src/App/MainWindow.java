@@ -233,6 +233,7 @@ public class MainWindow {
     public void goToShoppingCart() {
         productViewController.changeToDefaultView();
 
+        paymentViewController.focus(0);
         contentPane.getChildren().setAll(shoppingView);
         continueToShopButton.setVisible(true);
         shoppingCartButton.setVisible(false);

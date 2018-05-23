@@ -13,12 +13,12 @@
    <children>
       <VBox prefHeight="601.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" prefHeight="0.0" prefWidth="1350.0">
+            <AnchorPane minHeight="-Infinity" prefHeight="60.0" prefWidth="1350.0">
                <children>
-                  <Label layoutX="200.0" layoutY="90.0" styleClass="text-normal" text="Vara" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="90.0" />
-                  <Label layoutX="648.0" layoutY="85.0" styleClass="text-normal" text="Antal" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="90.0" />
-                  <Label layoutX="706.0" layoutY="90.0" styleClass="text-normal" text="Pris" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="90.0" />
-                  <Label layoutX="948.0" layoutY="87.0" styleClass="text-normal" text="Summa" AnchorPane.leftAnchor="898.0" AnchorPane.topAnchor="90.0" />
+                  <Label layoutX="200.0" layoutY="90.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="Vara" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="20.0" />
+                  <Label layoutX="648.0" layoutY="85.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="Antal" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="20.0" />
+                  <Label layoutX="706.0" layoutY="90.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="Pris" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="20.0" />
+                  <Label layoutX="948.0" layoutY="87.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="Summa" AnchorPane.leftAnchor="898.0" AnchorPane.topAnchor="20.0" />
                   <Separator layoutY="3.0" prefHeight="1.0" prefWidth="1057.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
@@ -37,9 +37,9 @@
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="1059.0">
                            <children>
-                              <Label layoutX="40.0" layoutY="22.0" styleClass="text-normal" text="Totalt:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalAmountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="630.0" layoutY="42.0" prefWidth="42.0" styleClass="text-normal" text="x st" textAlignment="CENTER" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="900.0" layoutY="39.0" prefWidth="100.0" styleClass="text-normal" text="x kr" textAlignment="CENTER" AnchorPane.leftAnchor="898.0" AnchorPane.topAnchor="20.0" />
+                              <Label layoutX="40.0" layoutY="22.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="Totalt:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalAmountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="630.0" layoutY="42.0" prefWidth="42.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="x st" textAlignment="CENTER" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="900.0" layoutY="39.0" prefWidth="100.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="x kr" textAlignment="CENTER" AnchorPane.leftAnchor="898.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="104.0" prefWidth="1059.0">

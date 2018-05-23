@@ -283,7 +283,7 @@ public class PaymentView extends AnchorPane {
         }
     }
 
-    private void focus(int i) {
+    public void focus(int i) {
         anchorPaneListIndex = i;
         anchorPaneList.get(anchorPaneListIndex).toFront();
 
