@@ -25,12 +25,20 @@ public class HistoryProductView {
         });
 
         historyFlowPane.getChildren().clear();
+        boolean even = false;
         for (Order order: orders) {
             int totalPrice = 0;
             for (ShoppingItem item:order.getItems()){
                 totalPrice += item.getTotal();
             }
             HistoryItem historyItem = new HistoryItem(order, totalPrice);
+            historyItem.setParentView(this);
+            if (even) {
+                historyItem.setStyle("-fx-background-color: #ddd");
+                even = false;
+            } else {
+                even = true;
+            }
             historyFlowPane.getChildren().add(historyItem);
         }
     }

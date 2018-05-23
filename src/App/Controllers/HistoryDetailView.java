@@ -29,11 +29,19 @@ public class HistoryDetailView {
     public void initialize() {}
 
     public void updateList(Order order, int totalPrice) {
+        boolean even = false;
         this.order = order;
         this.totalPrice = totalPrice;
         historyProductFlowPane.getChildren().clear();
         for (ShoppingItem item:order.getItems()) {
             HistoryDetailProductView historyDetailItem = new HistoryDetailProductView(item);
+            historyDetailItem.setParentView(this);
+            if (even) {
+                historyDetailItem.setStyle("-fx-background-color: #ddd");
+                even = false;
+            } else {
+                even = true;
+            }
             historyProductFlowPane.getChildren().add(historyDetailItem);
         }
     }

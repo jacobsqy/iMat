@@ -31,6 +31,7 @@ public class HistoryItem extends AnchorPane {
 
     private Order order;
     private int totalPrice;
+    private HistoryProductView parentView;
 
     private String nameofmonth[] = {"Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
@@ -97,6 +98,10 @@ public class HistoryItem extends AnchorPane {
             }
         });
 
+    }
+
+    public void setParentView(HistoryProductView parentView) {
+        this.parentView = parentView;
     }
 
 }

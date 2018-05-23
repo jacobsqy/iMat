@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,12 +15,11 @@
          </image>
       </ImageView>
       <Label fx:id="productName" layoutX="183.0" layoutY="30.0" text="Produkt Namn" />
-      <Separator layoutX="23.0" layoutY="164.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Label fx:id="productUnit" layoutX="537.0" layoutY="30.0" text="x kr" />
       <Label fx:id="totalPrice" layoutX="697.0" layoutY="30.0" text="x kr" />
       <Button layoutX="808.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#addProduct" prefHeight="38.0" prefWidth="196.0" styleClass="button-green" text="Lägg Till Varukorg" />
-      <Label fx:id="labelCount" alignment="CENTER" contentDisplay="CENTER" layoutX="455.0" layoutY="30.0" text="1" textAlignment="CENTER" />
-      <Button fx:id="buttonIncrease" layoutX="472.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#increaseButtonPressed" prefHeight="38.0" prefWidth="38.0" text="+" />
-      <Button fx:id="buttonDecrease" layoutX="405.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#decreaseButtonPressed" prefHeight="38.0" prefWidth="38.0" text="-" />
+      <TextField fx:id="txtCount" alignment="CENTER" layoutX="429.0" layoutY="24.0" prefHeight="27.0" prefWidth="50.0" text="88" />
+      <Button id="add-remove-buttons" fx:id="buttonIncrease" layoutX="473.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#increaseButtonPressed" prefHeight="7.0" prefWidth="6.0" styleClass="button-grey" text="+" />
+      <Button id="add-remove-buttons" fx:id="buttonDecrease" layoutX="405.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#decreaseButtonPressed" prefHeight="17.0" prefWidth="29.0" styleClass="button-grey" text="-" />
    </children>
 </fx:root>
