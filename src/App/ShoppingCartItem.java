@@ -47,6 +47,7 @@ public class ShoppingCartItem extends AnchorPane {
         textFieldCount.setText(new DecimalFormat("#.##").format(shoppingItem.getAmount()));
         textFieldCount.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
 
+
             @Override
             public void handle(KeyEvent arg0) {
 
@@ -54,7 +55,13 @@ public class ShoppingCartItem extends AnchorPane {
                 if (tx.getText().length() >= 2) {
                     arg0.consume();
                 }
+            }
 
+        });
+
+        textFieldCount.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                textFieldCount.setText(newValue.replaceAll("[^\\d]", ""));
             }
 
         });

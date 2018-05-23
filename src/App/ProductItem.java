@@ -83,6 +83,12 @@ public class ProductItem extends AnchorPane {
         buttonDecrease.setOnAction(e -> pic.decreaseCount());
 
         buttonIncrease.setOnAction(e -> pic.increaseCount());
+
+        txtCount.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                txtCount.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+        });
     }
 
     private EventHandler<KeyEvent> maxLength(final Integer i) {
