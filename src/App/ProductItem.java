@@ -1,5 +1,7 @@
 package App;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,6 +37,7 @@ public class ProductItem extends AnchorPane {
 
     private ProductItemController pic;
     private Product product;
+    private String oldValue= "";
 
 
     public ProductItem(Product product) {
@@ -73,39 +76,34 @@ public class ProductItem extends AnchorPane {
         lblPrice.setText(new DecimalFormat("#.##").format((product.getPrice())) + " " + product.getUnit());
         txtCount.setText("1");
 
-        txtCount.addEventFilter(KeyEvent.KEY_TYPED, maxLength(2));
-
-        /*SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0, 1);
-        spinnerCount.setValueFactory(valueFactory);
-        spinnerCount.setEditable(true);
-        spinnerCount.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);*/
-
         buttonDecrease.setOnAction(e -> pic.decreaseCount());
-
         buttonIncrease.setOnAction(e -> pic.increaseCount());
 
-        txtCount.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("\\d*")) {
-                txtCount.setText(newValue.replaceAll("[^\\d]", ""));
-            }
-        });
-    }
-
-    private EventHandler<KeyEvent> maxLength(final Integer i) {
-        return new EventHandler<KeyEvent>() {
-
+        txtCount.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent arg0) {
 
-                TextField tx = (TextField) arg0.getSource();
-                if (tx.getText().length() >= i) {
+                if (txtCount.getText().length() >= 2) {
                     arg0.consume();
                 }
-
             }
 
-        };
+        });
+        txtCount.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*") || (!newValue.isEmpty() && newValue.compareTo("1") < 0)) {
+                txtCount.setText(oldValue);
+            }
+            else {this.oldValue = oldValue;}
 
+        });
+        txtCount.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if (oldValue && txtCount.getText().isEmpty()) {
+                    txtCount.setText("1");
+                }
+            }
+        });
     }
 
     /**
@@ -122,11 +120,17 @@ public class ProductItem extends AnchorPane {
         return txtCount;
     }
 
+    public String textOldValue(){
+        return this.oldValue;
+    }
+
     @FXML
     private void addToCartPressed() {
-        BackendController.addToCart(product, Integer.valueOf(txtCount.getText()));
-        parentView.updateInfo();
-        parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(txtCount.getText()));
+        if (!txtCount.getText().isEmpty()) {
+            BackendController.addToCart(product, Integer.valueOf(txtCount.getText()));
+            parentView.updateInfo();
+            parentView.getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(txtCount.getText()));
+        }
     }
 
     @FXML private void moreInfoPressed() {

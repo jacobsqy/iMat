@@ -12,14 +12,8 @@
 
 <fx:root prefHeight="179.0" prefWidth="1024.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="product" layoutX="236.0" layoutY="49.0" styleClass="text-normal" text="x produkter" />
-      <Label fx:id="price" layoutX="236.0" layoutY="91.0" styleClass="text-normal" text="x kr" />
-      <Button fx:id="addAllProduct" layoutX="571.0" layoutY="72.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" text="Lägg Till Alla Varor">
-         <styleClass>
-            <String fx:value="text-normal" />
-            <String fx:value="button-green" />
-         </styleClass>
-      </Button>
+      <Label fx:id="product" layoutX="236.0" layoutY="49.0" styleClass="text-headlines" text="x produkter" />
+      <Label fx:id="price" layoutX="236.0" layoutY="91.0" styleClass="text-headlines" text="x kr" />
       <Button fx:id="showProduct" layoutX="800.0" layoutY="71.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" text="Visa Varor">
          <styleClass>
             <String fx:value="text-normal" />

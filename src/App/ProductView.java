@@ -1,5 +1,7 @@
 package App;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -14,6 +16,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -53,6 +56,8 @@ public class ProductView {
     @FXML private ImageView favoriteImage;
     @FXML private Button addToCartButton;
     @FXML private TextField numberTextField;
+
+    private String oldValue = "";
 
     public static List<Product> productList = new ArrayList<Product>();
     public static Map<String, ProductItem> productMap = new HashMap<String, ProductItem>();
@@ -226,6 +231,70 @@ public class ProductView {
             }
         });
 
+        numberTextField.setText("1");
+        numberTextField.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent arg0) {
+                if (numberTextField.getText().length() >= 2) {
+                    arg0.consume();
+                }
+            }
+        });
+        numberTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*") || (!newValue.isEmpty() && newValue.compareTo("1") < 0)) {
+                numberTextField.setText(oldValue);
+            }
+            else {this.oldValue = oldValue;}
+
+        });
+        numberTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if (oldValue && numberTextField.getText().isEmpty()) {
+                    numberTextField.setText("1");
+                }
+            }
+        });
+
+
+        addToCartButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (!numberTextField.getText().isEmpty()) {
+                    BackendController.addToCart(product, Integer.valueOf(numberTextField.getText()));
+                    updateInfo();
+                    getParentController().showProductAddedToShoppingCartInfo(product, Integer.valueOf(numberTextField.getText()));
+                }
+            }
+        });
+    }
+
+    @FXML
+    private void increaseCount(){
+        int count= 0;
+        if(!numberTextField.getText().isEmpty()) {
+            count = Integer.parseInt(numberTextField.getText().replaceAll("\\D+",""));
+        } else {
+            count = Integer.parseInt(oldValue.replaceAll("\\D+",""));
+        }
+
+        if(count < 100) {
+            numberTextField.setText(Integer.toString(count + 1));
+        }
+    }
+
+    @FXML
+    private void decreaseCount(){
+        int count= 0;
+        if(!numberTextField.getText().isEmpty()) {
+            count = Integer.parseInt(numberTextField.getText().replaceAll("\\D+",""));
+        } else {
+            count = Integer.parseInt(oldValue.replaceAll("\\D+",""));
+        }
+
+        if(count > 1) {
+            numberTextField.setText(Integer.toString(count - 1));
+        }
     }
 
     public void changeToFirstTimeView() {
@@ -246,4 +315,5 @@ public class ProductView {
     private void mouseTrap(Event event){
         event.consume();
     }
+
 }

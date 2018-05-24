@@ -53,27 +53,32 @@ public class ShoppingCartItem extends AnchorPane {
             @Override
             public void handle(KeyEvent arg0) {
 
-                TextField tx = (TextField) arg0.getSource();
-                if (tx.getText().length() >= 2) {
+                if (textFieldCount.getText().length() >= 2) {
                     arg0.consume();
                 }
             }
 
         });
 
-        textFieldCount.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("\\d*")) {
-                textFieldCount.setText(newValue.replaceAll("[^\\d]", ""));
-            }
-
-        });
-
         textFieldCount.textProperty().addListener(new ChangeListener<String>() {
             @Override
-            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
-                shoppingItem.setAmount(Double.valueOf(newValue));
-                updateInfo();
-
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("\\d*") || (!newValue.isEmpty() && newValue.compareTo("1") < 0)) {
+                    textFieldCount.setText(oldValue);
+                }
+                else if (newValue.isEmpty()){}
+                else {
+                    shoppingItem.setAmount(Integer.parseInt(newValue));
+                    updateInfo();
+                }
+            }
+        });
+        textFieldCount.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if (oldValue && textFieldCount.getText().isEmpty()) {
+                    textFieldCount.setText("1");
+                }
             }
         });
     }

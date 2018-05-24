@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="179.0" prefWidth="503.0" stylesheets="@StyleSheet.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="179.0" prefWidth="503.0" stylesheets="@StyleSheet.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="productImage" fitHeight="115.0" fitWidth="156.0" layoutX="14.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,7 +26,7 @@
          </image>
       </ImageView>
       <Separator layoutX="174.0" layoutY="3.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <TextField fx:id="txtCount" layoutX="206.0" layoutY="128.0" prefHeight="27.0" prefWidth="50.0" text="88" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="125.0" />
+      <TextField fx:id="txtCount" alignment="CENTER" layoutX="206.0" layoutY="128.0" prefHeight="27.0" prefWidth="50.0" text="88" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="125.0" />
       <Button id="add-remove-buttons" fx:id="buttonIncrease" layoutX="250.0" layoutY="128.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="6.0" styleClass="button-grey" text="+" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="125.0" />
       <Button id="add-remove-buttons" fx:id="buttonDecrease" layoutX="182.0" layoutY="128.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="29.0" styleClass="button-grey" text="-" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="292.0" AnchorPane.topAnchor="125.0" />
    </children>

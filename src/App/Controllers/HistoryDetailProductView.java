@@ -54,8 +54,7 @@ public class HistoryDetailProductView extends AnchorPane {
             @Override
             public void handle(KeyEvent arg0) {
 
-                TextField tx = (TextField) arg0.getSource();
-                if (tx.getText().length() >= 2) {
+                if (txtCount.getText().length() >= 2) {
                     arg0.consume();
                 }
             }
@@ -71,6 +70,14 @@ public class HistoryDetailProductView extends AnchorPane {
                 else {
                     shoppingItem.setAmount(Integer.parseInt(newValue));
                     updateInfo();
+                }
+            }
+        });
+        txtCount.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if (oldValue && txtCount.getText().isEmpty()) {
+                    txtCount.setText("1");
                 }
             }
         });

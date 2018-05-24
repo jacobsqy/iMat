@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ProductView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1350.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ProductView">
    <children>
       <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -184,6 +184,26 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
+                  <AnchorPane fx:id="firstTimeView" layoutX="175.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <Label layoutX="185.0" layoutY="50.0" styleClass="text-headlines" text="Välkommen till iMat!" AnchorPane.topAnchor="50.0" />
+                        <Button fx:id="startShoppingButton" layoutX="548.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#changeToDefaultView" prefHeight="50.0" prefWidth="200.0" text="Börja handla" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-green" />
+                              <String fx:value="text-big" />
+                           </styleClass>
+                        </Button>
+                        <TextArea layoutX="119.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" text="Börja handla genom att lägga till varor i varukorgen. Du kan hitta varorna du är ute efter genom att antingen använda sökfunktionen högst upp eller använda dig av de olika kategorierna till vänster. Om du behöver hjälp eller har några frågor kan du använda dig av hjälp-knappen högst upp till höger. " wrapText="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0">
+                           <styleClass>
+                              <String fx:value="text-area" />
+                              <String fx:value="text-arrows" />
+                           </styleClass>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
                   <AnchorPane fx:id="moreInfo" layoutX="507.0" prefHeight="441.0" prefWidth="823.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
                      <children>
                         <ImageView fx:id="itemPictureImageView" fitHeight="212.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
@@ -194,10 +214,10 @@
                         <Label fx:id="pricePerUnitLabel" layoutX="310.0" layoutY="72.0" prefHeight="30.0" prefWidth="343.0" styleClass="text-normal" text="jämf.pris" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="100.0" />
                         <Label layoutX="10.0" layoutY="10.0" styleClass="text-arrows" text="Produktbeskrivning:" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="150.0" />
                         <TextArea layoutX="300.0" layoutY="172.0" prefHeight="102.0" prefWidth="313.0" styleClass="text-normal" text="Surdegsbröd med bland annat vetegroddar. Gör en bruschetta med tomat, basilika, vitlök och olivolja. In i ugnen i 10 minuter i 200 grader. Klart!" wrapText="true" AnchorPane.leftAnchor="290.0" />
-                        <Button fx:id="increaseButton" layoutX="412.0" layoutY="360.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="18.0" styleClass="button-grey" text="+" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="360.0" />
-                        <TextField fx:id="numberTextField" layoutX="319.0" layoutY="361.0" prefHeight="27.0" prefWidth="35.0" text="1" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="360.0" />
-                        <Button fx:id="decreaseButton" layoutX="294.0" layoutY="360.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="18.0" styleClass="button-grey" text="-" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="360.0" />
-                        <Button fx:id="addToCartButton" layoutX="438.0" layoutY="360.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="204.0" styleClass="button-green" text="Lägg till i varukorgen" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="360.0">
+                        <Button layoutX="372.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#increaseCount" prefHeight="36.0" prefWidth="36.0" styleClass="button-grey" text="+" />
+                        <TextField fx:id="numberTextField" alignment="CENTER" layoutX="330.0" layoutY="356.0" prefHeight="36.0" prefWidth="42.0" text="88" />
+                        <Button layoutX="294.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#decreaseCount" prefHeight="36.0" prefWidth="36.0" styleClass="button-grey" text="-" />
+                        <Button fx:id="addToCartButton" layoutX="416.0" layoutY="356.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="216.0" styleClass="button-green" text="Lägg till i varukorgen">
                            <graphic>
                               <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -216,25 +236,6 @@
                               <Image url="@resources/imat/images/icon_close.png" />
                            </image>
                         </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="firstTimeView" layoutX="175.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" styleClass="text-area" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="25.0">
-                     <children>
-                        <Label layoutX="185.0" layoutY="50.0" styleClass="text-headlines" text="Välkommen till iMat!" AnchorPane.topAnchor="50.0" />
-                        <Button fx:id="startShoppingButton" layoutX="548.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#changeToDefaultView" prefHeight="50.0" prefWidth="200.0" text="Börja handla" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="button-green" />
-                              <String fx:value="text-big" />
-                           </styleClass></Button>
-                        <TextArea layoutX="119.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" text="Börja handla genom att lägga till varor i varukorgen. Du kan hitta varorna du är ute efter genom att antingen använda sökfunktionen högst upp eller använda dig av de olika kategorierna till vänster. Om du behöver hjälp eller har några frågor kan du använda dig av hjälp-knappen högst upp till höger. " wrapText="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0">
-                           <styleClass>
-                              <String fx:value="text-area" />
-                              <String fx:value="text-arrows" />
-                           </styleClass>
-                        </TextArea>
                      </children>
                   </AnchorPane>
                </children>

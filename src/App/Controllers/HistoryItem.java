@@ -27,7 +27,6 @@ public class HistoryItem extends AnchorPane {
     @FXML private Label product;
     @FXML private Label price;
     @FXML private Button showProduct;
-    @FXML private Button addAllProduct;
 
     private Order order;
     private int totalPrice;
@@ -84,17 +83,6 @@ public class HistoryItem extends AnchorPane {
 
                 historyViews.get(0).getChildren().clear();
                 historyViews.get(0).getChildren().setAll(node);
-            }
-        });
-
-        addAllProduct.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                for (ShoppingItem shoppingItem:order.getItems()) {
-                    BackendController.addToCart(shoppingItem.getProduct(),(int) shoppingItem.getAmount());
-                }
-                main.get(0).updateInfo();
-                main.get(0).showProductAddedToShoppingCartInfo();
             }
         });
 
