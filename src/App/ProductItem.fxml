@@ -18,7 +18,7 @@
       </ImageView>
       <Label fx:id="lblName" layoutX="188.0" layoutY="31.0" text="Gröna ärter" />
       <Label fx:id="lblPrice" layoutX="188.0" layoutY="53.0" text="19.50 kr/kg" />
-      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="284.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#addToCartPressed" prefHeight="36.0" prefWidth="206.0" styleClass="button-green" text="Lägg till i Varukorg" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="120.0" />
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="284.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#addToCartPressed" prefHeight="36.0" prefWidth="206.0" styleClass="button-green" text="Lägg till i Varukorgen" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="120.0" />
       <Button layoutX="182.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#moreInfoPressed" prefHeight="36.0" prefWidth="308.0" styleClass="button-lightblue" text="Mer Information" textFill="WHITE" AnchorPane.rightAnchor="13.0" />
       <ImageView fx:id="imgFavorite" fitHeight="35.0" fitWidth="35.0" layoutX="454.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
