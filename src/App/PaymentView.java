@@ -410,7 +410,6 @@ public class PaymentView extends AnchorPane {
         creditCardTextArea.clear();
         cartTextArea.clear();
         deliveryTextArea.clear();
-        confirmButton.setText("");
 
 
         String delivery;
