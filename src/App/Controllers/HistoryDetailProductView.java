@@ -30,6 +30,7 @@ public class HistoryDetailProductView extends AnchorPane {
 
     private ShoppingItem shoppingItem;
     private HistoryDetailView parentView;
+    private int count = 0;
 
     public HistoryDetailProductView(ShoppingItem shoppingItem) {
 
@@ -44,6 +45,8 @@ public class HistoryDetailProductView extends AnchorPane {
         }
 
         this.shoppingItem = shoppingItem;
+
+        count = (int) shoppingItem.getAmount();
 
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productName.setText(shoppingItem.getProduct().getName());
@@ -63,16 +66,19 @@ public class HistoryDetailProductView extends AnchorPane {
         txtCount.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+
                 if (!newValue.matches("\\d*") || (!newValue.isEmpty() && newValue.compareTo("1") < 0)) {
-                    txtCount.setText(oldValue);
+                    txtCount.setText(String.valueOf(count));
                 }
-                else if (newValue.isEmpty()){}
+                else if (newValue.isEmpty()) {}
                 else {
-                    shoppingItem.setAmount(Integer.parseInt(newValue));
-                    updateInfo();
+                    txtCount.setText(newValue);
+                    count = Integer.parseInt(newValue);
                 }
+                updateInfo();
             }
         });
+
         txtCount.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
@@ -81,11 +87,11 @@ public class HistoryDetailProductView extends AnchorPane {
                 }
             }
         });
+
     }
 
     private void updateInfo() {
-        totalPrice.setText(String.valueOf((int)shoppingItem.getTotal()) + " kr");
-        txtCount.setText(String.valueOf((int) shoppingItem.getAmount()));
+        totalPrice.setText(((count * (int) shoppingItem.getProduct().getPrice()) + " kr"));
     }
 
     public void setParentView(HistoryDetailView parentView) {
@@ -94,16 +100,20 @@ public class HistoryDetailProductView extends AnchorPane {
 
     @FXML
     private void increaseButtonPressed() {
-        if (shoppingItem.getAmount() >= 99) return;
-        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
-        updateInfo();
+        if (count < 99) {
+            count += 1;
+            txtCount.setText(Integer.toString(count));
+            updateInfo();
+        }
     }
 
     @FXML
     private void decreaseButtonPressed() {
-        if (shoppingItem.getAmount() <= 1) return;
-        shoppingItem.setAmount(shoppingItem.getAmount() - 1);
-        updateInfo();
+        if (count > 1) {
+            count -= 1;
+            txtCount.setText(Integer.toString(count));
+            updateInfo();
+        }
     }
 
     @FXML

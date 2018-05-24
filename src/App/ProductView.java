@@ -278,7 +278,7 @@ public class ProductView {
             count = Integer.parseInt(oldValue.replaceAll("\\D+",""));
         }
 
-        if(count < 100) {
+        if(count < 99) {
             numberTextField.setText(Integer.toString(count + 1));
         }
     }

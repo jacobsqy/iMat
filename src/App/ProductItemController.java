@@ -16,7 +16,7 @@ public class ProductItemController {
             count = Integer.parseInt(productItem.textOldValue().replaceAll("\\D+",""));
         }
 
-       if(count < 100) {
+       if(count < 99) {
            productItem.getTxtCount().setText(Integer.toString(count + 1));
        }
     }
