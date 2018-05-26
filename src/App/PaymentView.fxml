@@ -109,12 +109,12 @@
                   <Label alignment="CENTER_RIGHT" layoutX="354.0" layoutY="265.0" prefWidth="220.0" styleClass="text-normal" text="Kortnummer:" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="265.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="203.0" prefWidth="220.0" styleClass="text-normal" text="Kortinnehavare:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="203.0" />
                   <Label alignment="CENTER_RIGHT" layoutX="341.0" layoutY="383.0" prefWidth="220.0" styleClass="text-normal" text="Giltigt till:" textAlignment="RIGHT" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="383.0" />
-                  <TextField fx:id="creditCardNameTextField" layoutX="444.0" layoutY="258.0" prefWidth="530.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
-                  <TextField fx:id="creditCardFirstNumberTextField" layoutX="443.0" layoutY="317.0" prefWidth="125.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
-                  <TextField fx:id="creditCardSecondNumberTextField" layoutX="437.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="615.0" AnchorPane.topAnchor="260.0" />
-                  <TextField fx:id="creditCardThirdNumberTextField" layoutX="587.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="260.0" />
-                  <TextField fx:id="creditCardForthNumberTextField" layoutX="796.0" layoutY="315.0" prefWidth="125.0" AnchorPane.leftAnchor="885.0" AnchorPane.topAnchor="260.0" />
-                  <TextField fx:id="creditCardCVCTextField" layoutX="477.0" layoutY="305.0" minWidth="70.0" prefHeight="27.0" prefWidth="32.0" AnchorPane.leftAnchor="477.0" AnchorPane.topAnchor="305.0" />
+                  <TextField fx:id="creditCardNameTextField" layoutX="444.0" layoutY="258.0" prefWidth="530.0" promptText="Förnamn Efternamn" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="200.0" />
+                  <TextField fx:id="creditCardFirstNumberTextField" layoutX="443.0" layoutY="317.0" prefWidth="125.0" promptText="1234" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="260.0" />
+                  <TextField fx:id="creditCardSecondNumberTextField" layoutX="437.0" layoutY="315.0" prefWidth="125.0" promptText="1234" AnchorPane.leftAnchor="615.0" AnchorPane.topAnchor="260.0" />
+                  <TextField fx:id="creditCardThirdNumberTextField" layoutX="587.0" layoutY="315.0" prefWidth="125.0" promptText="1234" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="260.0" />
+                  <TextField fx:id="creditCardForthNumberTextField" layoutX="796.0" layoutY="315.0" prefWidth="125.0" promptText="1234" AnchorPane.leftAnchor="885.0" AnchorPane.topAnchor="260.0" />
+                  <TextField fx:id="creditCardCVCTextField" layoutX="477.0" layoutY="305.0" minWidth="70.0" prefHeight="27.0" prefWidth="32.0" promptText="123" AnchorPane.leftAnchor="477.0" AnchorPane.topAnchor="305.0" />
                   <ChoiceBox fx:id="creditCardMonthTextField" layoutX="480.0" layoutY="381.0" prefHeight="27.0" prefWidth="56.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="381.0" />
                   <ChoiceBox fx:id="creditCardYearTextField" layoutX="561.0" layoutY="381.0" prefHeight="27.0" prefWidth="81.0" AnchorPane.leftAnchor="561.0" AnchorPane.topAnchor="381.0" />
                   <Label layoutX="486.0" layoutY="175.0" styleClass="text-headlines" text="Fyll i kortuppgifter" AnchorPane.leftAnchor="535.0" AnchorPane.topAnchor="130.0" />
@@ -136,7 +136,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;" visible="false">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
                      <image>

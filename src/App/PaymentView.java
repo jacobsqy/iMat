@@ -405,7 +405,6 @@ public class PaymentView extends AnchorPane {
     }
 
     @FXML public void setConfirmPage(){
-        Customer c = BackendController.getCustomer();
         addressTextArea.clear();
         creditCardTextArea.clear();
         cartTextArea.clear();

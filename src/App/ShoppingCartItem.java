@@ -44,8 +44,8 @@ public class ShoppingCartItem extends AnchorPane {
         productImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/" + shoppingItem.getProduct().getImageName())));
         productNameLabel.setText(shoppingItem.getProduct().getName());
 
-        priceLabel.setText(new DecimalFormat("#.##").format(shoppingItem.getProduct().getPrice()));
-        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
+        priceLabel.setText(new DecimalFormat("#.##").format(shoppingItem.getProduct().getPrice()) + " kr");
+        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())) + " kr");
         textFieldCount.setText(new DecimalFormat("#.##").format(shoppingItem.getAmount()));
         textFieldCount.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
 
@@ -88,8 +88,8 @@ public class ShoppingCartItem extends AnchorPane {
     }
 
     private void updateInfo() {
-        priceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getProduct().getPrice())));
-        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())));
+        priceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getProduct().getPrice())) + " kr");
+        totalPriceLabel.setText(new DecimalFormat("#.##").format((shoppingItem.getTotal())) + " kr");
         textFieldCount.setText(new DecimalFormat("#.##").format((shoppingItem.getAmount())));
         parentView.updateInfo();
     }
