@@ -136,7 +136,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;" visible="false">
+            <AnchorPane fx:id="addressInfoPane" prefHeight="599.0" prefWidth="1057.0" style="-fx-background-color: white;">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" AnchorPane.leftAnchor="815.0" AnchorPane.topAnchor="50.0">
                      <image>
