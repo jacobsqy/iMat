@@ -43,8 +43,8 @@
                         <AnchorPane prefHeight="200.0" prefWidth="1059.0">
                            <children>
                               <Label layoutX="40.0" layoutY="22.0" style="-fx-font-weight: bold;" styleClass="text-normal" text="Totalt:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalAmountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="438.0" layoutY="20.0" prefHeight="26.0" prefWidth="167.0" style="-fx-font-weight: bold;" styleClass="text-big" text="x st" textAlignment="CENTER" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="20.0" />
-                              <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="828.0" layoutY="20.0" prefHeight="26.0" prefWidth="175.0" style="-fx-font-weight: bold;" styleClass="text-big" text="x kr" textAlignment="CENTER" AnchorPane.leftAnchor="828.0" AnchorPane.topAnchor="20.0" />
+                              <Label fx:id="totalAmountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="494.0" layoutY="17.0" prefHeight="26.0" prefWidth="167.0" style="-fx-font-weight: bold;" styleClass="text-big" text="x st" textAlignment="CENTER" AnchorPane.leftAnchor="494.0" AnchorPane.topAnchor="17.0" />
+                              <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="911.0" layoutY="17.0" prefHeight="26.0" prefWidth="175.0" style="-fx-font-weight: bold;" styleClass="text-big" text="x kr" textAlignment="CENTER" AnchorPane.leftAnchor="911.0" AnchorPane.topAnchor="17.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="104.0" prefWidth="1059.0">
