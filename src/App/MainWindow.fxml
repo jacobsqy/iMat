@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
+<AnchorPane prefHeight="850.0" prefWidth="1350.0" styleClass="text-normal" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.MainWindow">
    <children>
       <Separator layoutY="194.0" prefHeight="0.0" prefWidth="1350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0" />
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="198.0" prefWidth="1330.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -99,7 +99,7 @@
                   <Insets left="150.0" top="40.0" />
                </GridPane.margin>
             </Label>
-            <Label fx:id="headlineLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="128.0" prefWidth="597.0" styleClass="text-headlines-big" text="Headline" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Label fx:id="headlineLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="122.0" prefWidth="836.0" styleClass="text-headlines-big" text="Headline" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" />
             <AnchorPane fx:id="productAddedToShoppingCartInfo" prefHeight="200.0" prefWidth="669.0" styleClass="product-added-headline" stylesheets="@StyleSheet.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
                <children>
                   <Label fx:id="productAddedToShoppingCartInfoLabel" alignment="CENTER" styleClass="product-added-text" text="X Lorem Ipsum tillagda i varukorgen!" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />

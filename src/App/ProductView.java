@@ -225,7 +225,7 @@ public class ProductView {
                 } else {
                     backend.addFavorite(product.getProductId());
                     favoriteImage.setImage(new Image(ProductItem.class.getResourceAsStream("resources/imat/images/favorite.png")));
-                    favoriteList.add(product);
+                    observableList.add(product);
                     productItem.setImageToFav();
                 }
             }

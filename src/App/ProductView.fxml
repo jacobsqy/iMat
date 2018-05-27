@@ -217,15 +217,7 @@
                         <Button layoutX="372.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#increaseCount" prefHeight="36.0" prefWidth="36.0" styleClass="button-grey" text="+" />
                         <TextField fx:id="numberTextField" alignment="CENTER" layoutX="330.0" layoutY="356.0" prefHeight="36.0" prefWidth="42.0" text="88" />
                         <Button layoutX="294.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#decreaseCount" prefHeight="36.0" prefWidth="36.0" styleClass="button-grey" text="-" />
-                        <Button fx:id="addToCartButton" layoutX="416.0" layoutY="356.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="216.0" styleClass="button-green" text="Lägg till i varukorgen">
-                           <graphic>
-                              <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/imat/images/cart.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
+                        <Button fx:id="addToCartButton" layoutX="420.0" layoutY="355.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="216.0" styleClass="button-green" text="Lägg till i varukorgen" />
                         <ImageView fx:id="favoriteImage" fitHeight="42.0" fitWidth="42.0" layoutX="569.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="300.0">
                            <image>
                               <Image url="@resources/imat/images/favorite.png" />

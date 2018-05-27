@@ -38,7 +38,7 @@
 .button-lightblue{
     -fx-border-color: transparent;
     -fx-border-width: 0;
-    -fx-background-radius: 0;
+    -fx-background-radius: 3;
     -fx-background-color: "lightblue";
     -fx-text-fill: "white";
 }
@@ -55,7 +55,7 @@
 .button-blue{
     -fx-border-color:   transparent;
     -fx-border-width: 0;
-    -fx-background-radius: 0;
+    -fx-background-radius: 3;
     -fx-background-color: #0077BE;
     -fx-text-fill: "white";
 }
@@ -72,7 +72,7 @@
 .button-red{
       -fx-border-color: transparent;
       -fx-border-width: 0;
-      -fx-background-radius: 0;
+      -fx-background-radius: 3;
       -fx-background-color: "red";
       -fx-text-fill:    "white";
 }
@@ -88,7 +88,7 @@
 .button-green{
      -fx-border-color: transparent;
      -fx-border-width: 0;
-     -fx-background-radius: 0;
+     -fx-background-radius: 3;
      -fx-background-color: "green";
      -fx-text-fill:    "white";
 }
@@ -104,7 +104,7 @@
 .button-grey{
      -fx-border-color: transparent;
       -fx-border-width: 0;
-      -fx-background-radius: 0;
+      -fx-background-radius: 3;
       -fx-background-color:  #757C88;
       -fx-text-fill:    "white";
 }
@@ -155,8 +155,8 @@
 .product-added-headline  {
     -fx-opacity: 0;
     -fx-background-color: "green";
-    -fx-background-radius: 30;
-    -fx-border-radius: 30;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
     -fx-border-width:5;
 
 }

@@ -1,6 +1,8 @@
 package App;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.ShoppingItem;
@@ -8,6 +10,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static App.BackendController.backend;
 
@@ -50,9 +53,23 @@ public class ShoppingCartView {
     }
 
     @FXML private void emptyShoppingCartButtonPressed() {
-        BackendController.emptyShoppingCart();
-        updateList();
-        updateInfo();
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Töm Varukorg");
+        alert.setHeaderText("Är du säker på att du vill rensa varukorgen?");
+        alert.setContentText("Du kan inte ångra detta steg.");
+
+        if (!BackendController.getShoppingItems().isEmpty()){
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                BackendController.emptyShoppingCart();
+                updateList();
+                updateInfo();
+            }
+
+        }
+
     }
 
     @FXML public void updateInfo() {
